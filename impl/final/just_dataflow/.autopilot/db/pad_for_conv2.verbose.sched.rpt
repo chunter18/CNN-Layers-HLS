@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vivado HLS Report for 'pad_for_conv2'
+================================================================
+* Date:           Tue Dec  3 11:06:18 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        final
+* Solution:       just_dataflow
+* Product family: kintex7
+* Target device:  xc7k325tffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.622|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  650|  650|  650|  650|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |            |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- fillzero  |   32|   32|         2|          -|          -|    16|    no    |
+        |- row       |  616|  616|        44|          -|          -|    14|    no    |
+        | + col      |   42|   42|         3|          -|          -|    14|    no    |
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp)
+	4  / (tmp)
+3 --> 
+	2  / true
+4 --> 
+	5  / (!tmp_24)
+5 --> 
+	6  / (!tmp_26)
+	4  / (tmp_26)
+6 --> 
+	7  / true
+7 --> 
+	5  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.87>
+ST_1 : Operation 8 [1/1] (0.87ns)   --->   "br label %1" [../src/CNN_final.cpp:76]   --->   Operation 8 'br' <Predicate = true> <Delay = 0.87>
+
+State 2 <SV = 1> <Delay = 2.26>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i = phi i5 [ 0, %0 ], [ %i_3, %2 ]"   --->   Operation 9 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.88ns)   --->   "%tmp = icmp eq i5 %i, -16" [../src/CNN_final.cpp:76]   --->   Operation 10 'icmp' 'tmp' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.10ns)   --->   "%i_3 = add i5 %i, 1" [../src/CNN_final.cpp:76]   --->   Operation 12 'add' 'i_3' <Predicate = true> <Delay = 1.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %tmp, label %.preheader.preheader, label %2" [../src/CNN_final.cpp:76]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_s = zext i5 %i to i64" [../src/CNN_final.cpp:78]   --->   Operation 14 'zext' 'tmp_s' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%out_image_V_addr = getelementptr [256 x i25]* %out_image_V, i64 0, i64 %tmp_s" [../src/CNN_final.cpp:78]   --->   Operation 15 'getelementptr' 'out_image_V_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_31 = call i9 @_ssdm_op_BitConcatenate.i9.i5.i4(i5 %i, i4 0)" [../src/CNN_final.cpp:76]   --->   Operation 16 'bitconcatenate' 'tmp_31' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_32 = zext i9 %tmp_31 to i64" [../src/CNN_final.cpp:79]   --->   Operation 17 'zext' 'tmp_32' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%out_image_V_addr_1 = getelementptr [256 x i25]* %out_image_V, i64 0, i64 %tmp_32" [../src/CNN_final.cpp:79]   --->   Operation 18 'getelementptr' 'out_image_V_addr_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (2.26ns)   --->   "store i25 0, i25* %out_image_V_addr, align 4" [../src/CNN_final.cpp:78]   --->   Operation 19 'store' <Predicate = (!tmp)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+ST_2 : Operation 20 [1/1] (2.26ns)   --->   "store i25 0, i25* %out_image_V_addr_1, align 4" [../src/CNN_final.cpp:79]   --->   Operation 20 'store' <Predicate = (!tmp)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+ST_2 : Operation 21 [1/1] (0.87ns)   --->   "br label %.preheader" [../src/CNN_final.cpp:84]   --->   Operation 21 'br' <Predicate = (tmp)> <Delay = 0.87>
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str333) nounwind" [../src/CNN_final.cpp:77]   --->   Operation 22 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.51ns)   --->   "%tmp_33 = xor i5 %i, -16" [../src/CNN_final.cpp:80]   --->   Operation 23 'xor' 'tmp_33' <Predicate = true> <Delay = 0.51> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_35_cast1 = sext i5 %tmp_33 to i8" [../src/CNN_final.cpp:80]   --->   Operation 24 'sext' 'tmp_35_cast1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_35_cast = zext i8 %tmp_35_cast1 to i64" [../src/CNN_final.cpp:80]   --->   Operation 25 'zext' 'tmp_35_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%out_image_V_addr_2 = getelementptr [256 x i25]* %out_image_V, i64 0, i64 %tmp_35_cast" [../src/CNN_final.cpp:80]   --->   Operation 26 'getelementptr' 'out_image_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_34 = or i9 %tmp_31, 15" [../src/CNN_final.cpp:76]   --->   Operation 27 'or' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_35 = call i64 @_ssdm_op_BitConcatenate.i64.i55.i9(i55 0, i9 %tmp_34)" [../src/CNN_final.cpp:81]   --->   Operation 28 'bitconcatenate' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%out_image_V_addr_3 = getelementptr [256 x i25]* %out_image_V, i64 0, i64 %tmp_35" [../src/CNN_final.cpp:81]   --->   Operation 29 'getelementptr' 'out_image_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (2.26ns)   --->   "store i25 0, i25* %out_image_V_addr_2, align 4" [../src/CNN_final.cpp:80]   --->   Operation 30 'store' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+ST_3 : Operation 31 [1/1] (2.26ns)   --->   "store i25 0, i25* %out_image_V_addr_3, align 4" [../src/CNN_final.cpp:81]   --->   Operation 31 'store' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br label %1" [../src/CNN_final.cpp:76]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 1.35>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%i_1 = phi i4 [ %i_4, %6 ], [ 0, %.preheader.preheader ]"   --->   Operation 33 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.86ns)   --->   "%tmp_24 = icmp eq i4 %i_1, -2" [../src/CNN_final.cpp:84]   --->   Operation 34 'icmp' 'tmp_24' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 35 'speclooptripcount' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (1.01ns)   --->   "%i_4 = add i4 %i_1, 1" [../src/CNN_final.cpp:88]   --->   Operation 36 'add' 'i_4' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %tmp_24, label %7, label %3" [../src/CNN_final.cpp:84]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str131) nounwind" [../src/CNN_final.cpp:85]   --->   Operation 38 'specloopname' <Predicate = (!tmp_24)> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_25 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str131)" [../src/CNN_final.cpp:85]   --->   Operation 39 'specregionbegin' 'tmp_25' <Predicate = (!tmp_24)> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_36 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %i_1, i4 0)" [../src/CNN_final.cpp:88]   --->   Operation 40 'bitconcatenate' 'tmp_36' <Predicate = (!tmp_24)> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i8 %tmp_36 to i9" [../src/CNN_final.cpp:88]   --->   Operation 41 'zext' 'p_shl_cast' <Predicate = (!tmp_24)> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_37 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %i_1, i1 false)" [../src/CNN_final.cpp:88]   --->   Operation 42 'bitconcatenate' 'tmp_37' <Predicate = (!tmp_24)> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i5 %tmp_37 to i9" [../src/CNN_final.cpp:88]   --->   Operation 43 'zext' 'p_shl1_cast' <Predicate = (!tmp_24)> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (1.35ns)   --->   "%tmp_38 = sub i9 %p_shl_cast, %p_shl1_cast" [../src/CNN_final.cpp:88]   --->   Operation 44 'sub' 'tmp_38' <Predicate = (!tmp_24)> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/1] (0.87ns)   --->   "br label %4" [../src/CNN_final.cpp:86]   --->   Operation 45 'br' <Predicate = (!tmp_24)> <Delay = 0.87>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "ret void" [../src/CNN_final.cpp:93]   --->   Operation 46 'ret' <Predicate = (tmp_24)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 3.62>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%j = phi i4 [ 0, %3 ], [ %j_4, %5 ]"   --->   Operation 47 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.86ns)   --->   "%tmp_26 = icmp eq i4 %j, -2" [../src/CNN_final.cpp:86]   --->   Operation 48 'icmp' 'tmp_26' <Predicate = true> <Delay = 0.86> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 49 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (1.01ns)   --->   "%j_4 = add i4 %j, 1" [../src/CNN_final.cpp:88]   --->   Operation 50 'add' 'j_4' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %tmp_26, label %6, label %5" [../src/CNN_final.cpp:86]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_27_cast = zext i4 %j to i9" [../src/CNN_final.cpp:88]   --->   Operation 52 'zext' 'tmp_27_cast' <Predicate = (!tmp_26)> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (1.35ns)   --->   "%tmp_41 = add i9 %tmp_38, %tmp_27_cast" [../src/CNN_final.cpp:88]   --->   Operation 53 'add' 'tmp_41' <Predicate = (!tmp_26)> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.35> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_43_cast = sext i9 %tmp_41 to i64" [../src/CNN_final.cpp:88]   --->   Operation 54 'sext' 'tmp_43_cast' <Predicate = (!tmp_26)> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%in_image_V_addr = getelementptr [196 x i25]* %in_image_V, i64 0, i64 %tmp_43_cast" [../src/CNN_final.cpp:88]   --->   Operation 55 'getelementptr' 'in_image_V_addr' <Predicate = (!tmp_26)> <Delay = 0.00>
+ST_5 : Operation 56 [2/2] (2.26ns)   --->   "%in_image_V_load = load i25* %in_image_V_addr, align 4" [../src/CNN_final.cpp:88]   --->   Operation 56 'load' 'in_image_V_load' <Predicate = (!tmp_26)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%empty_37 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str131, i32 %tmp_25)" [../src/CNN_final.cpp:90]   --->   Operation 57 'specregionend' 'empty_37' <Predicate = (tmp_26)> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "br label %.preheader" [../src/CNN_final.cpp:84]   --->   Operation 58 'br' <Predicate = (tmp_26)> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 2.26>
+ST_6 : Operation 59 [1/2] (2.26ns)   --->   "%in_image_V_load = load i25* %in_image_V_addr, align 4" [../src/CNN_final.cpp:88]   --->   Operation 59 'load' 'in_image_V_load' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+
+State 7 <SV = 5> <Delay = 2.26>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str232) nounwind" [../src/CNN_final.cpp:87]   --->   Operation 60 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_39 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %i_4, i4 %j_4)" [../src/CNN_final.cpp:88]   --->   Operation 61 'bitconcatenate' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_40 = zext i8 %tmp_39 to i64" [../src/CNN_final.cpp:88]   --->   Operation 62 'zext' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%out_image_V_addr_4 = getelementptr [256 x i25]* %out_image_V, i64 0, i64 %tmp_40" [../src/CNN_final.cpp:88]   --->   Operation 63 'getelementptr' 'out_image_V_addr_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (2.26ns)   --->   "store i25 %in_image_V_load, i25* %out_image_V_addr_4, align 4" [../src/CNN_final.cpp:88]   --->   Operation 64 'store' <Predicate = true> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 25> <Depth = 256> <RAM>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "br label %4" [../src/CNN_final.cpp:86]   --->   Operation 65 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0.872ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ../src/CNN_final.cpp:76) [5]  (0.872 ns)
+
+ <State 2>: 2.27ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../src/CNN_final.cpp:76) [5]  (0 ns)
+	'getelementptr' operation ('out_image_V_addr', ../src/CNN_final.cpp:78) [13]  (0 ns)
+	'store' operation (../src/CNN_final.cpp:78) of constant 0 on array 'out_image_V' [24]  (2.27 ns)
+
+ <State 3>: 2.78ns
+The critical path consists of the following:
+	'xor' operation ('tmp_33', ../src/CNN_final.cpp:80) [17]  (0.51 ns)
+	'getelementptr' operation ('out_image_V_addr_2', ../src/CNN_final.cpp:80) [20]  (0 ns)
+	'store' operation (../src/CNN_final.cpp:80) of constant 0 on array 'out_image_V' [26]  (2.27 ns)
+
+ <State 4>: 1.36ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../src/CNN_final.cpp:88) [32]  (0 ns)
+	'sub' operation ('tmp_38', ../src/CNN_final.cpp:88) [44]  (1.36 ns)
+
+ <State 5>: 3.62ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ../src/CNN_final.cpp:88) [47]  (0 ns)
+	'add' operation ('tmp_41', ../src/CNN_final.cpp:88) [58]  (1.36 ns)
+	'getelementptr' operation ('in_image_V_addr', ../src/CNN_final.cpp:88) [60]  (0 ns)
+	'load' operation ('in_image_V_load', ../src/CNN_final.cpp:88) on array 'in_image_V' [61]  (2.27 ns)
+
+ <State 6>: 2.27ns
+The critical path consists of the following:
+	'load' operation ('in_image_V_load', ../src/CNN_final.cpp:88) on array 'in_image_V' [61]  (2.27 ns)
+
+ <State 7>: 2.27ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_image_V_addr_4', ../src/CNN_final.cpp:88) [56]  (0 ns)
+	'store' operation (../src/CNN_final.cpp:88) of variable 'in_image_V_load', ../src/CNN_final.cpp:88 on array 'out_image_V' [62]  (2.27 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

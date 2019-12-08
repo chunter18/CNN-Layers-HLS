@@ -1,0 +1,343 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>in_image_V</name>
+<CType>
+<TypeName>ap_fixed 18 9 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>9</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>means_V</name>
+<CType>
+<TypeName>ap_fixed 18 8 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>10</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_0_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_1_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_2_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_3_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_4_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_5_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_6_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_7_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L1_8_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_bias_L1_V</name>
+<CType>
+<TypeName>ap_fixed 48 1 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>47</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>a_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>b_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_0_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_1_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_2_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_3_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_4_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_5_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_6_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_7_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_kernel_L2_8_V</name>
+<CType>
+<TypeName>ap_fixed 18 1 5 3 0</TypeName>
+<TypeWidth>18</TypeWidth>
+<PhysicalWidth>18</PhysicalWidth>
+</CType>
+<CFractionWidth>17</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_bias_L2_0_V</name>
+<CType>
+<TypeName>ap_fixed 48 1 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>47</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_bias_L2_1_V</name>
+<CType>
+<TypeName>ap_fixed 48 1 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>47</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_bias_L2_2_V</name>
+<CType>
+<TypeName>ap_fixed 48 1 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>47</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>conv_bias_L2_3_V</name>
+<CType>
+<TypeName>ap_fixed 48 1 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>47</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_0_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_1_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_2_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_3_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_4_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_5_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>result_6_V</name>
+<CType>
+<TypeName>ap_fixed 48 3 5 3 0</TypeName>
+<TypeWidth>48</TypeWidth>
+<PhysicalWidth>48</PhysicalWidth>
+</CType>
+<CFractionWidth>45</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

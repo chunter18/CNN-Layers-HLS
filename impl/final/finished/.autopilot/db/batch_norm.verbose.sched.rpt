@@ -1,0 +1,401 @@
+
+
+================================================================
+== Vivado HLS Report for 'batch_norm'
+================================================================
+* Date:           Mon Dec  2 23:35:38 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        final
+* Solution:       finished
+* Product family: kintex7
+* Target device:  xc7k325tffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.040|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  789|  789|  789|  789|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |           |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- row_col  |  787|  787|         5|          1|          1|   784|    yes   |
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	7  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	2  / true
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.87>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%B_V_read = call i18 @_ssdm_op_Read.ap_auto.i18(i18 %B_V)"   --->   Operation 8 'read' 'B_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%A_V_read = call i18 @_ssdm_op_Read.ap_auto.i18(i18 %A_V)"   --->   Operation 9 'read' 'A_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%OP2_V = sext i18 %A_V_read to i37"   --->   Operation 10 'sext' 'OP2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_s = call i34 @_ssdm_op_BitConcatenate.i34.i18.i16(i18 %B_V_read, i16 0)"   --->   Operation 11 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_45_cast = sext i34 %tmp_s to i37"   --->   Operation 12 'sext' 'tmp_45_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.87ns)   --->   "br label %1" [../src/CNN_final.cpp:227]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.87>
+
+State 2 <SV = 1> <Delay = 2.66>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i10 [ 0, %0 ], [ %indvar_flatten_next, %ifBlock ]"   --->   Operation 14 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%j = phi i5 [ 0, %0 ], [ %j_mid2, %ifBlock ]" [../src/CNN_final.cpp:229]   --->   Operation 15 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%k = phi i5 [ 0, %0 ], [ %k_3, %ifBlock ]"   --->   Operation 16 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (1.03ns)   --->   "%exitcond_flatten = icmp eq i10 %indvar_flatten, -240"   --->   Operation 17 'icmp' 'exitcond_flatten' <Predicate = true> <Delay = 1.03> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (1.35ns)   --->   "%indvar_flatten_next = add i10 %indvar_flatten, 1"   --->   Operation 18 'add' 'indvar_flatten_next' <Predicate = true> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %2, label %.reset"   --->   Operation 19 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.10ns)   --->   "%j_2 = add i5 %j, 1" [../src/CNN_final.cpp:227]   --->   Operation 20 'add' 'j_2' <Predicate = (!exitcond_flatten)> <Delay = 1.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.88ns)   --->   "%tmp_23 = icmp eq i5 %k, -4" [../src/CNN_final.cpp:229]   --->   Operation 21 'icmp' 'tmp_23' <Predicate = (!exitcond_flatten)> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.62ns)   --->   "%k_mid2 = select i1 %tmp_23, i5 0, i5 %k" [../src/CNN_final.cpp:229]   --->   Operation 22 'select' 'k_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.62> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.62ns)   --->   "%j_mid2 = select i1 %tmp_23, i5 %j_2, i5 %j" [../src/CNN_final.cpp:229]   --->   Operation 23 'select' 'j_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.62> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_24 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str434)" [../src/CNN_final.cpp:230]   --->   Operation 24 'specregionbegin' 'tmp_24' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_25 = zext i5 %k_mid2 to i64" [../src/CNN_final.cpp:231]   --->   Operation 25 'zext' 'tmp_25' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%in_image_0_V_addr = getelementptr [28 x i25]* %in_image_0_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 26 'getelementptr' 'in_image_0_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 27 [2/2] (1.14ns)   --->   "%in_image_0_V_load = load i25* %in_image_0_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 27 'load' 'in_image_0_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%in_image_1_V_addr = getelementptr [28 x i25]* %in_image_1_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 28 'getelementptr' 'in_image_1_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (1.14ns)   --->   "%in_image_1_V_load = load i25* %in_image_1_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 29 'load' 'in_image_1_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%in_image_2_V_addr = getelementptr [28 x i25]* %in_image_2_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 30 'getelementptr' 'in_image_2_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 31 [2/2] (1.14ns)   --->   "%in_image_2_V_load = load i25* %in_image_2_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 31 'load' 'in_image_2_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%in_image_3_V_addr = getelementptr [28 x i25]* %in_image_3_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 32 'getelementptr' 'in_image_3_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 33 [2/2] (1.14ns)   --->   "%in_image_3_V_load = load i25* %in_image_3_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 33 'load' 'in_image_3_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%in_image_4_V_addr = getelementptr [28 x i25]* %in_image_4_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 34 'getelementptr' 'in_image_4_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 35 [2/2] (1.14ns)   --->   "%in_image_4_V_load = load i25* %in_image_4_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 35 'load' 'in_image_4_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%in_image_5_V_addr = getelementptr [28 x i25]* %in_image_5_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 36 'getelementptr' 'in_image_5_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 37 [2/2] (1.14ns)   --->   "%in_image_5_V_load = load i25* %in_image_5_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 37 'load' 'in_image_5_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%in_image_6_V_addr = getelementptr [28 x i25]* %in_image_6_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 38 'getelementptr' 'in_image_6_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 39 [2/2] (1.14ns)   --->   "%in_image_6_V_load = load i25* %in_image_6_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 39 'load' 'in_image_6_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%in_image_7_V_addr = getelementptr [28 x i25]* %in_image_7_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 40 'getelementptr' 'in_image_7_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 41 [2/2] (1.14ns)   --->   "%in_image_7_V_load = load i25* %in_image_7_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 41 'load' 'in_image_7_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%in_image_8_V_addr = getelementptr [28 x i25]* %in_image_8_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 42 'getelementptr' 'in_image_8_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 43 [2/2] (1.14ns)   --->   "%in_image_8_V_load = load i25* %in_image_8_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 43 'load' 'in_image_8_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%in_image_9_V_addr = getelementptr [28 x i25]* %in_image_9_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 44 'getelementptr' 'in_image_9_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 45 [2/2] (1.14ns)   --->   "%in_image_9_V_load = load i25* %in_image_9_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 45 'load' 'in_image_9_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%in_image_10_V_addr = getelementptr [28 x i25]* %in_image_10_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 46 'getelementptr' 'in_image_10_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 47 [2/2] (1.14ns)   --->   "%in_image_10_V_load = load i25* %in_image_10_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 47 'load' 'in_image_10_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%in_image_11_V_addr = getelementptr [28 x i25]* %in_image_11_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 48 'getelementptr' 'in_image_11_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 49 [2/2] (1.14ns)   --->   "%in_image_11_V_load = load i25* %in_image_11_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 49 'load' 'in_image_11_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%in_image_12_V_addr = getelementptr [28 x i25]* %in_image_12_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 50 'getelementptr' 'in_image_12_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 51 [2/2] (1.14ns)   --->   "%in_image_12_V_load = load i25* %in_image_12_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 51 'load' 'in_image_12_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%in_image_13_V_addr = getelementptr [28 x i25]* %in_image_13_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 52 'getelementptr' 'in_image_13_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 53 [2/2] (1.14ns)   --->   "%in_image_13_V_load = load i25* %in_image_13_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 53 'load' 'in_image_13_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%in_image_14_V_addr = getelementptr [28 x i25]* %in_image_14_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 54 'getelementptr' 'in_image_14_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 55 [2/2] (1.14ns)   --->   "%in_image_14_V_load = load i25* %in_image_14_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 55 'load' 'in_image_14_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%in_image_15_V_addr = getelementptr [28 x i25]* %in_image_15_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 56 'getelementptr' 'in_image_15_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 57 [2/2] (1.14ns)   --->   "%in_image_15_V_load = load i25* %in_image_15_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 57 'load' 'in_image_15_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%in_image_16_V_addr = getelementptr [28 x i25]* %in_image_16_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 58 'getelementptr' 'in_image_16_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 59 [2/2] (1.14ns)   --->   "%in_image_16_V_load = load i25* %in_image_16_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 59 'load' 'in_image_16_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%in_image_17_V_addr = getelementptr [28 x i25]* %in_image_17_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 60 'getelementptr' 'in_image_17_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 61 [2/2] (1.14ns)   --->   "%in_image_17_V_load = load i25* %in_image_17_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 61 'load' 'in_image_17_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%in_image_18_V_addr = getelementptr [28 x i25]* %in_image_18_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 62 'getelementptr' 'in_image_18_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 63 [2/2] (1.14ns)   --->   "%in_image_18_V_load = load i25* %in_image_18_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 63 'load' 'in_image_18_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%in_image_19_V_addr = getelementptr [28 x i25]* %in_image_19_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 64 'getelementptr' 'in_image_19_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 65 [2/2] (1.14ns)   --->   "%in_image_19_V_load = load i25* %in_image_19_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 65 'load' 'in_image_19_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%in_image_20_V_addr = getelementptr [28 x i25]* %in_image_20_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 66 'getelementptr' 'in_image_20_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 67 [2/2] (1.14ns)   --->   "%in_image_20_V_load = load i25* %in_image_20_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 67 'load' 'in_image_20_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%in_image_21_V_addr = getelementptr [28 x i25]* %in_image_21_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 68 'getelementptr' 'in_image_21_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 69 [2/2] (1.14ns)   --->   "%in_image_21_V_load = load i25* %in_image_21_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 69 'load' 'in_image_21_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%in_image_22_V_addr = getelementptr [28 x i25]* %in_image_22_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 70 'getelementptr' 'in_image_22_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 71 [2/2] (1.14ns)   --->   "%in_image_22_V_load = load i25* %in_image_22_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 71 'load' 'in_image_22_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%in_image_23_V_addr = getelementptr [28 x i25]* %in_image_23_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 72 'getelementptr' 'in_image_23_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 73 [2/2] (1.14ns)   --->   "%in_image_23_V_load = load i25* %in_image_23_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 73 'load' 'in_image_23_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%in_image_24_V_addr = getelementptr [28 x i25]* %in_image_24_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 74 'getelementptr' 'in_image_24_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 75 [2/2] (1.14ns)   --->   "%in_image_24_V_load = load i25* %in_image_24_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 75 'load' 'in_image_24_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%in_image_25_V_addr = getelementptr [28 x i25]* %in_image_25_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 76 'getelementptr' 'in_image_25_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 77 [2/2] (1.14ns)   --->   "%in_image_25_V_load = load i25* %in_image_25_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 77 'load' 'in_image_25_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%in_image_26_V_addr = getelementptr [28 x i25]* %in_image_26_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 78 'getelementptr' 'in_image_26_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 79 [2/2] (1.14ns)   --->   "%in_image_26_V_load = load i25* %in_image_26_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 79 'load' 'in_image_26_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%in_image_27_V_addr = getelementptr [28 x i25]* %in_image_27_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 80 'getelementptr' 'in_image_27_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 81 [2/2] (1.14ns)   --->   "%in_image_27_V_load = load i25* %in_image_27_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 81 'load' 'in_image_27_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str434, i32 %tmp_24)" [../src/CNN_final.cpp:232]   --->   Operation 82 'specregionend' 'empty' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (1.10ns)   --->   "%k_3 = add i5 %k_mid2, 1" [../src/CNN_final.cpp:229]   --->   Operation 83 'add' 'k_3' <Predicate = (!exitcond_flatten)> <Delay = 1.10> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 84 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.90>
+ST_3 : Operation 85 [1/2] (1.14ns)   --->   "%in_image_0_V_load = load i25* %in_image_0_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 85 'load' 'in_image_0_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 86 [1/2] (1.14ns)   --->   "%in_image_1_V_load = load i25* %in_image_1_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 86 'load' 'in_image_1_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 87 [1/2] (1.14ns)   --->   "%in_image_2_V_load = load i25* %in_image_2_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 87 'load' 'in_image_2_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 88 [1/2] (1.14ns)   --->   "%in_image_3_V_load = load i25* %in_image_3_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 88 'load' 'in_image_3_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 89 [1/2] (1.14ns)   --->   "%in_image_4_V_load = load i25* %in_image_4_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 89 'load' 'in_image_4_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 90 [1/2] (1.14ns)   --->   "%in_image_5_V_load = load i25* %in_image_5_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 90 'load' 'in_image_5_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 91 [1/2] (1.14ns)   --->   "%in_image_6_V_load = load i25* %in_image_6_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 91 'load' 'in_image_6_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 92 [1/2] (1.14ns)   --->   "%in_image_7_V_load = load i25* %in_image_7_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 92 'load' 'in_image_7_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 93 [1/2] (1.14ns)   --->   "%in_image_8_V_load = load i25* %in_image_8_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 93 'load' 'in_image_8_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 94 [1/2] (1.14ns)   --->   "%in_image_9_V_load = load i25* %in_image_9_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 94 'load' 'in_image_9_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 95 [1/2] (1.14ns)   --->   "%in_image_10_V_load = load i25* %in_image_10_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 95 'load' 'in_image_10_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 96 [1/2] (1.14ns)   --->   "%in_image_11_V_load = load i25* %in_image_11_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 96 'load' 'in_image_11_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 97 [1/2] (1.14ns)   --->   "%in_image_12_V_load = load i25* %in_image_12_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 97 'load' 'in_image_12_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 98 [1/2] (1.14ns)   --->   "%in_image_13_V_load = load i25* %in_image_13_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 98 'load' 'in_image_13_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 99 [1/2] (1.14ns)   --->   "%in_image_14_V_load = load i25* %in_image_14_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 99 'load' 'in_image_14_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 100 [1/2] (1.14ns)   --->   "%in_image_15_V_load = load i25* %in_image_15_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 100 'load' 'in_image_15_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 101 [1/2] (1.14ns)   --->   "%in_image_16_V_load = load i25* %in_image_16_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 101 'load' 'in_image_16_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 102 [1/2] (1.14ns)   --->   "%in_image_17_V_load = load i25* %in_image_17_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 102 'load' 'in_image_17_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 103 [1/2] (1.14ns)   --->   "%in_image_18_V_load = load i25* %in_image_18_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 103 'load' 'in_image_18_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 104 [1/2] (1.14ns)   --->   "%in_image_19_V_load = load i25* %in_image_19_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 104 'load' 'in_image_19_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 105 [1/2] (1.14ns)   --->   "%in_image_20_V_load = load i25* %in_image_20_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 105 'load' 'in_image_20_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 106 [1/2] (1.14ns)   --->   "%in_image_21_V_load = load i25* %in_image_21_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 106 'load' 'in_image_21_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 107 [1/2] (1.14ns)   --->   "%in_image_22_V_load = load i25* %in_image_22_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 107 'load' 'in_image_22_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 108 [1/2] (1.14ns)   --->   "%in_image_23_V_load = load i25* %in_image_23_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 108 'load' 'in_image_23_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 109 [1/2] (1.14ns)   --->   "%in_image_24_V_load = load i25* %in_image_24_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 109 'load' 'in_image_24_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 110 [1/2] (1.14ns)   --->   "%in_image_25_V_load = load i25* %in_image_25_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 110 'load' 'in_image_25_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 111 [1/2] (1.14ns)   --->   "%in_image_26_V_load = load i25* %in_image_26_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 111 'load' 'in_image_26_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 112 [1/2] (1.14ns)   --->   "%in_image_27_V_load = load i25* %in_image_27_V_addr, align 4" [../src/CNN_final.cpp:231]   --->   Operation 112 'load' 'in_image_27_V_load' <Predicate = (!exitcond_flatten)> <Delay = 1.14> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_3 : Operation 113 [1/1] (1.75ns)   --->   "%tmp_13 = call i25 @_ssdm_op_Mux.ap_auto.28i25.i5(i25 %in_image_0_V_load, i25 %in_image_1_V_load, i25 %in_image_2_V_load, i25 %in_image_3_V_load, i25 %in_image_4_V_load, i25 %in_image_5_V_load, i25 %in_image_6_V_load, i25 %in_image_7_V_load, i25 %in_image_8_V_load, i25 %in_image_9_V_load, i25 %in_image_10_V_load, i25 %in_image_11_V_load, i25 %in_image_12_V_load, i25 %in_image_13_V_load, i25 %in_image_14_V_load, i25 %in_image_15_V_load, i25 %in_image_16_V_load, i25 %in_image_17_V_load, i25 %in_image_18_V_load, i25 %in_image_19_V_load, i25 %in_image_20_V_load, i25 %in_image_21_V_load, i25 %in_image_22_V_load, i25 %in_image_23_V_load, i25 %in_image_24_V_load, i25 %in_image_25_V_load, i25 %in_image_26_V_load, i25 %in_image_27_V_load, i5 %j_mid2)" [../src/CNN_final.cpp:231]   --->   Operation 113 'mux' 'tmp_13' <Predicate = (!exitcond_flatten)> <Delay = 1.75> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 114 [1/1] (0.90ns)   --->   "switch i5 %j_mid2, label %branch27 [
+    i5 0, label %branch0
+    i5 1, label %branch1
+    i5 2, label %branch2
+    i5 3, label %branch3
+    i5 4, label %branch4
+    i5 5, label %branch5
+    i5 6, label %branch6
+    i5 7, label %branch7
+    i5 8, label %branch8
+    i5 9, label %branch9
+    i5 10, label %branch10
+    i5 11, label %branch11
+    i5 12, label %branch12
+    i5 13, label %branch13
+    i5 14, label %branch14
+    i5 15, label %branch15
+    i5 -16, label %branch16
+    i5 -15, label %branch17
+    i5 -14, label %branch18
+    i5 -13, label %branch19
+    i5 -12, label %branch20
+    i5 -11, label %branch21
+    i5 -10, label %branch22
+    i5 -9, label %branch23
+    i5 -8, label %branch24
+    i5 -7, label %branch25
+    i5 -6, label %branch26
+  ]" [../src/CNN_final.cpp:231]   --->   Operation 114 'switch' <Predicate = (!exitcond_flatten)> <Delay = 0.90>
+
+State 4 <SV = 3> <Delay = 3.04>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%OP1_V = sext i25 %tmp_13 to i37" [../src/CNN_final.cpp:231]   --->   Operation 115 'sext' 'OP1_V' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 116 [2/2] (3.04ns)   --->   "%p_Val2_s = mul i37 %OP2_V, %OP1_V" [../src/CNN_final.cpp:231]   --->   Operation 116 'mul' 'p_Val2_s' <Predicate = (!exitcond_flatten)> <Delay = 3.04> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 1> <II = 1> <Delay = 4.60> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 2.70>
+ST_5 : Operation 117 [1/2] (0.00ns)   --->   "%p_Val2_s = mul i37 %OP2_V, %OP1_V" [../src/CNN_final.cpp:231]   --->   Operation 117 'mul' 'p_Val2_s' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 1> <II = 1> <Delay = 4.60> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 118 [1/1] (2.70ns)   --->   "%p_Val2_s_24 = add i37 %tmp_45_cast, %p_Val2_s" [../src/CNN_final.cpp:231]   --->   Operation 118 'add' 'p_Val2_s_24' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 1> <II = 1> <Delay = 4.60> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 2.26>
+ST_6 : Operation 119 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @row_col_str)"   --->   Operation 119 'specloopname' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 120 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str434) nounwind" [../src/CNN_final.cpp:230]   --->   Operation 120 'specloopname' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 121 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str131) nounwind" [../src/CNN_final.cpp:231]   --->   Operation 121 'specpipeline' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_26 = call i48 @_ssdm_op_BitConcatenate.i48.i37.i11(i37 %p_Val2_s_24, i11 0)" [../src/CNN_final.cpp:231]   --->   Operation 122 'bitconcatenate' 'tmp_26' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 123 [1/1] (0.00ns)   --->   "%out_image_0_V_addr = getelementptr [28 x i48]* %out_image_0_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 123 'getelementptr' 'out_image_0_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 124 [1/1] (0.00ns)   --->   "%out_image_1_V_addr = getelementptr [28 x i48]* %out_image_1_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 124 'getelementptr' 'out_image_1_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 125 [1/1] (0.00ns)   --->   "%out_image_2_V_addr = getelementptr [28 x i48]* %out_image_2_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 125 'getelementptr' 'out_image_2_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 126 [1/1] (0.00ns)   --->   "%out_image_3_V_addr = getelementptr [28 x i48]* %out_image_3_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 126 'getelementptr' 'out_image_3_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 127 [1/1] (0.00ns)   --->   "%out_image_4_V_addr = getelementptr [28 x i48]* %out_image_4_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 127 'getelementptr' 'out_image_4_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (0.00ns)   --->   "%out_image_5_V_addr = getelementptr [28 x i48]* %out_image_5_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 128 'getelementptr' 'out_image_5_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "%out_image_6_V_addr = getelementptr [28 x i48]* %out_image_6_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 129 'getelementptr' 'out_image_6_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%out_image_7_V_addr = getelementptr [28 x i48]* %out_image_7_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 130 'getelementptr' 'out_image_7_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 131 [1/1] (0.00ns)   --->   "%out_image_8_V_addr = getelementptr [28 x i48]* %out_image_8_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 131 'getelementptr' 'out_image_8_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 132 [1/1] (0.00ns)   --->   "%out_image_9_V_addr = getelementptr [28 x i48]* %out_image_9_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 132 'getelementptr' 'out_image_9_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 133 [1/1] (0.00ns)   --->   "%out_image_10_V_addr = getelementptr [28 x i48]* %out_image_10_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 133 'getelementptr' 'out_image_10_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 134 [1/1] (0.00ns)   --->   "%out_image_11_V_addr = getelementptr [28 x i48]* %out_image_11_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 134 'getelementptr' 'out_image_11_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 135 [1/1] (0.00ns)   --->   "%out_image_12_V_addr = getelementptr [28 x i48]* %out_image_12_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 135 'getelementptr' 'out_image_12_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 136 [1/1] (0.00ns)   --->   "%out_image_13_V_addr = getelementptr [28 x i48]* %out_image_13_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 136 'getelementptr' 'out_image_13_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 137 [1/1] (0.00ns)   --->   "%out_image_14_V_addr = getelementptr [28 x i48]* %out_image_14_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 137 'getelementptr' 'out_image_14_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 138 [1/1] (0.00ns)   --->   "%out_image_15_V_addr = getelementptr [28 x i48]* %out_image_15_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 138 'getelementptr' 'out_image_15_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 139 [1/1] (0.00ns)   --->   "%out_image_16_V_addr = getelementptr [28 x i48]* %out_image_16_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 139 'getelementptr' 'out_image_16_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 140 [1/1] (0.00ns)   --->   "%out_image_17_V_addr = getelementptr [28 x i48]* %out_image_17_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 140 'getelementptr' 'out_image_17_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 141 [1/1] (0.00ns)   --->   "%out_image_18_V_addr = getelementptr [28 x i48]* %out_image_18_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 141 'getelementptr' 'out_image_18_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 142 [1/1] (0.00ns)   --->   "%out_image_19_V_addr = getelementptr [28 x i48]* %out_image_19_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 142 'getelementptr' 'out_image_19_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 143 [1/1] (0.00ns)   --->   "%out_image_20_V_addr = getelementptr [28 x i48]* %out_image_20_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 143 'getelementptr' 'out_image_20_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 144 [1/1] (0.00ns)   --->   "%out_image_21_V_addr = getelementptr [28 x i48]* %out_image_21_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 144 'getelementptr' 'out_image_21_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 145 [1/1] (0.00ns)   --->   "%out_image_22_V_addr = getelementptr [28 x i48]* %out_image_22_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 145 'getelementptr' 'out_image_22_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 146 [1/1] (0.00ns)   --->   "%out_image_23_V_addr = getelementptr [28 x i48]* %out_image_23_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 146 'getelementptr' 'out_image_23_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 147 [1/1] (0.00ns)   --->   "%out_image_24_V_addr = getelementptr [28 x i48]* %out_image_24_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 147 'getelementptr' 'out_image_24_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 148 [1/1] (0.00ns)   --->   "%out_image_25_V_addr = getelementptr [28 x i48]* %out_image_25_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 148 'getelementptr' 'out_image_25_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 149 [1/1] (0.00ns)   --->   "%out_image_26_V_addr = getelementptr [28 x i48]* %out_image_26_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 149 'getelementptr' 'out_image_26_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 150 [1/1] (0.00ns)   --->   "%out_image_27_V_addr = getelementptr [28 x i48]* %out_image_27_V, i64 0, i64 %tmp_25" [../src/CNN_final.cpp:231]   --->   Operation 150 'getelementptr' 'out_image_27_V_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 151 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_26_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 151 'store' <Predicate = (j_mid2 == 26)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 152 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 152 'br' <Predicate = (j_mid2 == 26)> <Delay = 0.00>
+ST_6 : Operation 153 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_25_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 153 'store' <Predicate = (j_mid2 == 25)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 154 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 154 'br' <Predicate = (j_mid2 == 25)> <Delay = 0.00>
+ST_6 : Operation 155 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_24_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 155 'store' <Predicate = (j_mid2 == 24)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 156 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 156 'br' <Predicate = (j_mid2 == 24)> <Delay = 0.00>
+ST_6 : Operation 157 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_23_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 157 'store' <Predicate = (j_mid2 == 23)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 158 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 158 'br' <Predicate = (j_mid2 == 23)> <Delay = 0.00>
+ST_6 : Operation 159 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_22_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 159 'store' <Predicate = (j_mid2 == 22)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 160 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 160 'br' <Predicate = (j_mid2 == 22)> <Delay = 0.00>
+ST_6 : Operation 161 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_21_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 161 'store' <Predicate = (j_mid2 == 21)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 162 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 162 'br' <Predicate = (j_mid2 == 21)> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_20_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 163 'store' <Predicate = (j_mid2 == 20)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 164 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 164 'br' <Predicate = (j_mid2 == 20)> <Delay = 0.00>
+ST_6 : Operation 165 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_19_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 165 'store' <Predicate = (j_mid2 == 19)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 166 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 166 'br' <Predicate = (j_mid2 == 19)> <Delay = 0.00>
+ST_6 : Operation 167 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_18_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 167 'store' <Predicate = (j_mid2 == 18)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 168 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 168 'br' <Predicate = (j_mid2 == 18)> <Delay = 0.00>
+ST_6 : Operation 169 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_17_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 169 'store' <Predicate = (j_mid2 == 17)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 170 'br' <Predicate = (j_mid2 == 17)> <Delay = 0.00>
+ST_6 : Operation 171 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_16_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 171 'store' <Predicate = (j_mid2 == 16)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 172 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 172 'br' <Predicate = (j_mid2 == 16)> <Delay = 0.00>
+ST_6 : Operation 173 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_15_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 173 'store' <Predicate = (j_mid2 == 15)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 174 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 174 'br' <Predicate = (j_mid2 == 15)> <Delay = 0.00>
+ST_6 : Operation 175 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_14_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 175 'store' <Predicate = (j_mid2 == 14)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 176 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 176 'br' <Predicate = (j_mid2 == 14)> <Delay = 0.00>
+ST_6 : Operation 177 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_13_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 177 'store' <Predicate = (j_mid2 == 13)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 178 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 178 'br' <Predicate = (j_mid2 == 13)> <Delay = 0.00>
+ST_6 : Operation 179 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_12_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 179 'store' <Predicate = (j_mid2 == 12)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 180 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 180 'br' <Predicate = (j_mid2 == 12)> <Delay = 0.00>
+ST_6 : Operation 181 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_11_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 181 'store' <Predicate = (j_mid2 == 11)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 182 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 182 'br' <Predicate = (j_mid2 == 11)> <Delay = 0.00>
+ST_6 : Operation 183 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_10_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 183 'store' <Predicate = (j_mid2 == 10)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 184 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 184 'br' <Predicate = (j_mid2 == 10)> <Delay = 0.00>
+ST_6 : Operation 185 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_9_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 185 'store' <Predicate = (j_mid2 == 9)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 186 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 186 'br' <Predicate = (j_mid2 == 9)> <Delay = 0.00>
+ST_6 : Operation 187 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_8_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 187 'store' <Predicate = (j_mid2 == 8)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 188 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 188 'br' <Predicate = (j_mid2 == 8)> <Delay = 0.00>
+ST_6 : Operation 189 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_7_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 189 'store' <Predicate = (j_mid2 == 7)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 190 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 190 'br' <Predicate = (j_mid2 == 7)> <Delay = 0.00>
+ST_6 : Operation 191 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_6_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 191 'store' <Predicate = (j_mid2 == 6)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 192 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 192 'br' <Predicate = (j_mid2 == 6)> <Delay = 0.00>
+ST_6 : Operation 193 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_5_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 193 'store' <Predicate = (j_mid2 == 5)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 194 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 194 'br' <Predicate = (j_mid2 == 5)> <Delay = 0.00>
+ST_6 : Operation 195 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_4_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 195 'store' <Predicate = (j_mid2 == 4)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 196 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 196 'br' <Predicate = (j_mid2 == 4)> <Delay = 0.00>
+ST_6 : Operation 197 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_3_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 197 'store' <Predicate = (j_mid2 == 3)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 198 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 198 'br' <Predicate = (j_mid2 == 3)> <Delay = 0.00>
+ST_6 : Operation 199 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_2_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 199 'store' <Predicate = (j_mid2 == 2)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 200 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 200 'br' <Predicate = (j_mid2 == 2)> <Delay = 0.00>
+ST_6 : Operation 201 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_1_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 201 'store' <Predicate = (j_mid2 == 1)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 202 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 202 'br' <Predicate = (j_mid2 == 1)> <Delay = 0.00>
+ST_6 : Operation 203 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_0_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 203 'store' <Predicate = (j_mid2 == 0)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 204 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 204 'br' <Predicate = (j_mid2 == 0)> <Delay = 0.00>
+ST_6 : Operation 205 [1/1] (2.26ns)   --->   "store i48 %tmp_26, i48* %out_image_27_V_addr, align 8" [../src/CNN_final.cpp:231]   --->   Operation 205 'store' <Predicate = (j_mid2 == 27) | (j_mid2 == 28) | (j_mid2 == 29) | (j_mid2 == 30) | (j_mid2 == 31)> <Delay = 2.26> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 28> <RAM>
+ST_6 : Operation 206 [1/1] (0.00ns)   --->   "br label %ifBlock" [../src/CNN_final.cpp:231]   --->   Operation 206 'br' <Predicate = (j_mid2 == 27) | (j_mid2 == 28) | (j_mid2 == 29) | (j_mid2 == 30) | (j_mid2 == 31)> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 0.00>
+ST_7 : Operation 207 [1/1] (0.00ns)   --->   "ret void" [../src/CNN_final.cpp:235]   --->   Operation 207 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0.872ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [66]  (0.872 ns)
+
+ <State 2>: 2.66ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ../src/CNN_final.cpp:229) [68]  (0 ns)
+	'icmp' operation ('tmp_23', ../src/CNN_final.cpp:229) [75]  (0.887 ns)
+	'select' operation ('k_mid2', ../src/CNN_final.cpp:229) [76]  (0.625 ns)
+	'getelementptr' operation ('in_image_3_V_addr', ../src/CNN_final.cpp:231) [88]  (0 ns)
+	'load' operation ('in_image_3_V_load', ../src/CNN_final.cpp:231) on array 'in_image_3_V' [89]  (1.15 ns)
+
+ <State 3>: 2.9ns
+The critical path consists of the following:
+	'load' operation ('in_image_0_V_load', ../src/CNN_final.cpp:231) on array 'in_image_0_V' [83]  (1.15 ns)
+	'mux' operation ('tmp_13', ../src/CNN_final.cpp:231) [138]  (1.75 ns)
+
+ <State 4>: 3.04ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_s', ../src/CNN_final.cpp:231) [140]  (3.04 ns)
+
+ <State 5>: 2.7ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_s', ../src/CNN_final.cpp:231) [140]  (0 ns)
+	'add' operation ('p_Val2_s_24', ../src/CNN_final.cpp:231) [141]  (2.7 ns)
+
+ <State 6>: 2.27ns
+The critical path consists of the following:
+	'store' operation (../src/CNN_final.cpp:231) of variable 'tmp_26', ../src/CNN_final.cpp:231 on array 'out_image_19_V' [194]  (2.27 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

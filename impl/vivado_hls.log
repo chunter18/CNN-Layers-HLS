@@ -1,0 +1,135 @@
+INFO: [HLS 200-10] Running 'A:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'chunt' on host 'desktop-s201mjr' (Windows NT_amd64 version 6.2) on Tue Dec 03 12:56:33 -0800 2019
+INFO: [HLS 200-10] In directory 'C:/Users/chunt/Desktop/ELEN226/final/impl'
+INFO: [HLS 200-10] Opening project 'C:/Users/chunt/Desktop/ELEN226/final/impl/final'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/chunt/Desktop/ELEN226/final/impl/final/bigger_II'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k325tffg676-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../src/tb.cpp in debug mode
+   Compiling ../../../../../src/intermediate.cpp in debug mode
+   Compiling ../../../../../src/helper.cpp in debug mode
+   Compiling ../../../../../src/CNN_final.cpp in debug mode
+   Generating csim.exe
+In file included from A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/tb.cpp:1:
+A:/Xilinx/Vivado/2018.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/tb.cpp:1:
+A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/intermediate.cpp:1:
+A:/Xilinx/Vivado/2018.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/intermediate.cpp:1:
+A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/helper.cpp:4:
+A:/Xilinx/Vivado/2018.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/helper.cpp:4:
+A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/CNN_final.cpp:1:
+A:/Xilinx/Vivado/2018.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from A:/Xilinx/Vivado/2018.2/include/hls_fpo.h:166:0,
+                 from A:/Xilinx/Vivado/2018.2/include/hls_half.h:58,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int_sim.h:73,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_int.h:65,
+                 from A:/Xilinx/Vivado/2018.2/include/ap_fixed.h:57,
+                 from ../../../../../src/CNN_final.h:5,
+                 from ../../../../../src/CNN_final.cpp:1:
+A:/Xilinx/Vivado/2018.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+opening file: input_single.dat
+
+opening file: pixel_means.dat
+
+opening file: conv1_weights.dat
+
+opening file: conv1_bias.dat
+
+
+opening file: bn_params.dat
+
+
+
+opening file: conv2_weights.dat
+
+opening file: conv2_bias.dat
+
+opening golden file: conv2_single.dat
+
+1.13811e-008
+Max diff was : 0.000451088
+Max diff on index [7][7]
+There were 0 diffs above 0.1
+2.58022e-008
+Max diff was : 0.000550985
+Max diff on index [7][8]
+There were 0 diffs above 0.1
+4.2069e-008
+Max diff was : 0.000556231
+Max diff on index [7][9]
+There were 0 diffs above 0.1
+5.19248e-008
+Max diff was : 0.000458002
+Max diff on index [5][9]
+There were 0 diffs above 0.1
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

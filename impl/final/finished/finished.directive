@@ -1,0 +1,182 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="DATAFLOW"/>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="in_image" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="28"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="means" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="28"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="conv_kernel_L1" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="conv_kernel_L2" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="9"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="conv_bias_L2" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="mean_removed" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="28"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="padded" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="30"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="resampled" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="3"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="conv" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="28"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="batchnorm" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="28"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="ReLU" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="28"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="maxpool" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="14"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="padded_L2" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="resampled_L2" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="3"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="CNN" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="result" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="14"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="zero_mean_1chan" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="efficient_pad_n_1chan" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="pad_for_conv2" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="resample" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="resample_for_conv2" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="conv2d_3x3_1chan_rev2" label="L1" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="conv2d_3x3_4chan_rev2" label="L2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="batch_norm" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="relu" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="max_pool_1chan" label="col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+                <option name="rewind" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

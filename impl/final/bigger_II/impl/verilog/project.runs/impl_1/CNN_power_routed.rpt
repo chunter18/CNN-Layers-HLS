@@ -1,0 +1,384 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Tue Dec  3 11:27:02 2019
+| Host             : DESKTOP-S201MJR running 64-bit major release  (build 9200)
+| Command          : report_power -file CNN_power_routed.rpt -pb CNN_power_summary_routed.pb -rpx CNN_power_routed.rpx
+| Design           : CNN
+| Device           : xc7k325tffg676-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.414        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.253        |
+| Device Static (W)        | 0.161        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.032 |        3 |       --- |             --- |
+| Slice Logic             |     0.027 |    10701 |       --- |             --- |
+|   LUT as Logic          |     0.025 |     5318 |    203800 |            2.61 |
+|   CARRY4                |     0.001 |      184 |     50950 |            0.36 |
+|   Register              |    <0.001 |     3270 |    407600 |            0.80 |
+|   LUT as Shift Register |    <0.001 |      328 |     64000 |            0.51 |
+|   F7/F8 Muxes           |    <0.001 |      230 |    203800 |            0.11 |
+|   Others                |     0.000 |      277 |       --- |             --- |
+| Signals                 |     0.049 |    10925 |       --- |             --- |
+| Block RAM               |     0.133 |     46.5 |       445 |           10.45 |
+| DSPs                    |     0.013 |       20 |       840 |            2.38 |
+| Static Power            |     0.161 |          |           |                 |
+| Total                   |     0.414 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.316 |       0.245 |      0.071 |
+| Vccaux    |       1.800 |     0.028 |       0.000 |      0.028 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.011 |       0.008 |      0.003 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------+--------+-----------------+
+| Clock  | Domain | Constraint (ns) |
++--------+--------+-----------------+
+| ap_clk | ap_clk |             5.0 |
++--------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| CNN                                              |     0.253 |
+|   ReLU_V_U                                       |     0.012 |
+|     gen_buffer[0].CNN_ReLU_V_memcore_U           |     0.006 |
+|       CNN_ReLU_V_memcore_ram_U                   |     0.006 |
+|     gen_buffer[1].CNN_ReLU_V_memcore_U           |     0.006 |
+|       CNN_ReLU_V_memcore_ram_U                   |     0.006 |
+|   a_V_c_U                                        |    <0.001 |
+|     U_fifo_w18_d5_A_ram                          |    <0.001 |
+|   b_V_c_U                                        |    <0.001 |
+|     U_fifo_w18_d5_A_ram                          |    <0.001 |
+|   batch_norm_U0                                  |     0.005 |
+|     CNN_mux_732_25_2_1_U117                      |     0.001 |
+|   batchnorm_V_U                                  |     0.023 |
+|     CNN_batchnorm_V_memcore_U                    |     0.023 |
+|       CNN_batchnorm_V_memcore_ram_U              |     0.023 |
+|   conv2d_3x3_1chan_rev_U0                        |     0.009 |
+|     CNN_mac_muladd_18cud_U81                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U82                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U83                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U84                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U85                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U86                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U87                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|     CNN_mac_muladd_18cud_U88                     |    <0.001 |
+|       CNN_mac_muladd_18cud_DSP48_1_U             |    <0.001 |
+|   conv2d_3x3_4chan_rev_U0                        |     0.026 |
+|     CNN_mux_42_48_1_1_U152                       |    <0.001 |
+|   conv_0_V_U                                     |     0.003 |
+|     CNN_conv_0_V_memcore_U                       |     0.003 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.003 |
+|   conv_1_V_U                                     |     0.004 |
+|     CNN_conv_0_V_memcore_U                       |     0.004 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.004 |
+|   conv_2_V_U                                     |     0.004 |
+|     CNN_conv_0_V_memcore_U                       |     0.004 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.004 |
+|   conv_3_V_U                                     |     0.003 |
+|     CNN_conv_0_V_memcore_U                       |     0.003 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.003 |
+|   conv_4_V_U                                     |     0.003 |
+|     CNN_conv_0_V_memcore_U                       |     0.003 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.003 |
+|   conv_5_V_U                                     |     0.003 |
+|     CNN_conv_0_V_memcore_U                       |     0.003 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.003 |
+|   conv_6_V_U                                     |     0.003 |
+|     CNN_conv_0_V_memcore_U                       |     0.003 |
+|       CNN_conv_0_V_memcore_ram_U                 |     0.003 |
+|   conv_bias_L1_V_c_U                             |    <0.001 |
+|     U_fifo_w48_d4_A_ram                          |    <0.001 |
+|   conv_bias_L2_0_V_c_U                           |    <0.001 |
+|     U_fifo_w48_d10_A_ram                         |    <0.001 |
+|   conv_bias_L2_1_V_c_U                           |    <0.001 |
+|     U_fifo_w48_d10_A_ram                         |    <0.001 |
+|   conv_bias_L2_2_V_c_U                           |    <0.001 |
+|     U_fifo_w48_d10_A_ram                         |    <0.001 |
+|   conv_bias_L2_3_V_c_U                           |    <0.001 |
+|     U_fifo_w48_d10_A_ram                         |    <0.001 |
+|   conv_kernel_L1_0_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_1_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_2_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_3_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_4_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_5_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_6_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_7_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   conv_kernel_L1_8_V_s_U                         |    <0.001 |
+|     U_fifo_w18_d4_A_ram                          |    <0.001 |
+|   efficient_pad_n_1cha_U0                        |     0.008 |
+|   max_pool_1chan_U0                              |     0.007 |
+|   maxpool_V_U                                    |     0.007 |
+|     CNN_maxpool_V_memcore_U                      |     0.007 |
+|       CNN_maxpool_V_memcore_ram_U                |     0.007 |
+|   mean_removed_V_U                               |     0.019 |
+|     CNN_mean_removed_V_memcore_U                 |     0.019 |
+|       CNN_mean_removed_V_memcore_ram_U           |     0.019 |
+|   pad_for_conv2_U0                               |     0.004 |
+|   padded_0_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_10_V_U                                  |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_11_V_U                                  |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_12_V_U                                  |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_13_V_U                                  |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_14_V_U                                  |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.003 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.003 |
+|   padded_1_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_2_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_3_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_4_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_5_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_6_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_7_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_8_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_9_V_U                                   |     0.004 |
+|     gen_buffer[0].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|     gen_buffer[1].CNN_padded_0_V_memcore_U       |     0.002 |
+|       CNN_padded_0_V_memcore_ram_U               |     0.002 |
+|   padded_L2_0_V_U                                |     0.006 |
+|     gen_buffer[0].CNN_padded_L2_0_V_memcore_U    |     0.003 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.003 |
+|     gen_buffer[1].CNN_padded_L2_0_V_memcore_U    |     0.003 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.003 |
+|   padded_L2_1_V_U                                |     0.005 |
+|     gen_buffer[0].CNN_padded_L2_0_V_memcore_U    |     0.003 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.003 |
+|     gen_buffer[1].CNN_padded_L2_0_V_memcore_U    |     0.002 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.002 |
+|   padded_L2_2_V_U                                |     0.005 |
+|     gen_buffer[0].CNN_padded_L2_0_V_memcore_U    |     0.002 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.002 |
+|     gen_buffer[1].CNN_padded_L2_0_V_memcore_U    |     0.003 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.003 |
+|   padded_L2_3_V_U                                |     0.008 |
+|     gen_buffer[0].CNN_padded_L2_0_V_memcore_U    |     0.004 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.004 |
+|     gen_buffer[1].CNN_padded_L2_0_V_memcore_U    |     0.004 |
+|       CNN_padded_L2_0_V_memcore_ram_U            |     0.004 |
+|   relu_U0                                        |     0.001 |
+|   resample_U0                                    |     0.007 |
+|     CNN_mux_1532_18_2_1_U52                      |    <0.001 |
+|     CNN_mux_1532_18_2_1_U53                      |    <0.001 |
+|     CNN_mux_1532_18_2_1_U54                      |    <0.001 |
+|   resample_for_conv2_U0                          |     0.007 |
+|     CNN_mux_432_25_1_1_U141                      |    <0.001 |
+|     CNN_urem_4ns_4ns_eOg_U140                    |    <0.001 |
+|       CNN_urem_4ns_4ns_eOg_div_U                 |    <0.001 |
+|         CNN_urem_4ns_4ns_eOg_div_u_0             |    <0.001 |
+|   resampled_0_0_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_0_1_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_0_2_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_0_3_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_0_4_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_1_0_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_1_1_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_1_2_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_1_3_V_U                              |    <0.001 |
+|     CNN_mean_removed_V_memcore_U                 |    <0.001 |
+|       CNN_mean_removed_V_memcore_ram_U           |    <0.001 |
+|   resampled_L2_0_V_U                             |    <0.001 |
+|     gen_buffer[0].CNN_resampled_L2_hbi_memcore_U |    <0.001 |
+|       CNN_resampled_L2_hbi_memcore_ram_U         |    <0.001 |
+|     gen_buffer[1].CNN_resampled_L2_hbi_memcore_U |    <0.001 |
+|       CNN_resampled_L2_hbi_memcore_ram_U         |    <0.001 |
+|   resampled_L2_1_V_U                             |    <0.001 |
+|     gen_buffer[0].CNN_resampled_L2_ibs_memcore_U |    <0.001 |
+|       CNN_resampled_L2_ibs_memcore_ram_U         |    <0.001 |
+|     gen_buffer[1].CNN_resampled_L2_ibs_memcore_U |    <0.001 |
+|       CNN_resampled_L2_ibs_memcore_ram_U         |    <0.001 |
+|   zero_mean_1chan64_U0                           |     0.002 |
++--------------------------------------------------+-----------+
+
+

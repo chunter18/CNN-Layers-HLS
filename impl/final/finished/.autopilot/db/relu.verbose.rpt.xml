@@ -1,0 +1,396 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'relu'" level="0">
+<item name = "Date">Mon Dec  2 23:35:55 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">final</item>
+<item name = "Solution">finished</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325tffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.021, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">787, 787, 787, 787, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- row_col">785, 785, 3, 1, 1, 784, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 169</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 0, 17</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 444</column>
+<column name="Register">-, -, 97, -</column>
+<specialColumn name="Available">890, 840, 407600, 203800</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="CNN_mux_285_48_1_1_U306">CNN_mux_285_48_1_1, 0, 0, 0, 17</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="indvar_flatten_next_fu_993_p2">+, 0, 0, 17, 10, 1</column>
+<column name="j_1_fu_999_p2">+, 0, 0, 15, 5, 1</column>
+<column name="k_1_fu_1059_p2">+, 0, 0, 15, 5, 1</column>
+<column name="ap_condition_1001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1004">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1007">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1010">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1013">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1016">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1019">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1026">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1029">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1032">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1035">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1038">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1041">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1044">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_1047">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_965">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_968">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_971">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_974">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_977">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_980">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_983">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_986">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_989">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_992">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_995">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_998">and, 0, 0, 2, 1, 1</column>
+<column name="exitcond_flatten_fu_987_p2">icmp, 0, 0, 13, 10, 9</column>
+<column name="tmp_4_fu_1126_p2">icmp, 0, 0, 24, 48, 1</column>
+<column name="tmp_5_fu_1005_p2">icmp, 0, 0, 11, 5, 4</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_850">or, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_861">or, 0, 0, 2, 1, 1</column>
+<column name="j_mid2_fu_1019_p3">select, 0, 0, 5, 1, 5</column>
+<column name="k_mid2_fu_1011_p3">select, 0, 0, 5, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="activations_0_V_d0">13, 3, 48, 144</column>
+<column name="activations_10_V_d0">13, 3, 48, 144</column>
+<column name="activations_11_V_d0">13, 3, 48, 144</column>
+<column name="activations_12_V_d0">13, 3, 48, 144</column>
+<column name="activations_13_V_d0">13, 3, 48, 144</column>
+<column name="activations_14_V_d0">13, 3, 48, 144</column>
+<column name="activations_15_V_d0">13, 3, 48, 144</column>
+<column name="activations_16_V_d0">13, 3, 48, 144</column>
+<column name="activations_17_V_d0">13, 3, 48, 144</column>
+<column name="activations_18_V_d0">13, 3, 48, 144</column>
+<column name="activations_19_V_d0">13, 3, 48, 144</column>
+<column name="activations_1_V_d0">13, 3, 48, 144</column>
+<column name="activations_20_V_d0">13, 3, 48, 144</column>
+<column name="activations_21_V_d0">13, 3, 48, 144</column>
+<column name="activations_22_V_d0">13, 3, 48, 144</column>
+<column name="activations_23_V_d0">13, 3, 48, 144</column>
+<column name="activations_24_V_d0">13, 3, 48, 144</column>
+<column name="activations_25_V_d0">13, 3, 48, 144</column>
+<column name="activations_26_V_d0">13, 3, 48, 144</column>
+<column name="activations_27_V_d0">13, 3, 48, 144</column>
+<column name="activations_2_V_d0">13, 3, 48, 144</column>
+<column name="activations_3_V_d0">13, 3, 48, 144</column>
+<column name="activations_4_V_d0">13, 3, 48, 144</column>
+<column name="activations_5_V_d0">13, 3, 48, 144</column>
+<column name="activations_6_V_d0">13, 3, 48, 144</column>
+<column name="activations_7_V_d0">13, 3, 48, 144</column>
+<column name="activations_8_V_d0">13, 3, 48, 144</column>
+<column name="activations_9_V_d0">13, 3, 48, 144</column>
+<column name="ap_NS_fsm">17, 4, 1, 4</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
+<column name="ap_phi_mux_j_phi_fu_969_p4">9, 2, 5, 10</column>
+<column name="indvar_flatten_reg_954">9, 2, 10, 20</column>
+<column name="j_reg_965">9, 2, 5, 10</column>
+<column name="k_reg_976">9, 2, 5, 10</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="exitcond_flatten_reg_1131">1, 0, 1, 0</column>
+<column name="exitcond_flatten_reg_1131_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="indvar_flatten_reg_954">10, 0, 10, 0</column>
+<column name="j_mid2_reg_1140">5, 0, 5, 0</column>
+<column name="j_mid2_reg_1140_pp0_iter1_reg">5, 0, 5, 0</column>
+<column name="j_reg_965">5, 0, 5, 0</column>
+<column name="k_reg_976">5, 0, 5, 0</column>
+<column name="tmp_3_reg_1146">5, 0, 64, 59</column>
+<column name="tmp_3_reg_1146_pp0_iter1_reg">5, 0, 64, 59</column>
+<column name="tmp_9_reg_1323">48, 0, 48, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, relu, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, relu, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, relu, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, relu, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, relu, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, relu, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, relu, return value</column>
+<column name="in_features_0_V_address0">out, 5, ap_memory, in_features_0_V, array</column>
+<column name="in_features_0_V_ce0">out, 1, ap_memory, in_features_0_V, array</column>
+<column name="in_features_0_V_q0">in, 48, ap_memory, in_features_0_V, array</column>
+<column name="in_features_1_V_address0">out, 5, ap_memory, in_features_1_V, array</column>
+<column name="in_features_1_V_ce0">out, 1, ap_memory, in_features_1_V, array</column>
+<column name="in_features_1_V_q0">in, 48, ap_memory, in_features_1_V, array</column>
+<column name="in_features_2_V_address0">out, 5, ap_memory, in_features_2_V, array</column>
+<column name="in_features_2_V_ce0">out, 1, ap_memory, in_features_2_V, array</column>
+<column name="in_features_2_V_q0">in, 48, ap_memory, in_features_2_V, array</column>
+<column name="in_features_3_V_address0">out, 5, ap_memory, in_features_3_V, array</column>
+<column name="in_features_3_V_ce0">out, 1, ap_memory, in_features_3_V, array</column>
+<column name="in_features_3_V_q0">in, 48, ap_memory, in_features_3_V, array</column>
+<column name="in_features_4_V_address0">out, 5, ap_memory, in_features_4_V, array</column>
+<column name="in_features_4_V_ce0">out, 1, ap_memory, in_features_4_V, array</column>
+<column name="in_features_4_V_q0">in, 48, ap_memory, in_features_4_V, array</column>
+<column name="in_features_5_V_address0">out, 5, ap_memory, in_features_5_V, array</column>
+<column name="in_features_5_V_ce0">out, 1, ap_memory, in_features_5_V, array</column>
+<column name="in_features_5_V_q0">in, 48, ap_memory, in_features_5_V, array</column>
+<column name="in_features_6_V_address0">out, 5, ap_memory, in_features_6_V, array</column>
+<column name="in_features_6_V_ce0">out, 1, ap_memory, in_features_6_V, array</column>
+<column name="in_features_6_V_q0">in, 48, ap_memory, in_features_6_V, array</column>
+<column name="in_features_7_V_address0">out, 5, ap_memory, in_features_7_V, array</column>
+<column name="in_features_7_V_ce0">out, 1, ap_memory, in_features_7_V, array</column>
+<column name="in_features_7_V_q0">in, 48, ap_memory, in_features_7_V, array</column>
+<column name="in_features_8_V_address0">out, 5, ap_memory, in_features_8_V, array</column>
+<column name="in_features_8_V_ce0">out, 1, ap_memory, in_features_8_V, array</column>
+<column name="in_features_8_V_q0">in, 48, ap_memory, in_features_8_V, array</column>
+<column name="in_features_9_V_address0">out, 5, ap_memory, in_features_9_V, array</column>
+<column name="in_features_9_V_ce0">out, 1, ap_memory, in_features_9_V, array</column>
+<column name="in_features_9_V_q0">in, 48, ap_memory, in_features_9_V, array</column>
+<column name="in_features_10_V_address0">out, 5, ap_memory, in_features_10_V, array</column>
+<column name="in_features_10_V_ce0">out, 1, ap_memory, in_features_10_V, array</column>
+<column name="in_features_10_V_q0">in, 48, ap_memory, in_features_10_V, array</column>
+<column name="in_features_11_V_address0">out, 5, ap_memory, in_features_11_V, array</column>
+<column name="in_features_11_V_ce0">out, 1, ap_memory, in_features_11_V, array</column>
+<column name="in_features_11_V_q0">in, 48, ap_memory, in_features_11_V, array</column>
+<column name="in_features_12_V_address0">out, 5, ap_memory, in_features_12_V, array</column>
+<column name="in_features_12_V_ce0">out, 1, ap_memory, in_features_12_V, array</column>
+<column name="in_features_12_V_q0">in, 48, ap_memory, in_features_12_V, array</column>
+<column name="in_features_13_V_address0">out, 5, ap_memory, in_features_13_V, array</column>
+<column name="in_features_13_V_ce0">out, 1, ap_memory, in_features_13_V, array</column>
+<column name="in_features_13_V_q0">in, 48, ap_memory, in_features_13_V, array</column>
+<column name="in_features_14_V_address0">out, 5, ap_memory, in_features_14_V, array</column>
+<column name="in_features_14_V_ce0">out, 1, ap_memory, in_features_14_V, array</column>
+<column name="in_features_14_V_q0">in, 48, ap_memory, in_features_14_V, array</column>
+<column name="in_features_15_V_address0">out, 5, ap_memory, in_features_15_V, array</column>
+<column name="in_features_15_V_ce0">out, 1, ap_memory, in_features_15_V, array</column>
+<column name="in_features_15_V_q0">in, 48, ap_memory, in_features_15_V, array</column>
+<column name="in_features_16_V_address0">out, 5, ap_memory, in_features_16_V, array</column>
+<column name="in_features_16_V_ce0">out, 1, ap_memory, in_features_16_V, array</column>
+<column name="in_features_16_V_q0">in, 48, ap_memory, in_features_16_V, array</column>
+<column name="in_features_17_V_address0">out, 5, ap_memory, in_features_17_V, array</column>
+<column name="in_features_17_V_ce0">out, 1, ap_memory, in_features_17_V, array</column>
+<column name="in_features_17_V_q0">in, 48, ap_memory, in_features_17_V, array</column>
+<column name="in_features_18_V_address0">out, 5, ap_memory, in_features_18_V, array</column>
+<column name="in_features_18_V_ce0">out, 1, ap_memory, in_features_18_V, array</column>
+<column name="in_features_18_V_q0">in, 48, ap_memory, in_features_18_V, array</column>
+<column name="in_features_19_V_address0">out, 5, ap_memory, in_features_19_V, array</column>
+<column name="in_features_19_V_ce0">out, 1, ap_memory, in_features_19_V, array</column>
+<column name="in_features_19_V_q0">in, 48, ap_memory, in_features_19_V, array</column>
+<column name="in_features_20_V_address0">out, 5, ap_memory, in_features_20_V, array</column>
+<column name="in_features_20_V_ce0">out, 1, ap_memory, in_features_20_V, array</column>
+<column name="in_features_20_V_q0">in, 48, ap_memory, in_features_20_V, array</column>
+<column name="in_features_21_V_address0">out, 5, ap_memory, in_features_21_V, array</column>
+<column name="in_features_21_V_ce0">out, 1, ap_memory, in_features_21_V, array</column>
+<column name="in_features_21_V_q0">in, 48, ap_memory, in_features_21_V, array</column>
+<column name="in_features_22_V_address0">out, 5, ap_memory, in_features_22_V, array</column>
+<column name="in_features_22_V_ce0">out, 1, ap_memory, in_features_22_V, array</column>
+<column name="in_features_22_V_q0">in, 48, ap_memory, in_features_22_V, array</column>
+<column name="in_features_23_V_address0">out, 5, ap_memory, in_features_23_V, array</column>
+<column name="in_features_23_V_ce0">out, 1, ap_memory, in_features_23_V, array</column>
+<column name="in_features_23_V_q0">in, 48, ap_memory, in_features_23_V, array</column>
+<column name="in_features_24_V_address0">out, 5, ap_memory, in_features_24_V, array</column>
+<column name="in_features_24_V_ce0">out, 1, ap_memory, in_features_24_V, array</column>
+<column name="in_features_24_V_q0">in, 48, ap_memory, in_features_24_V, array</column>
+<column name="in_features_25_V_address0">out, 5, ap_memory, in_features_25_V, array</column>
+<column name="in_features_25_V_ce0">out, 1, ap_memory, in_features_25_V, array</column>
+<column name="in_features_25_V_q0">in, 48, ap_memory, in_features_25_V, array</column>
+<column name="in_features_26_V_address0">out, 5, ap_memory, in_features_26_V, array</column>
+<column name="in_features_26_V_ce0">out, 1, ap_memory, in_features_26_V, array</column>
+<column name="in_features_26_V_q0">in, 48, ap_memory, in_features_26_V, array</column>
+<column name="in_features_27_V_address0">out, 5, ap_memory, in_features_27_V, array</column>
+<column name="in_features_27_V_ce0">out, 1, ap_memory, in_features_27_V, array</column>
+<column name="in_features_27_V_q0">in, 48, ap_memory, in_features_27_V, array</column>
+<column name="activations_0_V_address0">out, 5, ap_memory, activations_0_V, array</column>
+<column name="activations_0_V_ce0">out, 1, ap_memory, activations_0_V, array</column>
+<column name="activations_0_V_we0">out, 1, ap_memory, activations_0_V, array</column>
+<column name="activations_0_V_d0">out, 48, ap_memory, activations_0_V, array</column>
+<column name="activations_1_V_address0">out, 5, ap_memory, activations_1_V, array</column>
+<column name="activations_1_V_ce0">out, 1, ap_memory, activations_1_V, array</column>
+<column name="activations_1_V_we0">out, 1, ap_memory, activations_1_V, array</column>
+<column name="activations_1_V_d0">out, 48, ap_memory, activations_1_V, array</column>
+<column name="activations_2_V_address0">out, 5, ap_memory, activations_2_V, array</column>
+<column name="activations_2_V_ce0">out, 1, ap_memory, activations_2_V, array</column>
+<column name="activations_2_V_we0">out, 1, ap_memory, activations_2_V, array</column>
+<column name="activations_2_V_d0">out, 48, ap_memory, activations_2_V, array</column>
+<column name="activations_3_V_address0">out, 5, ap_memory, activations_3_V, array</column>
+<column name="activations_3_V_ce0">out, 1, ap_memory, activations_3_V, array</column>
+<column name="activations_3_V_we0">out, 1, ap_memory, activations_3_V, array</column>
+<column name="activations_3_V_d0">out, 48, ap_memory, activations_3_V, array</column>
+<column name="activations_4_V_address0">out, 5, ap_memory, activations_4_V, array</column>
+<column name="activations_4_V_ce0">out, 1, ap_memory, activations_4_V, array</column>
+<column name="activations_4_V_we0">out, 1, ap_memory, activations_4_V, array</column>
+<column name="activations_4_V_d0">out, 48, ap_memory, activations_4_V, array</column>
+<column name="activations_5_V_address0">out, 5, ap_memory, activations_5_V, array</column>
+<column name="activations_5_V_ce0">out, 1, ap_memory, activations_5_V, array</column>
+<column name="activations_5_V_we0">out, 1, ap_memory, activations_5_V, array</column>
+<column name="activations_5_V_d0">out, 48, ap_memory, activations_5_V, array</column>
+<column name="activations_6_V_address0">out, 5, ap_memory, activations_6_V, array</column>
+<column name="activations_6_V_ce0">out, 1, ap_memory, activations_6_V, array</column>
+<column name="activations_6_V_we0">out, 1, ap_memory, activations_6_V, array</column>
+<column name="activations_6_V_d0">out, 48, ap_memory, activations_6_V, array</column>
+<column name="activations_7_V_address0">out, 5, ap_memory, activations_7_V, array</column>
+<column name="activations_7_V_ce0">out, 1, ap_memory, activations_7_V, array</column>
+<column name="activations_7_V_we0">out, 1, ap_memory, activations_7_V, array</column>
+<column name="activations_7_V_d0">out, 48, ap_memory, activations_7_V, array</column>
+<column name="activations_8_V_address0">out, 5, ap_memory, activations_8_V, array</column>
+<column name="activations_8_V_ce0">out, 1, ap_memory, activations_8_V, array</column>
+<column name="activations_8_V_we0">out, 1, ap_memory, activations_8_V, array</column>
+<column name="activations_8_V_d0">out, 48, ap_memory, activations_8_V, array</column>
+<column name="activations_9_V_address0">out, 5, ap_memory, activations_9_V, array</column>
+<column name="activations_9_V_ce0">out, 1, ap_memory, activations_9_V, array</column>
+<column name="activations_9_V_we0">out, 1, ap_memory, activations_9_V, array</column>
+<column name="activations_9_V_d0">out, 48, ap_memory, activations_9_V, array</column>
+<column name="activations_10_V_address0">out, 5, ap_memory, activations_10_V, array</column>
+<column name="activations_10_V_ce0">out, 1, ap_memory, activations_10_V, array</column>
+<column name="activations_10_V_we0">out, 1, ap_memory, activations_10_V, array</column>
+<column name="activations_10_V_d0">out, 48, ap_memory, activations_10_V, array</column>
+<column name="activations_11_V_address0">out, 5, ap_memory, activations_11_V, array</column>
+<column name="activations_11_V_ce0">out, 1, ap_memory, activations_11_V, array</column>
+<column name="activations_11_V_we0">out, 1, ap_memory, activations_11_V, array</column>
+<column name="activations_11_V_d0">out, 48, ap_memory, activations_11_V, array</column>
+<column name="activations_12_V_address0">out, 5, ap_memory, activations_12_V, array</column>
+<column name="activations_12_V_ce0">out, 1, ap_memory, activations_12_V, array</column>
+<column name="activations_12_V_we0">out, 1, ap_memory, activations_12_V, array</column>
+<column name="activations_12_V_d0">out, 48, ap_memory, activations_12_V, array</column>
+<column name="activations_13_V_address0">out, 5, ap_memory, activations_13_V, array</column>
+<column name="activations_13_V_ce0">out, 1, ap_memory, activations_13_V, array</column>
+<column name="activations_13_V_we0">out, 1, ap_memory, activations_13_V, array</column>
+<column name="activations_13_V_d0">out, 48, ap_memory, activations_13_V, array</column>
+<column name="activations_14_V_address0">out, 5, ap_memory, activations_14_V, array</column>
+<column name="activations_14_V_ce0">out, 1, ap_memory, activations_14_V, array</column>
+<column name="activations_14_V_we0">out, 1, ap_memory, activations_14_V, array</column>
+<column name="activations_14_V_d0">out, 48, ap_memory, activations_14_V, array</column>
+<column name="activations_15_V_address0">out, 5, ap_memory, activations_15_V, array</column>
+<column name="activations_15_V_ce0">out, 1, ap_memory, activations_15_V, array</column>
+<column name="activations_15_V_we0">out, 1, ap_memory, activations_15_V, array</column>
+<column name="activations_15_V_d0">out, 48, ap_memory, activations_15_V, array</column>
+<column name="activations_16_V_address0">out, 5, ap_memory, activations_16_V, array</column>
+<column name="activations_16_V_ce0">out, 1, ap_memory, activations_16_V, array</column>
+<column name="activations_16_V_we0">out, 1, ap_memory, activations_16_V, array</column>
+<column name="activations_16_V_d0">out, 48, ap_memory, activations_16_V, array</column>
+<column name="activations_17_V_address0">out, 5, ap_memory, activations_17_V, array</column>
+<column name="activations_17_V_ce0">out, 1, ap_memory, activations_17_V, array</column>
+<column name="activations_17_V_we0">out, 1, ap_memory, activations_17_V, array</column>
+<column name="activations_17_V_d0">out, 48, ap_memory, activations_17_V, array</column>
+<column name="activations_18_V_address0">out, 5, ap_memory, activations_18_V, array</column>
+<column name="activations_18_V_ce0">out, 1, ap_memory, activations_18_V, array</column>
+<column name="activations_18_V_we0">out, 1, ap_memory, activations_18_V, array</column>
+<column name="activations_18_V_d0">out, 48, ap_memory, activations_18_V, array</column>
+<column name="activations_19_V_address0">out, 5, ap_memory, activations_19_V, array</column>
+<column name="activations_19_V_ce0">out, 1, ap_memory, activations_19_V, array</column>
+<column name="activations_19_V_we0">out, 1, ap_memory, activations_19_V, array</column>
+<column name="activations_19_V_d0">out, 48, ap_memory, activations_19_V, array</column>
+<column name="activations_20_V_address0">out, 5, ap_memory, activations_20_V, array</column>
+<column name="activations_20_V_ce0">out, 1, ap_memory, activations_20_V, array</column>
+<column name="activations_20_V_we0">out, 1, ap_memory, activations_20_V, array</column>
+<column name="activations_20_V_d0">out, 48, ap_memory, activations_20_V, array</column>
+<column name="activations_21_V_address0">out, 5, ap_memory, activations_21_V, array</column>
+<column name="activations_21_V_ce0">out, 1, ap_memory, activations_21_V, array</column>
+<column name="activations_21_V_we0">out, 1, ap_memory, activations_21_V, array</column>
+<column name="activations_21_V_d0">out, 48, ap_memory, activations_21_V, array</column>
+<column name="activations_22_V_address0">out, 5, ap_memory, activations_22_V, array</column>
+<column name="activations_22_V_ce0">out, 1, ap_memory, activations_22_V, array</column>
+<column name="activations_22_V_we0">out, 1, ap_memory, activations_22_V, array</column>
+<column name="activations_22_V_d0">out, 48, ap_memory, activations_22_V, array</column>
+<column name="activations_23_V_address0">out, 5, ap_memory, activations_23_V, array</column>
+<column name="activations_23_V_ce0">out, 1, ap_memory, activations_23_V, array</column>
+<column name="activations_23_V_we0">out, 1, ap_memory, activations_23_V, array</column>
+<column name="activations_23_V_d0">out, 48, ap_memory, activations_23_V, array</column>
+<column name="activations_24_V_address0">out, 5, ap_memory, activations_24_V, array</column>
+<column name="activations_24_V_ce0">out, 1, ap_memory, activations_24_V, array</column>
+<column name="activations_24_V_we0">out, 1, ap_memory, activations_24_V, array</column>
+<column name="activations_24_V_d0">out, 48, ap_memory, activations_24_V, array</column>
+<column name="activations_25_V_address0">out, 5, ap_memory, activations_25_V, array</column>
+<column name="activations_25_V_ce0">out, 1, ap_memory, activations_25_V, array</column>
+<column name="activations_25_V_we0">out, 1, ap_memory, activations_25_V, array</column>
+<column name="activations_25_V_d0">out, 48, ap_memory, activations_25_V, array</column>
+<column name="activations_26_V_address0">out, 5, ap_memory, activations_26_V, array</column>
+<column name="activations_26_V_ce0">out, 1, ap_memory, activations_26_V, array</column>
+<column name="activations_26_V_we0">out, 1, ap_memory, activations_26_V, array</column>
+<column name="activations_26_V_d0">out, 48, ap_memory, activations_26_V, array</column>
+<column name="activations_27_V_address0">out, 5, ap_memory, activations_27_V, array</column>
+<column name="activations_27_V_ce0">out, 1, ap_memory, activations_27_V, array</column>
+<column name="activations_27_V_we0">out, 1, ap_memory, activations_27_V, array</column>
+<column name="activations_27_V_d0">out, 48, ap_memory, activations_27_V, array</column>
+</table>
+</item>
+</section>
+</profile>

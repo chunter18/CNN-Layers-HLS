@@ -1,0 +1,552 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'CNN'" level="0">
+<item name = "Date">Tue Dec  3 11:19:10 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">final</item>
+<item name = "Solution">bigger_II</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325tffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.950, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">22500, 22534, 3978, 3978, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="resample_U0">resample, 3922, 3923, 3920, 3920, loop rewind(delay=1 initiation interval(s))</column>
+<column name="conv2d_3x3_4chan_rev_U0">conv2d_3x3_4chan_rev, 3077, 3078, 3072, 3072, loop rewind(delay=1 initiation interval(s))</column>
+<column name="conv2d_3x3_1chan_rev_U0">conv2d_3x3_1chan_rev, 795, 796, 784, 784, loop rewind(delay=1 initiation interval(s))</column>
+<column name="max_pool_1chan_U0">max_pool_1chan, 1009, 1009, 1009, 1009, none</column>
+<column name="batch_norm_U0">batch_norm, 3977, 3977, 3977, 3977, none</column>
+<column name="resample_for_conv2_U0">resample_for_conv2, 1773, 1774, 1764, 1764, loop rewind(delay=2 initiation interval(s))</column>
+<column name="efficient_pad_n_1cha_U0">efficient_pad_n_1cha, 2470, 2500, 2470, 2500, none</column>
+<column name="pad_for_conv2_U0">pad_for_conv2, 650, 650, 650, 650, none</column>
+<column name="relu_U0">relu, 2409, 2409, 2409, 2409, none</column>
+<column name="zero_mean_1chan64_U0">zero_mean_1chan64, 2409, 2409, 2409, 2409, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 198</column>
+<column name="FIFO">0, -, 84, 638</column>
+<column name="Instance">2, 20, 6143, 6967</column>
+<column name="Memory">51, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 369</column>
+<column name="Register">-, -, 43, -</column>
+<specialColumn name="Available">890, 840, 407600, 203800</specialColumn>
+<specialColumn name="Utilization (%)">5, 2, 1, 4</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="batch_norm_U0">batch_norm, 0, 1, 152, 215</column>
+<column name="conv2d_3x3_1chan_rev_U0">conv2d_3x3_1chan_rev, 2, 9, 1919, 1175</column>
+<column name="conv2d_3x3_4chan_rev_U0">conv2d_3x3_4chan_rev, 0, 9, 2095, 1040</column>
+<column name="efficient_pad_n_1cha_U0">efficient_pad_n_1cha, 0, 0, 181, 651</column>
+<column name="max_pool_1chan_U0">max_pool_1chan, 0, 0, 228, 599</column>
+<column name="pad_for_conv2_U0">pad_for_conv2, 0, 0, 102, 325</column>
+<column name="relu_U0">relu, 0, 0, 147, 214</column>
+<column name="resample_U0">resample, 0, 0, 629, 1543</column>
+<column name="resample_for_conv2_U0">resample_for_conv2, 0, 1, 573, 893</column>
+<column name="zero_mean_1chan64_U0">zero_mean_1chan64, 0, 0, 117, 312</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="ReLU_V_U">CNN_ReLU_V, 3, 0, 0, 784, 48, 2, 75264</column>
+<column name="batchnorm_V_U">CNN_batchnorm_V, 3, 0, 0, 784, 48, 2, 75264</column>
+<column name="conv_0_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="conv_1_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="conv_2_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="conv_3_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="conv_4_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="conv_5_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="conv_6_V_U">CNN_conv_0_V, 1, 0, 0, 112, 25, 2, 5600</column>
+<column name="maxpool_V_U">CNN_maxpool_V, 1, 0, 0, 196, 25, 2, 9800</column>
+<column name="mean_removed_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_0_0_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_0_1_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_0_2_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_0_3_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_0_4_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_1_0_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_1_1_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_1_2_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="resampled_1_3_V_U">CNN_mean_removed_V, 1, 0, 0, 784, 18, 2, 28224</column>
+<column name="padded_0_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_1_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_2_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_3_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_4_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_5_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_6_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_7_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_8_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_9_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_10_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_11_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_12_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_13_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_14_V_U">CNN_padded_0_V, 1, 0, 0, 60, 18, 2, 2160</column>
+<column name="padded_L2_0_V_U">CNN_padded_L2_0_V, 2, 0, 0, 64, 25, 2, 3200</column>
+<column name="padded_L2_1_V_U">CNN_padded_L2_0_V, 2, 0, 0, 64, 25, 2, 3200</column>
+<column name="padded_L2_2_V_U">CNN_padded_L2_0_V, 2, 0, 0, 64, 25, 2, 3200</column>
+<column name="padded_L2_3_V_U">CNN_padded_L2_0_V, 2, 0, 0, 64, 25, 2, 3200</column>
+<column name="resampled_L2_0_V_U">CNN_resampled_L2_hbi, 2, 0, 0, 980, 25, 2, 49000</column>
+<column name="resampled_L2_1_V_U">CNN_resampled_L2_ibs, 2, 0, 0, 784, 25, 2, 39200</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="a_V_c_U">0, 5, 30, 5, 18, 90</column>
+<column name="b_V_c_U">0, 5, 30, 5, 18, 90</column>
+<column name="conv_bias_L1_V_c_U">0, 5, 60, 4, 48, 192</column>
+<column name="conv_bias_L2_0_V_c_U">0, 6, 62, 10, 48, 480</column>
+<column name="conv_bias_L2_1_V_c_U">0, 6, 62, 10, 48, 480</column>
+<column name="conv_bias_L2_2_V_c_U">0, 6, 62, 10, 48, 480</column>
+<column name="conv_bias_L2_3_V_c_U">0, 6, 62, 10, 48, 480</column>
+<column name="conv_kernel_L1_0_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_1_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_2_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_3_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_4_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_5_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_6_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_7_V_s_U">0, 5, 30, 4, 18, 72</column>
+<column name="conv_kernel_L1_8_V_s_U">0, 5, 30, 4, 18, 72</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="conv2d_3x3_4chan_rev_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="zero_mean_1chan64_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="ap_channel_done_conv_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_conv_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_conv_2_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_conv_3_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_conv_4_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_conv_5_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_conv_6_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_10_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_11_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_12_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_13_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_14_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_2_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_3_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_4_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_5_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_6_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_7_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_8_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_9_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_L2_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_L2_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_L2_2_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_padded_L2_3_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_0_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_0_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_0_2_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_0_3_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_0_4_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_1_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_1_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_1_2_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_1_3_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_L2_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_resampled_L2_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="batch_norm_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="conv2d_3x3_1chan_rev_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="conv2d_3x3_1chan_rev_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="conv2d_3x3_4chan_rev_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="efficient_pad_n_1cha_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="pad_for_conv2_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="resample_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="resample_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="resample_for_conv2_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="resample_for_conv2_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="zero_mean_1chan64_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_2_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_3_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_4_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_5_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_conv_6_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_10_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_11_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_12_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_13_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_14_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_2_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_3_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_4_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_5_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_6_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_7_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_8_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_9_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_L2_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_L2_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_L2_2_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_padded_L2_3_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_0_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_0_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_0_2_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_0_3_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_0_4_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_1_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_1_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_1_2_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_1_3_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_L2_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_resampled_L2_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_conv2d_3x3_4chan_rev_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_zero_mean_1chan64_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_conv_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_conv_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_conv_2_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_conv_3_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_conv_4_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_conv_5_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_conv_6_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_10_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_11_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_12_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_13_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_14_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_2_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_3_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_4_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_5_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_6_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_7_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_8_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_9_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_L2_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_L2_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_L2_2_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_padded_L2_3_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_0_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_0_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_0_2_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_0_3_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_0_4_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_1_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_1_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_1_2_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_1_3_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_L2_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_resampled_L2_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_conv2d_3x3_4chan_rev_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_zero_mean_1chan64_U0_ap_ready">9, 2, 1, 2</column>
+<column name="conv2d_3x3_4chan_rev_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="zero_mean_1chan64_U0_ap_ready_count">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_conv_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_conv_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_conv_2_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_conv_3_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_conv_4_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_conv_5_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_conv_6_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_10_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_11_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_12_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_13_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_14_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_2_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_3_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_4_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_5_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_6_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_7_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_8_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_9_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_L2_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_L2_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_L2_2_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_padded_L2_3_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_0_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_0_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_0_2_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_0_3_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_0_4_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_1_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_1_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_1_2_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_1_3_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_L2_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_resampled_L2_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_conv2d_3x3_4chan_rev_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_zero_mean_1chan64_U0_ap_ready">1, 0, 1, 0</column>
+<column name="conv2d_3x3_4chan_rev_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="zero_mean_1chan64_U0_ap_ready_count">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, CNN, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, CNN, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, CNN, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, CNN, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, CNN, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, CNN, return value</column>
+<column name="in_image_V_address0">out, 10, ap_memory, in_image_V, array</column>
+<column name="in_image_V_ce0">out, 1, ap_memory, in_image_V, array</column>
+<column name="in_image_V_d0">out, 18, ap_memory, in_image_V, array</column>
+<column name="in_image_V_q0">in, 18, ap_memory, in_image_V, array</column>
+<column name="in_image_V_we0">out, 1, ap_memory, in_image_V, array</column>
+<column name="in_image_V_address1">out, 10, ap_memory, in_image_V, array</column>
+<column name="in_image_V_ce1">out, 1, ap_memory, in_image_V, array</column>
+<column name="in_image_V_d1">out, 18, ap_memory, in_image_V, array</column>
+<column name="in_image_V_q1">in, 18, ap_memory, in_image_V, array</column>
+<column name="in_image_V_we1">out, 1, ap_memory, in_image_V, array</column>
+<column name="means_V_address0">out, 10, ap_memory, means_V, array</column>
+<column name="means_V_ce0">out, 1, ap_memory, means_V, array</column>
+<column name="means_V_d0">out, 18, ap_memory, means_V, array</column>
+<column name="means_V_q0">in, 18, ap_memory, means_V, array</column>
+<column name="means_V_we0">out, 1, ap_memory, means_V, array</column>
+<column name="means_V_address1">out, 10, ap_memory, means_V, array</column>
+<column name="means_V_ce1">out, 1, ap_memory, means_V, array</column>
+<column name="means_V_d1">out, 18, ap_memory, means_V, array</column>
+<column name="means_V_q1">in, 18, ap_memory, means_V, array</column>
+<column name="means_V_we1">out, 1, ap_memory, means_V, array</column>
+<column name="conv_kernel_L1_0_V">in, 18, ap_none, conv_kernel_L1_0_V, pointer</column>
+<column name="conv_kernel_L1_1_V">in, 18, ap_none, conv_kernel_L1_1_V, pointer</column>
+<column name="conv_kernel_L1_2_V">in, 18, ap_none, conv_kernel_L1_2_V, pointer</column>
+<column name="conv_kernel_L1_3_V">in, 18, ap_none, conv_kernel_L1_3_V, pointer</column>
+<column name="conv_kernel_L1_4_V">in, 18, ap_none, conv_kernel_L1_4_V, pointer</column>
+<column name="conv_kernel_L1_5_V">in, 18, ap_none, conv_kernel_L1_5_V, pointer</column>
+<column name="conv_kernel_L1_6_V">in, 18, ap_none, conv_kernel_L1_6_V, pointer</column>
+<column name="conv_kernel_L1_7_V">in, 18, ap_none, conv_kernel_L1_7_V, pointer</column>
+<column name="conv_kernel_L1_8_V">in, 18, ap_none, conv_kernel_L1_8_V, pointer</column>
+<column name="conv_bias_L1_V">in, 48, ap_none, conv_bias_L1_V, scalar</column>
+<column name="a_V">in, 18, ap_none, a_V, scalar</column>
+<column name="b_V">in, 18, ap_none, b_V, scalar</column>
+<column name="conv_kernel_L2_0_V_address0">out, 2, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_ce0">out, 1, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_d0">out, 18, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_q0">in, 18, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_we0">out, 1, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_address1">out, 2, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_ce1">out, 1, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_d1">out, 18, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_q1">in, 18, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_0_V_we1">out, 1, ap_memory, conv_kernel_L2_0_V, array</column>
+<column name="conv_kernel_L2_1_V_address0">out, 2, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_ce0">out, 1, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_d0">out, 18, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_q0">in, 18, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_we0">out, 1, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_address1">out, 2, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_ce1">out, 1, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_d1">out, 18, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_q1">in, 18, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_1_V_we1">out, 1, ap_memory, conv_kernel_L2_1_V, array</column>
+<column name="conv_kernel_L2_2_V_address0">out, 2, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_ce0">out, 1, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_d0">out, 18, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_q0">in, 18, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_we0">out, 1, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_address1">out, 2, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_ce1">out, 1, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_d1">out, 18, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_q1">in, 18, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_2_V_we1">out, 1, ap_memory, conv_kernel_L2_2_V, array</column>
+<column name="conv_kernel_L2_3_V_address0">out, 2, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_ce0">out, 1, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_d0">out, 18, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_q0">in, 18, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_we0">out, 1, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_address1">out, 2, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_ce1">out, 1, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_d1">out, 18, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_q1">in, 18, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_3_V_we1">out, 1, ap_memory, conv_kernel_L2_3_V, array</column>
+<column name="conv_kernel_L2_4_V_address0">out, 2, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_ce0">out, 1, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_d0">out, 18, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_q0">in, 18, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_we0">out, 1, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_address1">out, 2, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_ce1">out, 1, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_d1">out, 18, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_q1">in, 18, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_4_V_we1">out, 1, ap_memory, conv_kernel_L2_4_V, array</column>
+<column name="conv_kernel_L2_5_V_address0">out, 2, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_ce0">out, 1, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_d0">out, 18, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_q0">in, 18, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_we0">out, 1, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_address1">out, 2, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_ce1">out, 1, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_d1">out, 18, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_q1">in, 18, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_5_V_we1">out, 1, ap_memory, conv_kernel_L2_5_V, array</column>
+<column name="conv_kernel_L2_6_V_address0">out, 2, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_ce0">out, 1, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_d0">out, 18, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_q0">in, 18, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_we0">out, 1, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_address1">out, 2, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_ce1">out, 1, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_d1">out, 18, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_q1">in, 18, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_6_V_we1">out, 1, ap_memory, conv_kernel_L2_6_V, array</column>
+<column name="conv_kernel_L2_7_V_address0">out, 2, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_ce0">out, 1, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_d0">out, 18, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_q0">in, 18, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_we0">out, 1, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_address1">out, 2, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_ce1">out, 1, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_d1">out, 18, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_q1">in, 18, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_7_V_we1">out, 1, ap_memory, conv_kernel_L2_7_V, array</column>
+<column name="conv_kernel_L2_8_V_address0">out, 2, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_ce0">out, 1, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_d0">out, 18, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_q0">in, 18, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_we0">out, 1, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_address1">out, 2, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_ce1">out, 1, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_d1">out, 18, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_q1">in, 18, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_kernel_L2_8_V_we1">out, 1, ap_memory, conv_kernel_L2_8_V, array</column>
+<column name="conv_bias_L2_0_V">in, 48, ap_none, conv_bias_L2_0_V, pointer</column>
+<column name="conv_bias_L2_1_V">in, 48, ap_none, conv_bias_L2_1_V, pointer</column>
+<column name="conv_bias_L2_2_V">in, 48, ap_none, conv_bias_L2_2_V, pointer</column>
+<column name="conv_bias_L2_3_V">in, 48, ap_none, conv_bias_L2_3_V, pointer</column>
+<column name="result_0_V_address0">out, 7, ap_memory, result_0_V, array</column>
+<column name="result_0_V_ce0">out, 1, ap_memory, result_0_V, array</column>
+<column name="result_0_V_d0">out, 48, ap_memory, result_0_V, array</column>
+<column name="result_0_V_q0">in, 48, ap_memory, result_0_V, array</column>
+<column name="result_0_V_we0">out, 1, ap_memory, result_0_V, array</column>
+<column name="result_0_V_address1">out, 7, ap_memory, result_0_V, array</column>
+<column name="result_0_V_ce1">out, 1, ap_memory, result_0_V, array</column>
+<column name="result_0_V_d1">out, 48, ap_memory, result_0_V, array</column>
+<column name="result_0_V_q1">in, 48, ap_memory, result_0_V, array</column>
+<column name="result_0_V_we1">out, 1, ap_memory, result_0_V, array</column>
+<column name="result_1_V_address0">out, 7, ap_memory, result_1_V, array</column>
+<column name="result_1_V_ce0">out, 1, ap_memory, result_1_V, array</column>
+<column name="result_1_V_d0">out, 48, ap_memory, result_1_V, array</column>
+<column name="result_1_V_q0">in, 48, ap_memory, result_1_V, array</column>
+<column name="result_1_V_we0">out, 1, ap_memory, result_1_V, array</column>
+<column name="result_1_V_address1">out, 7, ap_memory, result_1_V, array</column>
+<column name="result_1_V_ce1">out, 1, ap_memory, result_1_V, array</column>
+<column name="result_1_V_d1">out, 48, ap_memory, result_1_V, array</column>
+<column name="result_1_V_q1">in, 48, ap_memory, result_1_V, array</column>
+<column name="result_1_V_we1">out, 1, ap_memory, result_1_V, array</column>
+<column name="result_2_V_address0">out, 7, ap_memory, result_2_V, array</column>
+<column name="result_2_V_ce0">out, 1, ap_memory, result_2_V, array</column>
+<column name="result_2_V_d0">out, 48, ap_memory, result_2_V, array</column>
+<column name="result_2_V_q0">in, 48, ap_memory, result_2_V, array</column>
+<column name="result_2_V_we0">out, 1, ap_memory, result_2_V, array</column>
+<column name="result_2_V_address1">out, 7, ap_memory, result_2_V, array</column>
+<column name="result_2_V_ce1">out, 1, ap_memory, result_2_V, array</column>
+<column name="result_2_V_d1">out, 48, ap_memory, result_2_V, array</column>
+<column name="result_2_V_q1">in, 48, ap_memory, result_2_V, array</column>
+<column name="result_2_V_we1">out, 1, ap_memory, result_2_V, array</column>
+<column name="result_3_V_address0">out, 7, ap_memory, result_3_V, array</column>
+<column name="result_3_V_ce0">out, 1, ap_memory, result_3_V, array</column>
+<column name="result_3_V_d0">out, 48, ap_memory, result_3_V, array</column>
+<column name="result_3_V_q0">in, 48, ap_memory, result_3_V, array</column>
+<column name="result_3_V_we0">out, 1, ap_memory, result_3_V, array</column>
+<column name="result_3_V_address1">out, 7, ap_memory, result_3_V, array</column>
+<column name="result_3_V_ce1">out, 1, ap_memory, result_3_V, array</column>
+<column name="result_3_V_d1">out, 48, ap_memory, result_3_V, array</column>
+<column name="result_3_V_q1">in, 48, ap_memory, result_3_V, array</column>
+<column name="result_3_V_we1">out, 1, ap_memory, result_3_V, array</column>
+<column name="result_4_V_address0">out, 7, ap_memory, result_4_V, array</column>
+<column name="result_4_V_ce0">out, 1, ap_memory, result_4_V, array</column>
+<column name="result_4_V_d0">out, 48, ap_memory, result_4_V, array</column>
+<column name="result_4_V_q0">in, 48, ap_memory, result_4_V, array</column>
+<column name="result_4_V_we0">out, 1, ap_memory, result_4_V, array</column>
+<column name="result_4_V_address1">out, 7, ap_memory, result_4_V, array</column>
+<column name="result_4_V_ce1">out, 1, ap_memory, result_4_V, array</column>
+<column name="result_4_V_d1">out, 48, ap_memory, result_4_V, array</column>
+<column name="result_4_V_q1">in, 48, ap_memory, result_4_V, array</column>
+<column name="result_4_V_we1">out, 1, ap_memory, result_4_V, array</column>
+<column name="result_5_V_address0">out, 7, ap_memory, result_5_V, array</column>
+<column name="result_5_V_ce0">out, 1, ap_memory, result_5_V, array</column>
+<column name="result_5_V_d0">out, 48, ap_memory, result_5_V, array</column>
+<column name="result_5_V_q0">in, 48, ap_memory, result_5_V, array</column>
+<column name="result_5_V_we0">out, 1, ap_memory, result_5_V, array</column>
+<column name="result_5_V_address1">out, 7, ap_memory, result_5_V, array</column>
+<column name="result_5_V_ce1">out, 1, ap_memory, result_5_V, array</column>
+<column name="result_5_V_d1">out, 48, ap_memory, result_5_V, array</column>
+<column name="result_5_V_q1">in, 48, ap_memory, result_5_V, array</column>
+<column name="result_5_V_we1">out, 1, ap_memory, result_5_V, array</column>
+<column name="result_6_V_address0">out, 7, ap_memory, result_6_V, array</column>
+<column name="result_6_V_ce0">out, 1, ap_memory, result_6_V, array</column>
+<column name="result_6_V_d0">out, 48, ap_memory, result_6_V, array</column>
+<column name="result_6_V_q0">in, 48, ap_memory, result_6_V, array</column>
+<column name="result_6_V_we0">out, 1, ap_memory, result_6_V, array</column>
+<column name="result_6_V_address1">out, 7, ap_memory, result_6_V, array</column>
+<column name="result_6_V_ce1">out, 1, ap_memory, result_6_V, array</column>
+<column name="result_6_V_d1">out, 48, ap_memory, result_6_V, array</column>
+<column name="result_6_V_q1">in, 48, ap_memory, result_6_V, array</column>
+<column name="result_6_V_we1">out, 1, ap_memory, result_6_V, array</column>
+</table>
+</item>
+</section>
+</profile>

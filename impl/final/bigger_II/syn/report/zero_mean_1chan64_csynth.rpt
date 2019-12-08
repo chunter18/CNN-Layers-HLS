@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vivado HLS Report for 'zero_mean_1chan64'
+================================================================
+* Date:           Tue Dec  3 11:19:00 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        final
+* Solution:       bigger_II
+* Product family: kintex7
+* Target device:  xc7k325tffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.643|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  2409|  2409|  2409|  2409|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- row     |  2408|  2408|        86|          -|          -|    28|    no    |
+        | + col    |    84|    84|         3|          -|          -|    28|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     116|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       -|       -|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     196|
+|Register         |        -|      -|     117|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|     117|     312|
++-----------------+---------+-------+--------+--------+
+|Available        |      890|    840|  407600|  203800|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |i_fu_423_p2          |     +    |      0|  0|  15|           5|           1|
+    |j_fu_465_p2          |     +    |      0|  0|  15|           5|           1|
+    |tmp_3_fu_475_p2      |     +    |      0|  0|  18|          11|          11|
+    |p_Val2_2_fu_498_p2   |     -    |      0|  0|  26|          19|          19|
+    |tmp_2_fu_453_p2      |     -    |      0|  0|  18|          11|          11|
+    |tmp_2_i_i_fu_459_p2  |   icmp   |      0|  0|  11|           5|           4|
+    |tmp_i_i_fu_417_p2    |   icmp   |      0|  0|  11|           5|           4|
+    |ap_block_state1      |    or    |      0|  0|   2|           1|           1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0| 116|          62|          52|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |a_V_out_blk_n                 |   9|          2|    1|          2|
+    |ap_NS_fsm                     |  25|          6|    1|          6|
+    |ap_done                       |   9|          2|    1|          2|
+    |b_V_out_blk_n                 |   9|          2|    1|          2|
+    |conv_bias_L1_V_out_blk_n      |   9|          2|    1|          2|
+    |conv_bias_L2_0_V_out_blk_n    |   9|          2|    1|          2|
+    |conv_bias_L2_1_V_out_blk_n    |   9|          2|    1|          2|
+    |conv_bias_L2_2_V_out_blk_n    |   9|          2|    1|          2|
+    |conv_bias_L2_3_V_out_blk_n    |   9|          2|    1|          2|
+    |conv_kernel_L1_0_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_1_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_2_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_3_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_4_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_5_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_6_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_7_V_out_blk_n  |   9|          2|    1|          2|
+    |conv_kernel_L1_8_V_out_blk_n  |   9|          2|    1|          2|
+    |i_i_i_reg_395                 |   9|          2|    5|         10|
+    |j_i_i_reg_406                 |   9|          2|    5|         10|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         | 196|         44|   28|         60|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |   5|   0|    5|          0|
+    |ap_done_reg         |   1|   0|    1|          0|
+    |i_i_i_reg_395       |   5|   0|    5|          0|
+    |i_reg_517           |   5|   0|    5|          0|
+    |j_i_i_reg_406       |   5|   0|    5|          0|
+    |j_reg_530           |   5|   0|    5|          0|
+    |tmp_2_reg_522       |   9|   0|   11|          2|
+    |tmp_3_cast_reg_535  |  64|   0|   64|          0|
+    |tmp_i_i_38_reg_550  |  18|   0|   18|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               | 117|   0|  119|          2|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|ap_done                        | out |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|ap_continue                    |  in |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs |    zero_mean_1chan64   | return value |
+|in_image_V_address0            | out |   10|  ap_memory |       in_image_V       |     array    |
+|in_image_V_ce0                 | out |    1|  ap_memory |       in_image_V       |     array    |
+|in_image_V_q0                  |  in |   18|  ap_memory |       in_image_V       |     array    |
+|out_image_V_address0           | out |   10|  ap_memory |       out_image_V      |     array    |
+|out_image_V_ce0                | out |    1|  ap_memory |       out_image_V      |     array    |
+|out_image_V_we0                | out |    1|  ap_memory |       out_image_V      |     array    |
+|out_image_V_d0                 | out |   18|  ap_memory |       out_image_V      |     array    |
+|means_V_address0               | out |   10|  ap_memory |         means_V        |     array    |
+|means_V_ce0                    | out |    1|  ap_memory |         means_V        |     array    |
+|means_V_q0                     |  in |   18|  ap_memory |         means_V        |     array    |
+|conv_kernel_L1_0_V             |  in |   18|   ap_none  |   conv_kernel_L1_0_V   |    pointer   |
+|conv_kernel_L1_1_V             |  in |   18|   ap_none  |   conv_kernel_L1_1_V   |    pointer   |
+|conv_kernel_L1_2_V             |  in |   18|   ap_none  |   conv_kernel_L1_2_V   |    pointer   |
+|conv_kernel_L1_3_V             |  in |   18|   ap_none  |   conv_kernel_L1_3_V   |    pointer   |
+|conv_kernel_L1_4_V             |  in |   18|   ap_none  |   conv_kernel_L1_4_V   |    pointer   |
+|conv_kernel_L1_5_V             |  in |   18|   ap_none  |   conv_kernel_L1_5_V   |    pointer   |
+|conv_kernel_L1_6_V             |  in |   18|   ap_none  |   conv_kernel_L1_6_V   |    pointer   |
+|conv_kernel_L1_7_V             |  in |   18|   ap_none  |   conv_kernel_L1_7_V   |    pointer   |
+|conv_kernel_L1_8_V             |  in |   18|   ap_none  |   conv_kernel_L1_8_V   |    pointer   |
+|conv_bias_L1_V                 |  in |   48|   ap_none  |     conv_bias_L1_V     |    scalar    |
+|a_V                            |  in |   18|   ap_none  |           a_V          |    scalar    |
+|b_V                            |  in |   18|   ap_none  |           b_V          |    scalar    |
+|conv_bias_L2_0_V               |  in |   48|   ap_none  |    conv_bias_L2_0_V    |    pointer   |
+|conv_bias_L2_1_V               |  in |   48|   ap_none  |    conv_bias_L2_1_V    |    pointer   |
+|conv_bias_L2_2_V               |  in |   48|   ap_none  |    conv_bias_L2_2_V    |    pointer   |
+|conv_bias_L2_3_V               |  in |   48|   ap_none  |    conv_bias_L2_3_V    |    pointer   |
+|conv_kernel_L1_0_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_0_V_out |    pointer   |
+|conv_kernel_L1_0_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_0_V_out |    pointer   |
+|conv_kernel_L1_0_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_0_V_out |    pointer   |
+|conv_kernel_L1_1_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_1_V_out |    pointer   |
+|conv_kernel_L1_1_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_1_V_out |    pointer   |
+|conv_kernel_L1_1_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_1_V_out |    pointer   |
+|conv_kernel_L1_2_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_2_V_out |    pointer   |
+|conv_kernel_L1_2_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_2_V_out |    pointer   |
+|conv_kernel_L1_2_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_2_V_out |    pointer   |
+|conv_kernel_L1_3_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_3_V_out |    pointer   |
+|conv_kernel_L1_3_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_3_V_out |    pointer   |
+|conv_kernel_L1_3_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_3_V_out |    pointer   |
+|conv_kernel_L1_4_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_4_V_out |    pointer   |
+|conv_kernel_L1_4_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_4_V_out |    pointer   |
+|conv_kernel_L1_4_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_4_V_out |    pointer   |
+|conv_kernel_L1_5_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_5_V_out |    pointer   |
+|conv_kernel_L1_5_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_5_V_out |    pointer   |
+|conv_kernel_L1_5_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_5_V_out |    pointer   |
+|conv_kernel_L1_6_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_6_V_out |    pointer   |
+|conv_kernel_L1_6_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_6_V_out |    pointer   |
+|conv_kernel_L1_6_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_6_V_out |    pointer   |
+|conv_kernel_L1_7_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_7_V_out |    pointer   |
+|conv_kernel_L1_7_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_7_V_out |    pointer   |
+|conv_kernel_L1_7_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_7_V_out |    pointer   |
+|conv_kernel_L1_8_V_out_din     | out |   18|   ap_fifo  | conv_kernel_L1_8_V_out |    pointer   |
+|conv_kernel_L1_8_V_out_full_n  |  in |    1|   ap_fifo  | conv_kernel_L1_8_V_out |    pointer   |
+|conv_kernel_L1_8_V_out_write   | out |    1|   ap_fifo  | conv_kernel_L1_8_V_out |    pointer   |
+|conv_bias_L1_V_out_din         | out |   48|   ap_fifo  |   conv_bias_L1_V_out   |    pointer   |
+|conv_bias_L1_V_out_full_n      |  in |    1|   ap_fifo  |   conv_bias_L1_V_out   |    pointer   |
+|conv_bias_L1_V_out_write       | out |    1|   ap_fifo  |   conv_bias_L1_V_out   |    pointer   |
+|a_V_out_din                    | out |   18|   ap_fifo  |         a_V_out        |    pointer   |
+|a_V_out_full_n                 |  in |    1|   ap_fifo  |         a_V_out        |    pointer   |
+|a_V_out_write                  | out |    1|   ap_fifo  |         a_V_out        |    pointer   |
+|b_V_out_din                    | out |   18|   ap_fifo  |         b_V_out        |    pointer   |
+|b_V_out_full_n                 |  in |    1|   ap_fifo  |         b_V_out        |    pointer   |
+|b_V_out_write                  | out |    1|   ap_fifo  |         b_V_out        |    pointer   |
+|conv_bias_L2_0_V_out_din       | out |   48|   ap_fifo  |  conv_bias_L2_0_V_out  |    pointer   |
+|conv_bias_L2_0_V_out_full_n    |  in |    1|   ap_fifo  |  conv_bias_L2_0_V_out  |    pointer   |
+|conv_bias_L2_0_V_out_write     | out |    1|   ap_fifo  |  conv_bias_L2_0_V_out  |    pointer   |
+|conv_bias_L2_1_V_out_din       | out |   48|   ap_fifo  |  conv_bias_L2_1_V_out  |    pointer   |
+|conv_bias_L2_1_V_out_full_n    |  in |    1|   ap_fifo  |  conv_bias_L2_1_V_out  |    pointer   |
+|conv_bias_L2_1_V_out_write     | out |    1|   ap_fifo  |  conv_bias_L2_1_V_out  |    pointer   |
+|conv_bias_L2_2_V_out_din       | out |   48|   ap_fifo  |  conv_bias_L2_2_V_out  |    pointer   |
+|conv_bias_L2_2_V_out_full_n    |  in |    1|   ap_fifo  |  conv_bias_L2_2_V_out  |    pointer   |
+|conv_bias_L2_2_V_out_write     | out |    1|   ap_fifo  |  conv_bias_L2_2_V_out  |    pointer   |
+|conv_bias_L2_3_V_out_din       | out |   48|   ap_fifo  |  conv_bias_L2_3_V_out  |    pointer   |
+|conv_bias_L2_3_V_out_full_n    |  in |    1|   ap_fifo  |  conv_bias_L2_3_V_out  |    pointer   |
+|conv_bias_L2_3_V_out_write     | out |    1|   ap_fifo  |  conv_bias_L2_3_V_out  |    pointer   |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+

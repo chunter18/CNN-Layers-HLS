@@ -1,0 +1,256 @@
+
+
+================================================================
+== Vivado HLS Report for 'CNN'
+================================================================
+* Date:           Tue Dec  3 11:06:24 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        final
+* Solution:       just_dataflow
+* Product family: kintex7
+* Target device:  xc7k325tffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.950|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+-------+-------+----------+
+    |     Latency     |    Interval   | Pipeline |
+    |   min  |   max  |  min  |  max  |   Type   |
+    +--------+--------+-------+-------+----------+
+    |  155633|  164849|  57354|  66570| dataflow |
+    +--------+--------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+-------+-------+-------+-------+---------+
+        |                         |                      |    Latency    |    Interval   | Pipeline|
+        |         Instance        |        Module        |  min  |  max  |  min  |  max  |   Type  |
+        +-------------------------+----------------------+-------+-------+-------+-------+---------+
+        |conv2d_3x3_4chan_rev_U0  |conv2d_3x3_4chan_rev  |  57353|  66569|  57353|  66569|   none  |
+        |conv2d_3x3_1chan_rev_U0  |conv2d_3x3_1chan_rev  |  43905|  43905|  43905|  43905|   none  |
+        |max_pool_1chan_U0        |max_pool_1chan        |   1009|   1009|   1009|   1009|   none  |
+        |resample_U0              |resample              |  34553|  34553|  34553|  34553|   none  |
+        |batch_norm_U0            |batch_norm            |   3977|   3977|   3977|   3977|   none  |
+        |resample_for_conv2_U0    |resample_for_conv2    |   6889|   6889|   6889|   6889|   none  |
+        |efficient_pad_n_1cha_U0  |efficient_pad_n_1cha  |   2470|   2470|   2470|   2470|   none  |
+        |relu_U0                  |relu                  |   2409|   2409|   2409|   2409|   none  |
+        |zero_mean_1chan50_U0     |zero_mean_1chan50     |   2409|   2409|   2409|   2409|   none  |
+        |pad_for_conv2_U0         |pad_for_conv2         |    650|    650|    650|    650|   none  |
+        +-------------------------+----------------------+-------+-------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      46|
+|FIFO             |        0|      -|      15|     120|
+|Instance         |        -|      5|    2037|    3589|
+|Memory           |       25|      -|       0|       0|
+|Multiplexer      |        -|      -|       -|      54|
+|Register         |        -|      -|       9|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       25|      5|    2061|    3809|
++-----------------+---------+-------+--------+--------+
+|Available        |      890|    840|  407600|  203800|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        2|   ~0  |   ~0   |       1|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |batch_norm_U0            |batch_norm            |        0|      1|  221|  168|
+    |conv2d_3x3_1chan_rev_U0  |conv2d_3x3_1chan_rev  |        0|      1|  342|  528|
+    |conv2d_3x3_4chan_rev_U0  |conv2d_3x3_4chan_rev  |        0|      1|  549|  720|
+    |efficient_pad_n_1cha_U0  |efficient_pad_n_1cha  |        0|      0|   96|  316|
+    |max_pool_1chan_U0        |max_pool_1chan        |        0|      0|  228|  605|
+    |pad_for_conv2_U0         |pad_for_conv2         |        0|      0|   72|  231|
+    |relu_U0                  |relu                  |        0|      0|  147|  214|
+    |resample_U0              |resample              |        0|      1|  145|  334|
+    |resample_for_conv2_U0    |resample_for_conv2    |        0|      1|  120|  278|
+    |zero_mean_1chan50_U0     |zero_mean_1chan50     |        0|      0|  117|  195|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |Total                    |                      |        0|      5| 2037| 3589|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------------+--------------------+---------+---+----+------+-----+------+-------------+
+    |      Memory      |       Module       | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +------------------+--------------------+---------+---+----+------+-----+------+-------------+
+    |ReLU_V_U          |CNN_ReLU_V          |        3|  0|   0|   784|   48|     2|        75264|
+    |batchnorm_V_U     |CNN_batchnorm_V     |        3|  0|   0|   784|   48|     2|        75264|
+    |conv_V_U          |CNN_conv_V          |        2|  0|   0|   784|   25|     2|        39200|
+    |maxpool_V_U       |CNN_maxpool_V       |        1|  0|   0|   196|   25|     2|         9800|
+    |mean_removed_V_U  |CNN_mean_removed_V  |        1|  0|   0|   784|   18|     2|        28224|
+    |padded_L2_V_U     |CNN_padded_L2_V     |        2|  0|   0|   256|   25|     2|        12800|
+    |padded_V_U        |CNN_padded_V        |        1|  0|   0|   900|   18|     2|        32400|
+    |resampled_L2_V_U  |CNN_resampled_L2_V  |        3|  0|   0|  1764|   25|     2|        88200|
+    |resampled_V_U     |CNN_resampled_V     |        9|  0|   0|  7056|   18|     2|       254016|
+    +------------------+--------------------+---------+---+----+------+-----+------+-------------+
+    |Total             |                    |       25|  0|   0| 13308|  250|    18|       615168|
+    +------------------+--------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    +--------------------+---------+---+----+------+-----+---------+
+    |        Name        | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +--------------------+---------+---+----+------+-----+---------+
+    |a_V_c_U             |        0|  5|  30|     5|   18|       90|
+    |b_V_c_U             |        0|  5|  30|     5|   18|       90|
+    |conv_bias_L1_V_c_U  |        0|  5|  60|     4|   48|      192|
+    +--------------------+---------+---+----+------+-----+---------+
+    |Total               |        0| 15| 120|    14|   84|      372|
+    +--------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |conv2d_3x3_1chan_rev_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |conv2d_3x3_4chan_rev_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |zero_mean_1chan50_U0_ap_ready_count       |     +    |      0|  0|  10|           2|           1|
+    |ap_idle                                   |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                             |    and   |      0|  0|   2|           1|           1|
+    |conv2d_3x3_1chan_rev_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |conv2d_3x3_4chan_rev_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |zero_mean_1chan50_U0_ap_start             |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_conv2d_3x3_1chan_rev_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_conv2d_3x3_4chan_rev_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_zero_mean_1chan50_U0_ap_ready     |    or    |      0|  0|   2|           1|           1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                     |          |      0|  0|  46|          14|          11|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_conv2d_3x3_1chan_rev_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_conv2d_3x3_4chan_rev_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_zero_mean_1chan50_U0_ap_ready     |   9|          2|    1|          2|
+    |conv2d_3x3_1chan_rev_U0_ap_ready_count        |   9|          2|    2|          4|
+    |conv2d_3x3_4chan_rev_U0_ap_ready_count        |   9|          2|    2|          4|
+    |zero_mean_1chan50_U0_ap_ready_count           |   9|          2|    2|          4|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  54|         12|    9|         18|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_conv2d_3x3_1chan_rev_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_conv2d_3x3_4chan_rev_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_zero_mean_1chan50_U0_ap_ready     |  1|   0|    1|          0|
+    |conv2d_3x3_1chan_rev_U0_ap_ready_count        |  2|   0|    2|          0|
+    |conv2d_3x3_4chan_rev_U0_ap_ready_count        |  2|   0|    2|          0|
+    |zero_mean_1chan50_U0_ap_ready_count           |  2|   0|    2|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  9|   0|    9|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs |        CNN       | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs |        CNN       | return value |
+|ap_done                    | out |    1| ap_ctrl_hs |        CNN       | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs |        CNN       | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs |        CNN       | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs |        CNN       | return value |
+|in_image_V_address0        | out |   10|  ap_memory |    in_image_V    |     array    |
+|in_image_V_ce0             | out |    1|  ap_memory |    in_image_V    |     array    |
+|in_image_V_d0              | out |   18|  ap_memory |    in_image_V    |     array    |
+|in_image_V_q0              |  in |   18|  ap_memory |    in_image_V    |     array    |
+|in_image_V_we0             | out |    1|  ap_memory |    in_image_V    |     array    |
+|in_image_V_address1        | out |   10|  ap_memory |    in_image_V    |     array    |
+|in_image_V_ce1             | out |    1|  ap_memory |    in_image_V    |     array    |
+|in_image_V_d1              | out |   18|  ap_memory |    in_image_V    |     array    |
+|in_image_V_q1              |  in |   18|  ap_memory |    in_image_V    |     array    |
+|in_image_V_we1             | out |    1|  ap_memory |    in_image_V    |     array    |
+|means_V_address0           | out |   10|  ap_memory |      means_V     |     array    |
+|means_V_ce0                | out |    1|  ap_memory |      means_V     |     array    |
+|means_V_d0                 | out |   18|  ap_memory |      means_V     |     array    |
+|means_V_q0                 |  in |   18|  ap_memory |      means_V     |     array    |
+|means_V_we0                | out |    1|  ap_memory |      means_V     |     array    |
+|means_V_address1           | out |   10|  ap_memory |      means_V     |     array    |
+|means_V_ce1                | out |    1|  ap_memory |      means_V     |     array    |
+|means_V_d1                 | out |   18|  ap_memory |      means_V     |     array    |
+|means_V_q1                 |  in |   18|  ap_memory |      means_V     |     array    |
+|means_V_we1                | out |    1|  ap_memory |      means_V     |     array    |
+|conv_kernel_L1_V_address0  | out |    4|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_ce0       | out |    1|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_d0        | out |   18|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_q0        |  in |   18|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_we0       | out |    1|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_address1  | out |    4|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_ce1       | out |    1|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_d1        | out |   18|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_q1        |  in |   18|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_kernel_L1_V_we1       | out |    1|  ap_memory | conv_kernel_L1_V |     array    |
+|conv_bias_L1_V             |  in |   48|   ap_none  |  conv_bias_L1_V  |    scalar    |
+|a_V                        |  in |   18|   ap_none  |        a_V       |    scalar    |
+|b_V                        |  in |   18|   ap_none  |        b_V       |    scalar    |
+|conv_kernel_L2_V_address0  | out |    6|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_ce0       | out |    1|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_d0        | out |   18|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_q0        |  in |   18|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_we0       | out |    1|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_address1  | out |    6|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_ce1       | out |    1|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_d1        | out |   18|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_q1        |  in |   18|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_kernel_L2_V_we1       | out |    1|  ap_memory | conv_kernel_L2_V |     array    |
+|conv_bias_L2_V_address0    | out |    2|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_ce0         | out |    1|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_d0          | out |   48|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_q0          |  in |   48|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_we0         | out |    1|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_address1    | out |    2|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_ce1         | out |    1|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_d1          | out |   48|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_q1          |  in |   48|  ap_memory |  conv_bias_L2_V  |     array    |
+|conv_bias_L2_V_we1         | out |    1|  ap_memory |  conv_bias_L2_V  |     array    |
+|result_V_address0          | out |   10|  ap_memory |     result_V     |     array    |
+|result_V_ce0               | out |    1|  ap_memory |     result_V     |     array    |
+|result_V_d0                | out |   48|  ap_memory |     result_V     |     array    |
+|result_V_q0                |  in |   48|  ap_memory |     result_V     |     array    |
+|result_V_we0               | out |    1|  ap_memory |     result_V     |     array    |
+|result_V_address1          | out |   10|  ap_memory |     result_V     |     array    |
+|result_V_ce1               | out |    1|  ap_memory |     result_V     |     array    |
+|result_V_d1                | out |   48|  ap_memory |     result_V     |     array    |
+|result_V_q1                |  in |   48|  ap_memory |     result_V     |     array    |
+|result_V_we1               | out |    1|  ap_memory |     result_V     |     array    |
++---------------------------+-----+-----+------------+------------------+--------------+
+

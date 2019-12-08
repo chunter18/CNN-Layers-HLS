@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="CNN" xd:componentRef="CNN" xd:initiationInterval="22535" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="conv_kernel_L1[0]" xd:originalName="conv_kernel_L10" xd:direction="in" xd:interfaceRef="conv_kernel_L1_0_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[1]" xd:originalName="conv_kernel_L11" xd:direction="in" xd:interfaceRef="conv_kernel_L1_1_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[2]" xd:originalName="conv_kernel_L12" xd:direction="in" xd:interfaceRef="conv_kernel_L1_2_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[3]" xd:originalName="conv_kernel_L13" xd:direction="in" xd:interfaceRef="conv_kernel_L1_3_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[4]" xd:originalName="conv_kernel_L14" xd:direction="in" xd:interfaceRef="conv_kernel_L1_4_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[5]" xd:originalName="conv_kernel_L15" xd:direction="in" xd:interfaceRef="conv_kernel_L1_5_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[6]" xd:originalName="conv_kernel_L16" xd:direction="in" xd:interfaceRef="conv_kernel_L1_6_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[7]" xd:originalName="conv_kernel_L17" xd:direction="in" xd:interfaceRef="conv_kernel_L1_7_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_kernel_L1[8]" xd:originalName="conv_kernel_L18" xd:direction="in" xd:interfaceRef="conv_kernel_L1_8_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_bias_L1" xd:originalName="conv_bias_L1" xd:direction="in" xd:interfaceRef="conv_bias_L1_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="48"/>
+  <xd:arg xd:name="a" xd:originalName="a" xd:direction="in" xd:interfaceRef="a_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18"/>
+  <xd:arg xd:name="b" xd:originalName="b" xd:direction="in" xd:interfaceRef="b_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_bias_L2[0]" xd:originalName="conv_bias_L20" xd:direction="in" xd:interfaceRef="conv_bias_L2_0_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="48" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_bias_L2[1]" xd:originalName="conv_bias_L21" xd:direction="in" xd:interfaceRef="conv_bias_L2_1_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="48" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_bias_L2[2]" xd:originalName="conv_bias_L22" xd:direction="in" xd:interfaceRef="conv_bias_L2_2_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="48" xd:arraySize="1"/>
+  <xd:arg xd:name="conv_bias_L2[3]" xd:originalName="conv_bias_L23" xd:direction="in" xd:interfaceRef="conv_bias_L2_3_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="48" xd:arraySize="1"/>
+  <xd:arg xd:name="in_image_V_d0" xd:originalName="in_image_V_d0" xd:direction="out" xd:interfaceRef="in_image_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="in_image_V_q0" xd:originalName="in_image_V_q0" xd:direction="in" xd:interfaceRef="in_image_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="in_image_V_d1" xd:originalName="in_image_V_d1" xd:direction="out" xd:interfaceRef="in_image_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="in_image_V_q1" xd:originalName="in_image_V_q1" xd:direction="in" xd:interfaceRef="in_image_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="means_V_d0" xd:originalName="means_V_d0" xd:direction="out" xd:interfaceRef="means_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="means_V_q0" xd:originalName="means_V_q0" xd:direction="in" xd:interfaceRef="means_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="means_V_d1" xd:originalName="means_V_d1" xd:direction="out" xd:interfaceRef="means_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="means_V_q1" xd:originalName="means_V_q1" xd:direction="in" xd:interfaceRef="means_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="784" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_0_V_d0" xd:originalName="conv_kernel_L2_0_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_0_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_0_V_q0" xd:originalName="conv_kernel_L2_0_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_0_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_0_V_d1" xd:originalName="conv_kernel_L2_0_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_0_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_0_V_q1" xd:originalName="conv_kernel_L2_0_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_0_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_1_V_d0" xd:originalName="conv_kernel_L2_1_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_1_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_1_V_q0" xd:originalName="conv_kernel_L2_1_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_1_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_1_V_d1" xd:originalName="conv_kernel_L2_1_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_1_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_1_V_q1" xd:originalName="conv_kernel_L2_1_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_1_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_2_V_d0" xd:originalName="conv_kernel_L2_2_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_2_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_2_V_q0" xd:originalName="conv_kernel_L2_2_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_2_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_2_V_d1" xd:originalName="conv_kernel_L2_2_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_2_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_2_V_q1" xd:originalName="conv_kernel_L2_2_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_2_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_3_V_d0" xd:originalName="conv_kernel_L2_3_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_3_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_3_V_q0" xd:originalName="conv_kernel_L2_3_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_3_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_3_V_d1" xd:originalName="conv_kernel_L2_3_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_3_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_3_V_q1" xd:originalName="conv_kernel_L2_3_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_3_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_4_V_d0" xd:originalName="conv_kernel_L2_4_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_4_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_4_V_q0" xd:originalName="conv_kernel_L2_4_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_4_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_4_V_d1" xd:originalName="conv_kernel_L2_4_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_4_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_4_V_q1" xd:originalName="conv_kernel_L2_4_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_4_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_5_V_d0" xd:originalName="conv_kernel_L2_5_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_5_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_5_V_q0" xd:originalName="conv_kernel_L2_5_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_5_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_5_V_d1" xd:originalName="conv_kernel_L2_5_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_5_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_5_V_q1" xd:originalName="conv_kernel_L2_5_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_5_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_6_V_d0" xd:originalName="conv_kernel_L2_6_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_6_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_6_V_q0" xd:originalName="conv_kernel_L2_6_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_6_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_6_V_d1" xd:originalName="conv_kernel_L2_6_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_6_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_6_V_q1" xd:originalName="conv_kernel_L2_6_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_6_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_7_V_d0" xd:originalName="conv_kernel_L2_7_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_7_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_7_V_q0" xd:originalName="conv_kernel_L2_7_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_7_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_7_V_d1" xd:originalName="conv_kernel_L2_7_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_7_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_7_V_q1" xd:originalName="conv_kernel_L2_7_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_7_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_8_V_d0" xd:originalName="conv_kernel_L2_8_V_d0" xd:direction="out" xd:interfaceRef="conv_kernel_L2_8_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_8_V_q0" xd:originalName="conv_kernel_L2_8_V_q0" xd:direction="in" xd:interfaceRef="conv_kernel_L2_8_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_8_V_d1" xd:originalName="conv_kernel_L2_8_V_d1" xd:direction="out" xd:interfaceRef="conv_kernel_L2_8_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="conv_kernel_L2_8_V_q1" xd:originalName="conv_kernel_L2_8_V_q1" xd:direction="in" xd:interfaceRef="conv_kernel_L2_8_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="4" xd:dataWidth="18"/>
+  <xd:arg xd:name="result_0_V_d0" xd:originalName="result_0_V_d0" xd:direction="out" xd:interfaceRef="result_0_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_0_V_q0" xd:originalName="result_0_V_q0" xd:direction="in" xd:interfaceRef="result_0_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_0_V_d1" xd:originalName="result_0_V_d1" xd:direction="out" xd:interfaceRef="result_0_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_0_V_q1" xd:originalName="result_0_V_q1" xd:direction="in" xd:interfaceRef="result_0_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_1_V_d0" xd:originalName="result_1_V_d0" xd:direction="out" xd:interfaceRef="result_1_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_1_V_q0" xd:originalName="result_1_V_q0" xd:direction="in" xd:interfaceRef="result_1_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_1_V_d1" xd:originalName="result_1_V_d1" xd:direction="out" xd:interfaceRef="result_1_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_1_V_q1" xd:originalName="result_1_V_q1" xd:direction="in" xd:interfaceRef="result_1_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_2_V_d0" xd:originalName="result_2_V_d0" xd:direction="out" xd:interfaceRef="result_2_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_2_V_q0" xd:originalName="result_2_V_q0" xd:direction="in" xd:interfaceRef="result_2_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_2_V_d1" xd:originalName="result_2_V_d1" xd:direction="out" xd:interfaceRef="result_2_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_2_V_q1" xd:originalName="result_2_V_q1" xd:direction="in" xd:interfaceRef="result_2_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_3_V_d0" xd:originalName="result_3_V_d0" xd:direction="out" xd:interfaceRef="result_3_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_3_V_q0" xd:originalName="result_3_V_q0" xd:direction="in" xd:interfaceRef="result_3_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_3_V_d1" xd:originalName="result_3_V_d1" xd:direction="out" xd:interfaceRef="result_3_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_3_V_q1" xd:originalName="result_3_V_q1" xd:direction="in" xd:interfaceRef="result_3_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_4_V_d0" xd:originalName="result_4_V_d0" xd:direction="out" xd:interfaceRef="result_4_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_4_V_q0" xd:originalName="result_4_V_q0" xd:direction="in" xd:interfaceRef="result_4_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_4_V_d1" xd:originalName="result_4_V_d1" xd:direction="out" xd:interfaceRef="result_4_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_4_V_q1" xd:originalName="result_4_V_q1" xd:direction="in" xd:interfaceRef="result_4_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_5_V_d0" xd:originalName="result_5_V_d0" xd:direction="out" xd:interfaceRef="result_5_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_5_V_q0" xd:originalName="result_5_V_q0" xd:direction="in" xd:interfaceRef="result_5_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_5_V_d1" xd:originalName="result_5_V_d1" xd:direction="out" xd:interfaceRef="result_5_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_5_V_q1" xd:originalName="result_5_V_q1" xd:direction="in" xd:interfaceRef="result_5_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_6_V_d0" xd:originalName="result_6_V_d0" xd:direction="out" xd:interfaceRef="result_6_V_d0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_6_V_q0" xd:originalName="result_6_V_q0" xd:direction="in" xd:interfaceRef="result_6_V_q0" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_6_V_d1" xd:originalName="result_6_V_d1" xd:direction="out" xd:interfaceRef="result_6_V_d1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:arg xd:name="result_6_V_q1" xd:originalName="result_6_V_q1" xd:direction="in" xd:interfaceRef="result_6_V_q1" xd:busTypeRef="ap_memory" xd:arraySize="112" xd:dataWidth="48"/>
+  <xd:latencyEstimates xd:best-case="22500" xd:worst-case="22534" xd:average-case="22500"/>
+  <xd:resourceEstimates xd:LUT="8172" xd:FF="6270" xd:BRAM="53" xd:DSP="20"/>
+</xd:acceleratorMap>

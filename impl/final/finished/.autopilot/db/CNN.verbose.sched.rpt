@@ -1,0 +1,564 @@
+
+
+================================================================
+== Vivado HLS Report for 'CNN'
+================================================================
+* Date:           Mon Dec  2 23:35:45 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        final
+* Solution:       finished
+* Product family: kintex7
+* Target device:  xc7k325tffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.950|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  8458|  8510|  2048|  2048| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 20
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 20, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%mean_removed_0_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 21 'alloca' 'mean_removed_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%mean_removed_1_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 22 'alloca' 'mean_removed_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%mean_removed_2_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 23 'alloca' 'mean_removed_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%mean_removed_3_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 24 'alloca' 'mean_removed_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%mean_removed_4_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 25 'alloca' 'mean_removed_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%mean_removed_5_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 26 'alloca' 'mean_removed_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%mean_removed_6_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 27 'alloca' 'mean_removed_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%mean_removed_7_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 28 'alloca' 'mean_removed_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%mean_removed_8_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 29 'alloca' 'mean_removed_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%mean_removed_9_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 30 'alloca' 'mean_removed_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%mean_removed_10_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 31 'alloca' 'mean_removed_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%mean_removed_11_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 32 'alloca' 'mean_removed_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%mean_removed_12_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 33 'alloca' 'mean_removed_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%mean_removed_13_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 34 'alloca' 'mean_removed_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%mean_removed_14_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 35 'alloca' 'mean_removed_14_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%mean_removed_15_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 36 'alloca' 'mean_removed_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%mean_removed_16_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 37 'alloca' 'mean_removed_16_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%mean_removed_17_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 38 'alloca' 'mean_removed_17_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%mean_removed_18_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 39 'alloca' 'mean_removed_18_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%mean_removed_19_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 40 'alloca' 'mean_removed_19_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%mean_removed_20_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 41 'alloca' 'mean_removed_20_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%mean_removed_21_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 42 'alloca' 'mean_removed_21_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%mean_removed_22_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 43 'alloca' 'mean_removed_22_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%mean_removed_23_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 44 'alloca' 'mean_removed_23_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%mean_removed_24_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 45 'alloca' 'mean_removed_24_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%mean_removed_25_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 46 'alloca' 'mean_removed_25_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%mean_removed_26_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 47 'alloca' 'mean_removed_26_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%mean_removed_27_V = alloca [28 x i18], align 4" [../src/CNN_final.cpp:7]   --->   Operation 48 'alloca' 'mean_removed_27_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%padded_0_V = alloca [30 x i1], align 1" [../src/CNN_final.cpp:8]   --->   Operation 49 'alloca' 'padded_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%padded_1_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 50 'alloca' 'padded_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%padded_2_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 51 'alloca' 'padded_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%padded_3_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 52 'alloca' 'padded_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%padded_4_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 53 'alloca' 'padded_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%padded_5_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 54 'alloca' 'padded_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%padded_6_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 55 'alloca' 'padded_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%padded_7_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 56 'alloca' 'padded_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%padded_8_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 57 'alloca' 'padded_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%padded_9_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 58 'alloca' 'padded_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%padded_10_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 59 'alloca' 'padded_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%padded_11_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 60 'alloca' 'padded_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%padded_12_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 61 'alloca' 'padded_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%padded_13_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 62 'alloca' 'padded_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%padded_14_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 63 'alloca' 'padded_14_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%padded_15_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 64 'alloca' 'padded_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%padded_16_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 65 'alloca' 'padded_16_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%padded_17_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 66 'alloca' 'padded_17_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%padded_18_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 67 'alloca' 'padded_18_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%padded_19_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 68 'alloca' 'padded_19_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%padded_20_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 69 'alloca' 'padded_20_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%padded_21_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 70 'alloca' 'padded_21_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%padded_22_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 71 'alloca' 'padded_22_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%padded_23_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 72 'alloca' 'padded_23_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%padded_24_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 73 'alloca' 'padded_24_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%padded_25_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 74 'alloca' 'padded_25_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%padded_26_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 75 'alloca' 'padded_26_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%padded_27_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 76 'alloca' 'padded_27_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%padded_28_V = alloca [30 x i18], align 4" [../src/CNN_final.cpp:8]   --->   Operation 77 'alloca' 'padded_28_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%padded_29_V = alloca [30 x i1], align 1" [../src/CNN_final.cpp:8]   --->   Operation 78 'alloca' 'padded_29_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%resampled_0_0_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 79 'alloca' 'resampled_0_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%resampled_0_1_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 80 'alloca' 'resampled_0_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%resampled_0_2_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 81 'alloca' 'resampled_0_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%resampled_1_0_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 82 'alloca' 'resampled_1_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%resampled_1_1_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 83 'alloca' 'resampled_1_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%resampled_1_2_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 84 'alloca' 'resampled_1_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%resampled_2_0_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 85 'alloca' 'resampled_2_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%resampled_2_1_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 86 'alloca' 'resampled_2_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%resampled_2_2_V = alloca [784 x i18], align 4" [../src/CNN_final.cpp:9]   --->   Operation 87 'alloca' 'resampled_2_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%conv_0_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 88 'alloca' 'conv_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%conv_1_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 89 'alloca' 'conv_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%conv_2_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 90 'alloca' 'conv_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%conv_3_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 91 'alloca' 'conv_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%conv_4_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 92 'alloca' 'conv_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%conv_5_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 93 'alloca' 'conv_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%conv_6_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 94 'alloca' 'conv_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%conv_7_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 95 'alloca' 'conv_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%conv_8_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 96 'alloca' 'conv_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%conv_9_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 97 'alloca' 'conv_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%conv_10_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 98 'alloca' 'conv_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%conv_11_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 99 'alloca' 'conv_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%conv_12_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 100 'alloca' 'conv_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%conv_13_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 101 'alloca' 'conv_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%conv_14_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 102 'alloca' 'conv_14_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%conv_15_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 103 'alloca' 'conv_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%conv_16_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 104 'alloca' 'conv_16_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%conv_17_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 105 'alloca' 'conv_17_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%conv_18_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 106 'alloca' 'conv_18_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%conv_19_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 107 'alloca' 'conv_19_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%conv_20_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 108 'alloca' 'conv_20_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%conv_21_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 109 'alloca' 'conv_21_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%conv_22_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 110 'alloca' 'conv_22_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%conv_23_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 111 'alloca' 'conv_23_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%conv_24_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 112 'alloca' 'conv_24_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%conv_25_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 113 'alloca' 'conv_25_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%conv_26_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 114 'alloca' 'conv_26_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%conv_27_V = alloca [28 x i25], align 4" [../src/CNN_final.cpp:10]   --->   Operation 115 'alloca' 'conv_27_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%batchnorm_0_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 116 'alloca' 'batchnorm_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%batchnorm_1_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 117 'alloca' 'batchnorm_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%batchnorm_2_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 118 'alloca' 'batchnorm_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%batchnorm_3_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 119 'alloca' 'batchnorm_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%batchnorm_4_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 120 'alloca' 'batchnorm_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%batchnorm_5_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 121 'alloca' 'batchnorm_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%batchnorm_6_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 122 'alloca' 'batchnorm_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%batchnorm_7_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 123 'alloca' 'batchnorm_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%batchnorm_8_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 124 'alloca' 'batchnorm_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%batchnorm_9_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 125 'alloca' 'batchnorm_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%batchnorm_10_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 126 'alloca' 'batchnorm_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%batchnorm_11_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 127 'alloca' 'batchnorm_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%batchnorm_12_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 128 'alloca' 'batchnorm_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%batchnorm_13_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 129 'alloca' 'batchnorm_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%batchnorm_14_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 130 'alloca' 'batchnorm_14_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%batchnorm_15_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 131 'alloca' 'batchnorm_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%batchnorm_16_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 132 'alloca' 'batchnorm_16_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%batchnorm_17_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 133 'alloca' 'batchnorm_17_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%batchnorm_18_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 134 'alloca' 'batchnorm_18_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%batchnorm_19_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 135 'alloca' 'batchnorm_19_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%batchnorm_20_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 136 'alloca' 'batchnorm_20_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%batchnorm_21_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 137 'alloca' 'batchnorm_21_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%batchnorm_22_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 138 'alloca' 'batchnorm_22_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%batchnorm_23_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 139 'alloca' 'batchnorm_23_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%batchnorm_24_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 140 'alloca' 'batchnorm_24_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%batchnorm_25_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 141 'alloca' 'batchnorm_25_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%batchnorm_26_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 142 'alloca' 'batchnorm_26_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%batchnorm_27_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:11]   --->   Operation 143 'alloca' 'batchnorm_27_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%ReLU_0_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 144 'alloca' 'ReLU_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%ReLU_1_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 145 'alloca' 'ReLU_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%ReLU_2_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 146 'alloca' 'ReLU_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%ReLU_3_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 147 'alloca' 'ReLU_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%ReLU_4_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 148 'alloca' 'ReLU_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%ReLU_5_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 149 'alloca' 'ReLU_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%ReLU_6_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 150 'alloca' 'ReLU_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%ReLU_7_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 151 'alloca' 'ReLU_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%ReLU_8_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 152 'alloca' 'ReLU_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%ReLU_9_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 153 'alloca' 'ReLU_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%ReLU_10_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 154 'alloca' 'ReLU_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%ReLU_11_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 155 'alloca' 'ReLU_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%ReLU_12_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 156 'alloca' 'ReLU_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%ReLU_13_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 157 'alloca' 'ReLU_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%ReLU_14_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 158 'alloca' 'ReLU_14_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%ReLU_15_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 159 'alloca' 'ReLU_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%ReLU_16_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 160 'alloca' 'ReLU_16_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%ReLU_17_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 161 'alloca' 'ReLU_17_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%ReLU_18_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 162 'alloca' 'ReLU_18_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%ReLU_19_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 163 'alloca' 'ReLU_19_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%ReLU_20_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 164 'alloca' 'ReLU_20_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%ReLU_21_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 165 'alloca' 'ReLU_21_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%ReLU_22_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 166 'alloca' 'ReLU_22_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%ReLU_23_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 167 'alloca' 'ReLU_23_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%ReLU_24_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 168 'alloca' 'ReLU_24_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%ReLU_25_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 169 'alloca' 'ReLU_25_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%ReLU_26_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 170 'alloca' 'ReLU_26_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%ReLU_27_V = alloca [28 x i48], align 8" [../src/CNN_final.cpp:12]   --->   Operation 171 'alloca' 'ReLU_27_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%maxpool_0_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 172 'alloca' 'maxpool_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%maxpool_1_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 173 'alloca' 'maxpool_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%maxpool_2_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 174 'alloca' 'maxpool_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%maxpool_3_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 175 'alloca' 'maxpool_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%maxpool_4_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 176 'alloca' 'maxpool_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%maxpool_5_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 177 'alloca' 'maxpool_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%maxpool_6_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 178 'alloca' 'maxpool_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%maxpool_7_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 179 'alloca' 'maxpool_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%maxpool_8_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 180 'alloca' 'maxpool_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%maxpool_9_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 181 'alloca' 'maxpool_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%maxpool_10_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 182 'alloca' 'maxpool_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%maxpool_11_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 183 'alloca' 'maxpool_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%maxpool_12_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 184 'alloca' 'maxpool_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%maxpool_13_V = alloca [14 x i25], align 4" [../src/CNN_final.cpp:14]   --->   Operation 185 'alloca' 'maxpool_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%padded_L2_0_V = alloca [16 x i1], align 1" [../src/CNN_final.cpp:15]   --->   Operation 186 'alloca' 'padded_L2_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%padded_L2_1_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 187 'alloca' 'padded_L2_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%padded_L2_2_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 188 'alloca' 'padded_L2_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%padded_L2_3_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 189 'alloca' 'padded_L2_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%padded_L2_4_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 190 'alloca' 'padded_L2_4_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%padded_L2_5_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 191 'alloca' 'padded_L2_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%padded_L2_6_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 192 'alloca' 'padded_L2_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%padded_L2_7_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 193 'alloca' 'padded_L2_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%padded_L2_8_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 194 'alloca' 'padded_L2_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%padded_L2_9_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 195 'alloca' 'padded_L2_9_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%padded_L2_10_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 196 'alloca' 'padded_L2_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%padded_L2_11_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 197 'alloca' 'padded_L2_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%padded_L2_12_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 198 'alloca' 'padded_L2_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%padded_L2_13_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 199 'alloca' 'padded_L2_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%padded_L2_14_V = alloca [16 x i25], align 4" [../src/CNN_final.cpp:15]   --->   Operation 200 'alloca' 'padded_L2_14_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%padded_L2_15_V = alloca [16 x i1], align 1" [../src/CNN_final.cpp:15]   --->   Operation 201 'alloca' 'padded_L2_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%resampled_L2_0_V = alloca [588 x i25], align 4" [../src/CNN_final.cpp:16]   --->   Operation 202 'alloca' 'resampled_L2_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%resampled_L2_1_V = alloca [588 x i25], align 4" [../src/CNN_final.cpp:16]   --->   Operation 203 'alloca' 'resampled_L2_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%resampled_L2_2_V = alloca [588 x i25], align 4" [../src/CNN_final.cpp:16]   --->   Operation 204 'alloca' 'resampled_L2_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [2/2] (0.00ns)   --->   "call fastcc void @zero_mean_1chan([28 x i18]* %in_image_0_V, [28 x i18]* %in_image_1_V, [28 x i18]* %in_image_2_V, [28 x i18]* %in_image_3_V, [28 x i18]* %in_image_4_V, [28 x i18]* %in_image_5_V, [28 x i18]* %in_image_6_V, [28 x i18]* %in_image_7_V, [28 x i18]* %in_image_8_V, [28 x i18]* %in_image_9_V, [28 x i18]* %in_image_10_V, [28 x i18]* %in_image_11_V, [28 x i18]* %in_image_12_V, [28 x i18]* %in_image_13_V, [28 x i18]* %in_image_14_V, [28 x i18]* %in_image_15_V, [28 x i18]* %in_image_16_V, [28 x i18]* %in_image_17_V, [28 x i18]* %in_image_18_V, [28 x i18]* %in_image_19_V, [28 x i18]* %in_image_20_V, [28 x i18]* %in_image_21_V, [28 x i18]* %in_image_22_V, [28 x i18]* %in_image_23_V, [28 x i18]* %in_image_24_V, [28 x i18]* %in_image_25_V, [28 x i18]* %in_image_26_V, [28 x i18]* %in_image_27_V, [28 x i18]* %mean_removed_0_V, [28 x i18]* %mean_removed_1_V, [28 x i18]* %mean_removed_2_V, [28 x i18]* %mean_removed_3_V, [28 x i18]* %mean_removed_4_V, [28 x i18]* %mean_removed_5_V, [28 x i18]* %mean_removed_6_V, [28 x i18]* %mean_removed_7_V, [28 x i18]* %mean_removed_8_V, [28 x i18]* %mean_removed_9_V, [28 x i18]* %mean_removed_10_V, [28 x i18]* %mean_removed_11_V, [28 x i18]* %mean_removed_12_V, [28 x i18]* %mean_removed_13_V, [28 x i18]* %mean_removed_14_V, [28 x i18]* %mean_removed_15_V, [28 x i18]* %mean_removed_16_V, [28 x i18]* %mean_removed_17_V, [28 x i18]* %mean_removed_18_V, [28 x i18]* %mean_removed_19_V, [28 x i18]* %mean_removed_20_V, [28 x i18]* %mean_removed_21_V, [28 x i18]* %mean_removed_22_V, [28 x i18]* %mean_removed_23_V, [28 x i18]* %mean_removed_24_V, [28 x i18]* %mean_removed_25_V, [28 x i18]* %mean_removed_26_V, [28 x i18]* %mean_removed_27_V, [28 x i18]* %means_0_V, [28 x i18]* %means_1_V, [28 x i18]* %means_2_V, [28 x i18]* %means_3_V, [28 x i18]* %means_4_V, [28 x i18]* %means_5_V, [28 x i18]* %means_6_V, [28 x i18]* %means_7_V, [28 x i18]* %means_8_V, [28 x i18]* %means_9_V, [28 x i18]* %means_10_V, [28 x i18]* %means_11_V, [28 x i18]* %means_12_V, [28 x i18]* %means_13_V, [28 x i18]* %means_14_V, [28 x i18]* %means_15_V, [28 x i18]* %means_16_V, [28 x i18]* %means_17_V, [28 x i18]* %means_18_V, [28 x i18]* %means_19_V, [28 x i18]* %means_20_V, [28 x i18]* %means_21_V, [28 x i18]* %means_22_V, [28 x i18]* %means_23_V, [28 x i18]* %means_24_V, [28 x i18]* %means_25_V, [28 x i18]* %means_26_V, [28 x i18]* %means_27_V)" [../src/CNN_final.cpp:18]   --->   Operation 205 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 206 [1/2] (0.00ns)   --->   "call fastcc void @zero_mean_1chan([28 x i18]* %in_image_0_V, [28 x i18]* %in_image_1_V, [28 x i18]* %in_image_2_V, [28 x i18]* %in_image_3_V, [28 x i18]* %in_image_4_V, [28 x i18]* %in_image_5_V, [28 x i18]* %in_image_6_V, [28 x i18]* %in_image_7_V, [28 x i18]* %in_image_8_V, [28 x i18]* %in_image_9_V, [28 x i18]* %in_image_10_V, [28 x i18]* %in_image_11_V, [28 x i18]* %in_image_12_V, [28 x i18]* %in_image_13_V, [28 x i18]* %in_image_14_V, [28 x i18]* %in_image_15_V, [28 x i18]* %in_image_16_V, [28 x i18]* %in_image_17_V, [28 x i18]* %in_image_18_V, [28 x i18]* %in_image_19_V, [28 x i18]* %in_image_20_V, [28 x i18]* %in_image_21_V, [28 x i18]* %in_image_22_V, [28 x i18]* %in_image_23_V, [28 x i18]* %in_image_24_V, [28 x i18]* %in_image_25_V, [28 x i18]* %in_image_26_V, [28 x i18]* %in_image_27_V, [28 x i18]* %mean_removed_0_V, [28 x i18]* %mean_removed_1_V, [28 x i18]* %mean_removed_2_V, [28 x i18]* %mean_removed_3_V, [28 x i18]* %mean_removed_4_V, [28 x i18]* %mean_removed_5_V, [28 x i18]* %mean_removed_6_V, [28 x i18]* %mean_removed_7_V, [28 x i18]* %mean_removed_8_V, [28 x i18]* %mean_removed_9_V, [28 x i18]* %mean_removed_10_V, [28 x i18]* %mean_removed_11_V, [28 x i18]* %mean_removed_12_V, [28 x i18]* %mean_removed_13_V, [28 x i18]* %mean_removed_14_V, [28 x i18]* %mean_removed_15_V, [28 x i18]* %mean_removed_16_V, [28 x i18]* %mean_removed_17_V, [28 x i18]* %mean_removed_18_V, [28 x i18]* %mean_removed_19_V, [28 x i18]* %mean_removed_20_V, [28 x i18]* %mean_removed_21_V, [28 x i18]* %mean_removed_22_V, [28 x i18]* %mean_removed_23_V, [28 x i18]* %mean_removed_24_V, [28 x i18]* %mean_removed_25_V, [28 x i18]* %mean_removed_26_V, [28 x i18]* %mean_removed_27_V, [28 x i18]* %means_0_V, [28 x i18]* %means_1_V, [28 x i18]* %means_2_V, [28 x i18]* %means_3_V, [28 x i18]* %means_4_V, [28 x i18]* %means_5_V, [28 x i18]* %means_6_V, [28 x i18]* %means_7_V, [28 x i18]* %means_8_V, [28 x i18]* %means_9_V, [28 x i18]* %means_10_V, [28 x i18]* %means_11_V, [28 x i18]* %means_12_V, [28 x i18]* %means_13_V, [28 x i18]* %means_14_V, [28 x i18]* %means_15_V, [28 x i18]* %means_16_V, [28 x i18]* %means_17_V, [28 x i18]* %means_18_V, [28 x i18]* %means_19_V, [28 x i18]* %means_20_V, [28 x i18]* %means_21_V, [28 x i18]* %means_22_V, [28 x i18]* %means_23_V, [28 x i18]* %means_24_V, [28 x i18]* %means_25_V, [28 x i18]* %means_26_V, [28 x i18]* %means_27_V)" [../src/CNN_final.cpp:18]   --->   Operation 206 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 207 [2/2] (0.00ns)   --->   "call fastcc void @efficient_pad_n_1cha([28 x i18]* %mean_removed_0_V, [28 x i18]* %mean_removed_1_V, [28 x i18]* %mean_removed_2_V, [28 x i18]* %mean_removed_3_V, [28 x i18]* %mean_removed_4_V, [28 x i18]* %mean_removed_5_V, [28 x i18]* %mean_removed_6_V, [28 x i18]* %mean_removed_7_V, [28 x i18]* %mean_removed_8_V, [28 x i18]* %mean_removed_9_V, [28 x i18]* %mean_removed_10_V, [28 x i18]* %mean_removed_11_V, [28 x i18]* %mean_removed_12_V, [28 x i18]* %mean_removed_13_V, [28 x i18]* %mean_removed_14_V, [28 x i18]* %mean_removed_15_V, [28 x i18]* %mean_removed_16_V, [28 x i18]* %mean_removed_17_V, [28 x i18]* %mean_removed_18_V, [28 x i18]* %mean_removed_19_V, [28 x i18]* %mean_removed_20_V, [28 x i18]* %mean_removed_21_V, [28 x i18]* %mean_removed_22_V, [28 x i18]* %mean_removed_23_V, [28 x i18]* %mean_removed_24_V, [28 x i18]* %mean_removed_25_V, [28 x i18]* %mean_removed_26_V, [28 x i18]* %mean_removed_27_V, [30 x i1]* %padded_0_V, [30 x i18]* %padded_1_V, [30 x i18]* %padded_2_V, [30 x i18]* %padded_3_V, [30 x i18]* %padded_4_V, [30 x i18]* %padded_5_V, [30 x i18]* %padded_6_V, [30 x i18]* %padded_7_V, [30 x i18]* %padded_8_V, [30 x i18]* %padded_9_V, [30 x i18]* %padded_10_V, [30 x i18]* %padded_11_V, [30 x i18]* %padded_12_V, [30 x i18]* %padded_13_V, [30 x i18]* %padded_14_V, [30 x i18]* %padded_15_V, [30 x i18]* %padded_16_V, [30 x i18]* %padded_17_V, [30 x i18]* %padded_18_V, [30 x i18]* %padded_19_V, [30 x i18]* %padded_20_V, [30 x i18]* %padded_21_V, [30 x i18]* %padded_22_V, [30 x i18]* %padded_23_V, [30 x i18]* %padded_24_V, [30 x i18]* %padded_25_V, [30 x i18]* %padded_26_V, [30 x i18]* %padded_27_V, [30 x i18]* %padded_28_V, [30 x i1]* %padded_29_V)" [../src/CNN_final.cpp:19]   --->   Operation 207 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 208 [1/2] (0.00ns)   --->   "call fastcc void @efficient_pad_n_1cha([28 x i18]* %mean_removed_0_V, [28 x i18]* %mean_removed_1_V, [28 x i18]* %mean_removed_2_V, [28 x i18]* %mean_removed_3_V, [28 x i18]* %mean_removed_4_V, [28 x i18]* %mean_removed_5_V, [28 x i18]* %mean_removed_6_V, [28 x i18]* %mean_removed_7_V, [28 x i18]* %mean_removed_8_V, [28 x i18]* %mean_removed_9_V, [28 x i18]* %mean_removed_10_V, [28 x i18]* %mean_removed_11_V, [28 x i18]* %mean_removed_12_V, [28 x i18]* %mean_removed_13_V, [28 x i18]* %mean_removed_14_V, [28 x i18]* %mean_removed_15_V, [28 x i18]* %mean_removed_16_V, [28 x i18]* %mean_removed_17_V, [28 x i18]* %mean_removed_18_V, [28 x i18]* %mean_removed_19_V, [28 x i18]* %mean_removed_20_V, [28 x i18]* %mean_removed_21_V, [28 x i18]* %mean_removed_22_V, [28 x i18]* %mean_removed_23_V, [28 x i18]* %mean_removed_24_V, [28 x i18]* %mean_removed_25_V, [28 x i18]* %mean_removed_26_V, [28 x i18]* %mean_removed_27_V, [30 x i1]* %padded_0_V, [30 x i18]* %padded_1_V, [30 x i18]* %padded_2_V, [30 x i18]* %padded_3_V, [30 x i18]* %padded_4_V, [30 x i18]* %padded_5_V, [30 x i18]* %padded_6_V, [30 x i18]* %padded_7_V, [30 x i18]* %padded_8_V, [30 x i18]* %padded_9_V, [30 x i18]* %padded_10_V, [30 x i18]* %padded_11_V, [30 x i18]* %padded_12_V, [30 x i18]* %padded_13_V, [30 x i18]* %padded_14_V, [30 x i18]* %padded_15_V, [30 x i18]* %padded_16_V, [30 x i18]* %padded_17_V, [30 x i18]* %padded_18_V, [30 x i18]* %padded_19_V, [30 x i18]* %padded_20_V, [30 x i18]* %padded_21_V, [30 x i18]* %padded_22_V, [30 x i18]* %padded_23_V, [30 x i18]* %padded_24_V, [30 x i18]* %padded_25_V, [30 x i18]* %padded_26_V, [30 x i18]* %padded_27_V, [30 x i18]* %padded_28_V, [30 x i1]* %padded_29_V)" [../src/CNN_final.cpp:19]   --->   Operation 208 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 209 [2/2] (0.00ns)   --->   "call fastcc void @resample([30 x i1]* %padded_0_V, [30 x i18]* %padded_1_V, [30 x i18]* %padded_2_V, [30 x i18]* %padded_3_V, [30 x i18]* %padded_4_V, [30 x i18]* %padded_5_V, [30 x i18]* %padded_6_V, [30 x i18]* %padded_7_V, [30 x i18]* %padded_8_V, [30 x i18]* %padded_9_V, [30 x i18]* %padded_10_V, [30 x i18]* %padded_11_V, [30 x i18]* %padded_12_V, [30 x i18]* %padded_13_V, [30 x i18]* %padded_14_V, [30 x i18]* %padded_15_V, [30 x i18]* %padded_16_V, [30 x i18]* %padded_17_V, [30 x i18]* %padded_18_V, [30 x i18]* %padded_19_V, [30 x i18]* %padded_20_V, [30 x i18]* %padded_21_V, [30 x i18]* %padded_22_V, [30 x i18]* %padded_23_V, [30 x i18]* %padded_24_V, [30 x i18]* %padded_25_V, [30 x i18]* %padded_26_V, [30 x i18]* %padded_27_V, [30 x i18]* %padded_28_V, [30 x i1]* %padded_29_V, [784 x i18]* %resampled_0_0_V, [784 x i18]* %resampled_0_1_V, [784 x i18]* %resampled_0_2_V, [784 x i18]* %resampled_1_0_V, [784 x i18]* %resampled_1_1_V, [784 x i18]* %resampled_1_2_V, [784 x i18]* %resampled_2_0_V, [784 x i18]* %resampled_2_1_V, [784 x i18]* %resampled_2_2_V)" [../src/CNN_final.cpp:20]   --->   Operation 209 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 210 [1/2] (0.00ns)   --->   "call fastcc void @resample([30 x i1]* %padded_0_V, [30 x i18]* %padded_1_V, [30 x i18]* %padded_2_V, [30 x i18]* %padded_3_V, [30 x i18]* %padded_4_V, [30 x i18]* %padded_5_V, [30 x i18]* %padded_6_V, [30 x i18]* %padded_7_V, [30 x i18]* %padded_8_V, [30 x i18]* %padded_9_V, [30 x i18]* %padded_10_V, [30 x i18]* %padded_11_V, [30 x i18]* %padded_12_V, [30 x i18]* %padded_13_V, [30 x i18]* %padded_14_V, [30 x i18]* %padded_15_V, [30 x i18]* %padded_16_V, [30 x i18]* %padded_17_V, [30 x i18]* %padded_18_V, [30 x i18]* %padded_19_V, [30 x i18]* %padded_20_V, [30 x i18]* %padded_21_V, [30 x i18]* %padded_22_V, [30 x i18]* %padded_23_V, [30 x i18]* %padded_24_V, [30 x i18]* %padded_25_V, [30 x i18]* %padded_26_V, [30 x i18]* %padded_27_V, [30 x i18]* %padded_28_V, [30 x i1]* %padded_29_V, [784 x i18]* %resampled_0_0_V, [784 x i18]* %resampled_0_1_V, [784 x i18]* %resampled_0_2_V, [784 x i18]* %resampled_1_0_V, [784 x i18]* %resampled_1_1_V, [784 x i18]* %resampled_1_2_V, [784 x i18]* %resampled_2_0_V, [784 x i18]* %resampled_2_1_V, [784 x i18]* %resampled_2_2_V)" [../src/CNN_final.cpp:20]   --->   Operation 210 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.87>
+ST_7 : Operation 211 [1/1] (0.00ns)   --->   "%conv_bias_L1_V_read = call i48 @_ssdm_op_Read.ap_auto.i48(i48 %conv_bias_L1_V)"   --->   Operation 211 'read' 'conv_bias_L1_V_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 212 [2/2] (0.87ns)   --->   "call fastcc void @conv2d_3x3_1chan_rev([784 x i18]* %resampled_0_0_V, [784 x i18]* %resampled_0_1_V, [784 x i18]* %resampled_0_2_V, [784 x i18]* %resampled_1_0_V, [784 x i18]* %resampled_1_1_V, [784 x i18]* %resampled_1_2_V, [784 x i18]* %resampled_2_0_V, [784 x i18]* %resampled_2_1_V, [784 x i18]* %resampled_2_2_V, i18* %conv_kernel_L1_0_V, i18* %conv_kernel_L1_1_V, i18* %conv_kernel_L1_2_V, i18* %conv_kernel_L1_3_V, i18* %conv_kernel_L1_4_V, i18* %conv_kernel_L1_5_V, i18* %conv_kernel_L1_6_V, i18* %conv_kernel_L1_7_V, i18* %conv_kernel_L1_8_V, i48 %conv_bias_L1_V_read, [28 x i25]* %conv_0_V, [28 x i25]* %conv_1_V, [28 x i25]* %conv_2_V, [28 x i25]* %conv_3_V, [28 x i25]* %conv_4_V, [28 x i25]* %conv_5_V, [28 x i25]* %conv_6_V, [28 x i25]* %conv_7_V, [28 x i25]* %conv_8_V, [28 x i25]* %conv_9_V, [28 x i25]* %conv_10_V, [28 x i25]* %conv_11_V, [28 x i25]* %conv_12_V, [28 x i25]* %conv_13_V, [28 x i25]* %conv_14_V, [28 x i25]* %conv_15_V, [28 x i25]* %conv_16_V, [28 x i25]* %conv_17_V, [28 x i25]* %conv_18_V, [28 x i25]* %conv_19_V, [28 x i25]* %conv_20_V, [28 x i25]* %conv_21_V, [28 x i25]* %conv_22_V, [28 x i25]* %conv_23_V, [28 x i25]* %conv_24_V, [28 x i25]* %conv_25_V, [28 x i25]* %conv_26_V, [28 x i25]* %conv_27_V)" [../src/CNN_final.cpp:21]   --->   Operation 212 'call' <Predicate = true> <Delay = 0.87> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 213 [1/2] (0.00ns)   --->   "call fastcc void @conv2d_3x3_1chan_rev([784 x i18]* %resampled_0_0_V, [784 x i18]* %resampled_0_1_V, [784 x i18]* %resampled_0_2_V, [784 x i18]* %resampled_1_0_V, [784 x i18]* %resampled_1_1_V, [784 x i18]* %resampled_1_2_V, [784 x i18]* %resampled_2_0_V, [784 x i18]* %resampled_2_1_V, [784 x i18]* %resampled_2_2_V, i18* %conv_kernel_L1_0_V, i18* %conv_kernel_L1_1_V, i18* %conv_kernel_L1_2_V, i18* %conv_kernel_L1_3_V, i18* %conv_kernel_L1_4_V, i18* %conv_kernel_L1_5_V, i18* %conv_kernel_L1_6_V, i18* %conv_kernel_L1_7_V, i18* %conv_kernel_L1_8_V, i48 %conv_bias_L1_V_read, [28 x i25]* %conv_0_V, [28 x i25]* %conv_1_V, [28 x i25]* %conv_2_V, [28 x i25]* %conv_3_V, [28 x i25]* %conv_4_V, [28 x i25]* %conv_5_V, [28 x i25]* %conv_6_V, [28 x i25]* %conv_7_V, [28 x i25]* %conv_8_V, [28 x i25]* %conv_9_V, [28 x i25]* %conv_10_V, [28 x i25]* %conv_11_V, [28 x i25]* %conv_12_V, [28 x i25]* %conv_13_V, [28 x i25]* %conv_14_V, [28 x i25]* %conv_15_V, [28 x i25]* %conv_16_V, [28 x i25]* %conv_17_V, [28 x i25]* %conv_18_V, [28 x i25]* %conv_19_V, [28 x i25]* %conv_20_V, [28 x i25]* %conv_21_V, [28 x i25]* %conv_22_V, [28 x i25]* %conv_23_V, [28 x i25]* %conv_24_V, [28 x i25]* %conv_25_V, [28 x i25]* %conv_26_V, [28 x i25]* %conv_27_V)" [../src/CNN_final.cpp:21]   --->   Operation 213 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 214 [1/1] (0.00ns)   --->   "%b_V_read = call i18 @_ssdm_op_Read.ap_auto.i18(i18 %b_V)"   --->   Operation 214 'read' 'b_V_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 215 [1/1] (0.00ns)   --->   "%a_V_read = call i18 @_ssdm_op_Read.ap_auto.i18(i18 %a_V)"   --->   Operation 215 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 216 [2/2] (0.00ns)   --->   "call fastcc void @batch_norm([28 x i25]* %conv_0_V, [28 x i25]* %conv_1_V, [28 x i25]* %conv_2_V, [28 x i25]* %conv_3_V, [28 x i25]* %conv_4_V, [28 x i25]* %conv_5_V, [28 x i25]* %conv_6_V, [28 x i25]* %conv_7_V, [28 x i25]* %conv_8_V, [28 x i25]* %conv_9_V, [28 x i25]* %conv_10_V, [28 x i25]* %conv_11_V, [28 x i25]* %conv_12_V, [28 x i25]* %conv_13_V, [28 x i25]* %conv_14_V, [28 x i25]* %conv_15_V, [28 x i25]* %conv_16_V, [28 x i25]* %conv_17_V, [28 x i25]* %conv_18_V, [28 x i25]* %conv_19_V, [28 x i25]* %conv_20_V, [28 x i25]* %conv_21_V, [28 x i25]* %conv_22_V, [28 x i25]* %conv_23_V, [28 x i25]* %conv_24_V, [28 x i25]* %conv_25_V, [28 x i25]* %conv_26_V, [28 x i25]* %conv_27_V, i18 %a_V_read, i18 %b_V_read, [28 x i48]* %batchnorm_0_V, [28 x i48]* %batchnorm_1_V, [28 x i48]* %batchnorm_2_V, [28 x i48]* %batchnorm_3_V, [28 x i48]* %batchnorm_4_V, [28 x i48]* %batchnorm_5_V, [28 x i48]* %batchnorm_6_V, [28 x i48]* %batchnorm_7_V, [28 x i48]* %batchnorm_8_V, [28 x i48]* %batchnorm_9_V, [28 x i48]* %batchnorm_10_V, [28 x i48]* %batchnorm_11_V, [28 x i48]* %batchnorm_12_V, [28 x i48]* %batchnorm_13_V, [28 x i48]* %batchnorm_14_V, [28 x i48]* %batchnorm_15_V, [28 x i48]* %batchnorm_16_V, [28 x i48]* %batchnorm_17_V, [28 x i48]* %batchnorm_18_V, [28 x i48]* %batchnorm_19_V, [28 x i48]* %batchnorm_20_V, [28 x i48]* %batchnorm_21_V, [28 x i48]* %batchnorm_22_V, [28 x i48]* %batchnorm_23_V, [28 x i48]* %batchnorm_24_V, [28 x i48]* %batchnorm_25_V, [28 x i48]* %batchnorm_26_V, [28 x i48]* %batchnorm_27_V)" [../src/CNN_final.cpp:22]   --->   Operation 216 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 217 [1/2] (0.00ns)   --->   "call fastcc void @batch_norm([28 x i25]* %conv_0_V, [28 x i25]* %conv_1_V, [28 x i25]* %conv_2_V, [28 x i25]* %conv_3_V, [28 x i25]* %conv_4_V, [28 x i25]* %conv_5_V, [28 x i25]* %conv_6_V, [28 x i25]* %conv_7_V, [28 x i25]* %conv_8_V, [28 x i25]* %conv_9_V, [28 x i25]* %conv_10_V, [28 x i25]* %conv_11_V, [28 x i25]* %conv_12_V, [28 x i25]* %conv_13_V, [28 x i25]* %conv_14_V, [28 x i25]* %conv_15_V, [28 x i25]* %conv_16_V, [28 x i25]* %conv_17_V, [28 x i25]* %conv_18_V, [28 x i25]* %conv_19_V, [28 x i25]* %conv_20_V, [28 x i25]* %conv_21_V, [28 x i25]* %conv_22_V, [28 x i25]* %conv_23_V, [28 x i25]* %conv_24_V, [28 x i25]* %conv_25_V, [28 x i25]* %conv_26_V, [28 x i25]* %conv_27_V, i18 %a_V_read, i18 %b_V_read, [28 x i48]* %batchnorm_0_V, [28 x i48]* %batchnorm_1_V, [28 x i48]* %batchnorm_2_V, [28 x i48]* %batchnorm_3_V, [28 x i48]* %batchnorm_4_V, [28 x i48]* %batchnorm_5_V, [28 x i48]* %batchnorm_6_V, [28 x i48]* %batchnorm_7_V, [28 x i48]* %batchnorm_8_V, [28 x i48]* %batchnorm_9_V, [28 x i48]* %batchnorm_10_V, [28 x i48]* %batchnorm_11_V, [28 x i48]* %batchnorm_12_V, [28 x i48]* %batchnorm_13_V, [28 x i48]* %batchnorm_14_V, [28 x i48]* %batchnorm_15_V, [28 x i48]* %batchnorm_16_V, [28 x i48]* %batchnorm_17_V, [28 x i48]* %batchnorm_18_V, [28 x i48]* %batchnorm_19_V, [28 x i48]* %batchnorm_20_V, [28 x i48]* %batchnorm_21_V, [28 x i48]* %batchnorm_22_V, [28 x i48]* %batchnorm_23_V, [28 x i48]* %batchnorm_24_V, [28 x i48]* %batchnorm_25_V, [28 x i48]* %batchnorm_26_V, [28 x i48]* %batchnorm_27_V)" [../src/CNN_final.cpp:22]   --->   Operation 217 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 218 [2/2] (0.00ns)   --->   "call fastcc void @relu([28 x i48]* %batchnorm_0_V, [28 x i48]* %batchnorm_1_V, [28 x i48]* %batchnorm_2_V, [28 x i48]* %batchnorm_3_V, [28 x i48]* %batchnorm_4_V, [28 x i48]* %batchnorm_5_V, [28 x i48]* %batchnorm_6_V, [28 x i48]* %batchnorm_7_V, [28 x i48]* %batchnorm_8_V, [28 x i48]* %batchnorm_9_V, [28 x i48]* %batchnorm_10_V, [28 x i48]* %batchnorm_11_V, [28 x i48]* %batchnorm_12_V, [28 x i48]* %batchnorm_13_V, [28 x i48]* %batchnorm_14_V, [28 x i48]* %batchnorm_15_V, [28 x i48]* %batchnorm_16_V, [28 x i48]* %batchnorm_17_V, [28 x i48]* %batchnorm_18_V, [28 x i48]* %batchnorm_19_V, [28 x i48]* %batchnorm_20_V, [28 x i48]* %batchnorm_21_V, [28 x i48]* %batchnorm_22_V, [28 x i48]* %batchnorm_23_V, [28 x i48]* %batchnorm_24_V, [28 x i48]* %batchnorm_25_V, [28 x i48]* %batchnorm_26_V, [28 x i48]* %batchnorm_27_V, [28 x i48]* %ReLU_0_V, [28 x i48]* %ReLU_1_V, [28 x i48]* %ReLU_2_V, [28 x i48]* %ReLU_3_V, [28 x i48]* %ReLU_4_V, [28 x i48]* %ReLU_5_V, [28 x i48]* %ReLU_6_V, [28 x i48]* %ReLU_7_V, [28 x i48]* %ReLU_8_V, [28 x i48]* %ReLU_9_V, [28 x i48]* %ReLU_10_V, [28 x i48]* %ReLU_11_V, [28 x i48]* %ReLU_12_V, [28 x i48]* %ReLU_13_V, [28 x i48]* %ReLU_14_V, [28 x i48]* %ReLU_15_V, [28 x i48]* %ReLU_16_V, [28 x i48]* %ReLU_17_V, [28 x i48]* %ReLU_18_V, [28 x i48]* %ReLU_19_V, [28 x i48]* %ReLU_20_V, [28 x i48]* %ReLU_21_V, [28 x i48]* %ReLU_22_V, [28 x i48]* %ReLU_23_V, [28 x i48]* %ReLU_24_V, [28 x i48]* %ReLU_25_V, [28 x i48]* %ReLU_26_V, [28 x i48]* %ReLU_27_V)" [../src/CNN_final.cpp:23]   --->   Operation 218 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 219 [1/2] (0.00ns)   --->   "call fastcc void @relu([28 x i48]* %batchnorm_0_V, [28 x i48]* %batchnorm_1_V, [28 x i48]* %batchnorm_2_V, [28 x i48]* %batchnorm_3_V, [28 x i48]* %batchnorm_4_V, [28 x i48]* %batchnorm_5_V, [28 x i48]* %batchnorm_6_V, [28 x i48]* %batchnorm_7_V, [28 x i48]* %batchnorm_8_V, [28 x i48]* %batchnorm_9_V, [28 x i48]* %batchnorm_10_V, [28 x i48]* %batchnorm_11_V, [28 x i48]* %batchnorm_12_V, [28 x i48]* %batchnorm_13_V, [28 x i48]* %batchnorm_14_V, [28 x i48]* %batchnorm_15_V, [28 x i48]* %batchnorm_16_V, [28 x i48]* %batchnorm_17_V, [28 x i48]* %batchnorm_18_V, [28 x i48]* %batchnorm_19_V, [28 x i48]* %batchnorm_20_V, [28 x i48]* %batchnorm_21_V, [28 x i48]* %batchnorm_22_V, [28 x i48]* %batchnorm_23_V, [28 x i48]* %batchnorm_24_V, [28 x i48]* %batchnorm_25_V, [28 x i48]* %batchnorm_26_V, [28 x i48]* %batchnorm_27_V, [28 x i48]* %ReLU_0_V, [28 x i48]* %ReLU_1_V, [28 x i48]* %ReLU_2_V, [28 x i48]* %ReLU_3_V, [28 x i48]* %ReLU_4_V, [28 x i48]* %ReLU_5_V, [28 x i48]* %ReLU_6_V, [28 x i48]* %ReLU_7_V, [28 x i48]* %ReLU_8_V, [28 x i48]* %ReLU_9_V, [28 x i48]* %ReLU_10_V, [28 x i48]* %ReLU_11_V, [28 x i48]* %ReLU_12_V, [28 x i48]* %ReLU_13_V, [28 x i48]* %ReLU_14_V, [28 x i48]* %ReLU_15_V, [28 x i48]* %ReLU_16_V, [28 x i48]* %ReLU_17_V, [28 x i48]* %ReLU_18_V, [28 x i48]* %ReLU_19_V, [28 x i48]* %ReLU_20_V, [28 x i48]* %ReLU_21_V, [28 x i48]* %ReLU_22_V, [28 x i48]* %ReLU_23_V, [28 x i48]* %ReLU_24_V, [28 x i48]* %ReLU_25_V, [28 x i48]* %ReLU_26_V, [28 x i48]* %ReLU_27_V)" [../src/CNN_final.cpp:23]   --->   Operation 219 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 220 [2/2] (0.00ns)   --->   "call fastcc void @max_pool_1chan([28 x i48]* %ReLU_0_V, [28 x i48]* %ReLU_1_V, [28 x i48]* %ReLU_2_V, [28 x i48]* %ReLU_3_V, [28 x i48]* %ReLU_4_V, [28 x i48]* %ReLU_5_V, [28 x i48]* %ReLU_6_V, [28 x i48]* %ReLU_7_V, [28 x i48]* %ReLU_8_V, [28 x i48]* %ReLU_9_V, [28 x i48]* %ReLU_10_V, [28 x i48]* %ReLU_11_V, [28 x i48]* %ReLU_12_V, [28 x i48]* %ReLU_13_V, [28 x i48]* %ReLU_14_V, [28 x i48]* %ReLU_15_V, [28 x i48]* %ReLU_16_V, [28 x i48]* %ReLU_17_V, [28 x i48]* %ReLU_18_V, [28 x i48]* %ReLU_19_V, [28 x i48]* %ReLU_20_V, [28 x i48]* %ReLU_21_V, [28 x i48]* %ReLU_22_V, [28 x i48]* %ReLU_23_V, [28 x i48]* %ReLU_24_V, [28 x i48]* %ReLU_25_V, [28 x i48]* %ReLU_26_V, [28 x i48]* %ReLU_27_V, [14 x i25]* %maxpool_0_V, [14 x i25]* %maxpool_1_V, [14 x i25]* %maxpool_2_V, [14 x i25]* %maxpool_3_V, [14 x i25]* %maxpool_4_V, [14 x i25]* %maxpool_5_V, [14 x i25]* %maxpool_6_V, [14 x i25]* %maxpool_7_V, [14 x i25]* %maxpool_8_V, [14 x i25]* %maxpool_9_V, [14 x i25]* %maxpool_10_V, [14 x i25]* %maxpool_11_V, [14 x i25]* %maxpool_12_V, [14 x i25]* %maxpool_13_V)" [../src/CNN_final.cpp:24]   --->   Operation 220 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 221 [1/2] (0.00ns)   --->   "call fastcc void @max_pool_1chan([28 x i48]* %ReLU_0_V, [28 x i48]* %ReLU_1_V, [28 x i48]* %ReLU_2_V, [28 x i48]* %ReLU_3_V, [28 x i48]* %ReLU_4_V, [28 x i48]* %ReLU_5_V, [28 x i48]* %ReLU_6_V, [28 x i48]* %ReLU_7_V, [28 x i48]* %ReLU_8_V, [28 x i48]* %ReLU_9_V, [28 x i48]* %ReLU_10_V, [28 x i48]* %ReLU_11_V, [28 x i48]* %ReLU_12_V, [28 x i48]* %ReLU_13_V, [28 x i48]* %ReLU_14_V, [28 x i48]* %ReLU_15_V, [28 x i48]* %ReLU_16_V, [28 x i48]* %ReLU_17_V, [28 x i48]* %ReLU_18_V, [28 x i48]* %ReLU_19_V, [28 x i48]* %ReLU_20_V, [28 x i48]* %ReLU_21_V, [28 x i48]* %ReLU_22_V, [28 x i48]* %ReLU_23_V, [28 x i48]* %ReLU_24_V, [28 x i48]* %ReLU_25_V, [28 x i48]* %ReLU_26_V, [28 x i48]* %ReLU_27_V, [14 x i25]* %maxpool_0_V, [14 x i25]* %maxpool_1_V, [14 x i25]* %maxpool_2_V, [14 x i25]* %maxpool_3_V, [14 x i25]* %maxpool_4_V, [14 x i25]* %maxpool_5_V, [14 x i25]* %maxpool_6_V, [14 x i25]* %maxpool_7_V, [14 x i25]* %maxpool_8_V, [14 x i25]* %maxpool_9_V, [14 x i25]* %maxpool_10_V, [14 x i25]* %maxpool_11_V, [14 x i25]* %maxpool_12_V, [14 x i25]* %maxpool_13_V)" [../src/CNN_final.cpp:24]   --->   Operation 221 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 222 [2/2] (0.00ns)   --->   "call fastcc void @pad_for_conv2([14 x i25]* %maxpool_0_V, [14 x i25]* %maxpool_1_V, [14 x i25]* %maxpool_2_V, [14 x i25]* %maxpool_3_V, [14 x i25]* %maxpool_4_V, [14 x i25]* %maxpool_5_V, [14 x i25]* %maxpool_6_V, [14 x i25]* %maxpool_7_V, [14 x i25]* %maxpool_8_V, [14 x i25]* %maxpool_9_V, [14 x i25]* %maxpool_10_V, [14 x i25]* %maxpool_11_V, [14 x i25]* %maxpool_12_V, [14 x i25]* %maxpool_13_V, [16 x i1]* %padded_L2_0_V, [16 x i25]* %padded_L2_1_V, [16 x i25]* %padded_L2_2_V, [16 x i25]* %padded_L2_3_V, [16 x i25]* %padded_L2_4_V, [16 x i25]* %padded_L2_5_V, [16 x i25]* %padded_L2_6_V, [16 x i25]* %padded_L2_7_V, [16 x i25]* %padded_L2_8_V, [16 x i25]* %padded_L2_9_V, [16 x i25]* %padded_L2_10_V, [16 x i25]* %padded_L2_11_V, [16 x i25]* %padded_L2_12_V, [16 x i25]* %padded_L2_13_V, [16 x i25]* %padded_L2_14_V, [16 x i1]* %padded_L2_15_V)" [../src/CNN_final.cpp:27]   --->   Operation 222 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 223 [1/2] (0.00ns)   --->   "call fastcc void @pad_for_conv2([14 x i25]* %maxpool_0_V, [14 x i25]* %maxpool_1_V, [14 x i25]* %maxpool_2_V, [14 x i25]* %maxpool_3_V, [14 x i25]* %maxpool_4_V, [14 x i25]* %maxpool_5_V, [14 x i25]* %maxpool_6_V, [14 x i25]* %maxpool_7_V, [14 x i25]* %maxpool_8_V, [14 x i25]* %maxpool_9_V, [14 x i25]* %maxpool_10_V, [14 x i25]* %maxpool_11_V, [14 x i25]* %maxpool_12_V, [14 x i25]* %maxpool_13_V, [16 x i1]* %padded_L2_0_V, [16 x i25]* %padded_L2_1_V, [16 x i25]* %padded_L2_2_V, [16 x i25]* %padded_L2_3_V, [16 x i25]* %padded_L2_4_V, [16 x i25]* %padded_L2_5_V, [16 x i25]* %padded_L2_6_V, [16 x i25]* %padded_L2_7_V, [16 x i25]* %padded_L2_8_V, [16 x i25]* %padded_L2_9_V, [16 x i25]* %padded_L2_10_V, [16 x i25]* %padded_L2_11_V, [16 x i25]* %padded_L2_12_V, [16 x i25]* %padded_L2_13_V, [16 x i25]* %padded_L2_14_V, [16 x i1]* %padded_L2_15_V)" [../src/CNN_final.cpp:27]   --->   Operation 223 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 0.00>
+ST_17 : Operation 224 [2/2] (0.00ns)   --->   "call fastcc void @resample_for_conv2([16 x i1]* %padded_L2_0_V, [16 x i25]* %padded_L2_1_V, [16 x i25]* %padded_L2_2_V, [16 x i25]* %padded_L2_3_V, [16 x i25]* %padded_L2_4_V, [16 x i25]* %padded_L2_5_V, [16 x i25]* %padded_L2_6_V, [16 x i25]* %padded_L2_7_V, [16 x i25]* %padded_L2_8_V, [16 x i25]* %padded_L2_9_V, [16 x i25]* %padded_L2_10_V, [16 x i25]* %padded_L2_11_V, [16 x i25]* %padded_L2_12_V, [16 x i25]* %padded_L2_13_V, [16 x i25]* %padded_L2_14_V, [16 x i1]* %padded_L2_15_V, [588 x i25]* %resampled_L2_0_V, [588 x i25]* %resampled_L2_1_V, [588 x i25]* %resampled_L2_2_V)" [../src/CNN_final.cpp:28]   --->   Operation 224 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 225 [1/2] (0.00ns)   --->   "call fastcc void @resample_for_conv2([16 x i1]* %padded_L2_0_V, [16 x i25]* %padded_L2_1_V, [16 x i25]* %padded_L2_2_V, [16 x i25]* %padded_L2_3_V, [16 x i25]* %padded_L2_4_V, [16 x i25]* %padded_L2_5_V, [16 x i25]* %padded_L2_6_V, [16 x i25]* %padded_L2_7_V, [16 x i25]* %padded_L2_8_V, [16 x i25]* %padded_L2_9_V, [16 x i25]* %padded_L2_10_V, [16 x i25]* %padded_L2_11_V, [16 x i25]* %padded_L2_12_V, [16 x i25]* %padded_L2_13_V, [16 x i25]* %padded_L2_14_V, [16 x i1]* %padded_L2_15_V, [588 x i25]* %resampled_L2_0_V, [588 x i25]* %resampled_L2_1_V, [588 x i25]* %resampled_L2_2_V)" [../src/CNN_final.cpp:28]   --->   Operation 225 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 0.88>
+ST_19 : Operation 226 [2/2] (0.88ns)   --->   "call fastcc void @conv2d_3x3_4chan_rev([588 x i25]* %resampled_L2_0_V, [588 x i25]* %resampled_L2_1_V, [588 x i25]* %resampled_L2_2_V, [4 x i18]* %conv_kernel_L2_0_V, [4 x i18]* %conv_kernel_L2_1_V, [4 x i18]* %conv_kernel_L2_2_V, [4 x i18]* %conv_kernel_L2_3_V, [4 x i18]* %conv_kernel_L2_4_V, [4 x i18]* %conv_kernel_L2_5_V, [4 x i18]* %conv_kernel_L2_6_V, [4 x i18]* %conv_kernel_L2_7_V, [4 x i18]* %conv_kernel_L2_8_V, i48* %conv_bias_L2_0_V, i48* %conv_bias_L2_1_V, i48* %conv_bias_L2_2_V, i48* %conv_bias_L2_3_V, [56 x i48]* %result_0_V, [56 x i48]* %result_1_V, [56 x i48]* %result_2_V, [56 x i48]* %result_3_V, [56 x i48]* %result_4_V, [56 x i48]* %result_5_V, [56 x i48]* %result_6_V, [56 x i48]* %result_7_V, [56 x i48]* %result_8_V, [56 x i48]* %result_9_V, [56 x i48]* %result_10_V, [56 x i48]* %result_11_V, [56 x i48]* %result_12_V, [56 x i48]* %result_13_V)" [../src/CNN_final.cpp:29]   --->   Operation 226 'call' <Predicate = true> <Delay = 0.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 227 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str131) nounwind" [../src/CNN_final.cpp:7]   --->   Operation 227 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 228 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_13_V), !map !216"   --->   Operation 228 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 229 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_12_V), !map !224"   --->   Operation 229 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 230 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_11_V), !map !230"   --->   Operation 230 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 231 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_10_V), !map !236"   --->   Operation 231 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 232 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_9_V), !map !242"   --->   Operation 232 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 233 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_8_V), !map !248"   --->   Operation 233 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 234 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_7_V), !map !254"   --->   Operation 234 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 235 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_6_V), !map !260"   --->   Operation 235 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 236 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_5_V), !map !266"   --->   Operation 236 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 237 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_4_V), !map !272"   --->   Operation 237 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 238 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_3_V), !map !278"   --->   Operation 238 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 239 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_2_V), !map !284"   --->   Operation 239 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 240 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_1_V), !map !290"   --->   Operation 240 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 241 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([56 x i48]* %result_0_V), !map !296"   --->   Operation 241 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 242 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_27_V), !map !302"   --->   Operation 242 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 243 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_26_V), !map !309"   --->   Operation 243 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 244 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_25_V), !map !315"   --->   Operation 244 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 245 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_24_V), !map !321"   --->   Operation 245 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 246 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_23_V), !map !327"   --->   Operation 246 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 247 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_22_V), !map !333"   --->   Operation 247 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 248 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_21_V), !map !339"   --->   Operation 248 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 249 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_20_V), !map !345"   --->   Operation 249 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 250 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_19_V), !map !351"   --->   Operation 250 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 251 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_18_V), !map !357"   --->   Operation 251 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 252 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_17_V), !map !363"   --->   Operation 252 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 253 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_16_V), !map !369"   --->   Operation 253 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 254 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_15_V), !map !375"   --->   Operation 254 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 255 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_14_V), !map !381"   --->   Operation 255 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 256 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_13_V), !map !387"   --->   Operation 256 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 257 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_12_V), !map !392"   --->   Operation 257 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 258 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_11_V), !map !397"   --->   Operation 258 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 259 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_10_V), !map !402"   --->   Operation 259 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 260 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_9_V), !map !407"   --->   Operation 260 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 261 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_8_V), !map !412"   --->   Operation 261 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 262 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_7_V), !map !417"   --->   Operation 262 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 263 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_6_V), !map !422"   --->   Operation 263 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 264 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_5_V), !map !427"   --->   Operation 264 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 265 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_4_V), !map !432"   --->   Operation 265 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 266 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_3_V), !map !437"   --->   Operation 266 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 267 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_2_V), !map !442"   --->   Operation 267 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 268 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_1_V), !map !447"   --->   Operation 268 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 269 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %means_0_V), !map !452"   --->   Operation 269 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 270 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_27_V), !map !457"   --->   Operation 270 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 271 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_26_V), !map !461"   --->   Operation 271 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 272 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_25_V), !map !465"   --->   Operation 272 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 273 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_24_V), !map !469"   --->   Operation 273 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 274 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_23_V), !map !473"   --->   Operation 274 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 275 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_22_V), !map !477"   --->   Operation 275 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 276 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_21_V), !map !481"   --->   Operation 276 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 277 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_20_V), !map !485"   --->   Operation 277 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 278 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_19_V), !map !489"   --->   Operation 278 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 279 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_18_V), !map !493"   --->   Operation 279 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 280 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_17_V), !map !497"   --->   Operation 280 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 281 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_16_V), !map !501"   --->   Operation 281 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 282 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_15_V), !map !505"   --->   Operation 282 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 283 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_14_V), !map !509"   --->   Operation 283 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 284 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_13_V), !map !513"   --->   Operation 284 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 285 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_12_V), !map !517"   --->   Operation 285 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 286 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_11_V), !map !521"   --->   Operation 286 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 287 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_10_V), !map !525"   --->   Operation 287 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 288 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_9_V), !map !529"   --->   Operation 288 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 289 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_8_V), !map !533"   --->   Operation 289 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 290 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_7_V), !map !537"   --->   Operation 290 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 291 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_6_V), !map !541"   --->   Operation 291 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 292 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_5_V), !map !545"   --->   Operation 292 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 293 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_4_V), !map !549"   --->   Operation 293 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 294 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_3_V), !map !553"   --->   Operation 294 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 295 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_2_V), !map !557"   --->   Operation 295 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 296 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_1_V), !map !561"   --->   Operation 296 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 297 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([28 x i18]* %in_image_0_V), !map !565"   --->   Operation 297 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 298 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_8_V), !map !569"   --->   Operation 298 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 299 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_7_V), !map !574"   --->   Operation 299 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 300 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_6_V), !map !579"   --->   Operation 300 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 301 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_5_V), !map !584"   --->   Operation 301 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 302 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_4_V), !map !589"   --->   Operation 302 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 303 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_3_V), !map !594"   --->   Operation 303 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 304 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_2_V), !map !599"   --->   Operation 304 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 305 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_1_V), !map !604"   --->   Operation 305 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 306 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %conv_kernel_L2_0_V), !map !609"   --->   Operation 306 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 307 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_8_V), !map !614"   --->   Operation 307 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 308 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_7_V), !map !619"   --->   Operation 308 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 309 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_6_V), !map !624"   --->   Operation 309 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 310 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_5_V), !map !629"   --->   Operation 310 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 311 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_4_V), !map !634"   --->   Operation 311 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 312 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_3_V), !map !639"   --->   Operation 312 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 313 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_2_V), !map !644"   --->   Operation 313 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 314 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_1_V), !map !649"   --->   Operation 314 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 315 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %conv_kernel_L1_0_V), !map !654"   --->   Operation 315 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 316 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i48* %conv_bias_L2_3_V), !map !659"   --->   Operation 316 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 317 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i48* %conv_bias_L2_2_V), !map !663"   --->   Operation 317 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 318 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i48* %conv_bias_L2_1_V), !map !667"   --->   Operation 318 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 319 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i48* %conv_bias_L2_0_V), !map !671"   --->   Operation 319 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 320 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i48 %conv_bias_L1_V), !map !675"   --->   Operation 320 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 321 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18 %a_V), !map !681"   --->   Operation 321 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 322 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18 %b_V), !map !685"   --->   Operation 322 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 323 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @CNN_str) nounwind"   --->   Operation 323 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 324 [1/2] (0.00ns)   --->   "call fastcc void @conv2d_3x3_4chan_rev([588 x i25]* %resampled_L2_0_V, [588 x i25]* %resampled_L2_1_V, [588 x i25]* %resampled_L2_2_V, [4 x i18]* %conv_kernel_L2_0_V, [4 x i18]* %conv_kernel_L2_1_V, [4 x i18]* %conv_kernel_L2_2_V, [4 x i18]* %conv_kernel_L2_3_V, [4 x i18]* %conv_kernel_L2_4_V, [4 x i18]* %conv_kernel_L2_5_V, [4 x i18]* %conv_kernel_L2_6_V, [4 x i18]* %conv_kernel_L2_7_V, [4 x i18]* %conv_kernel_L2_8_V, i48* %conv_bias_L2_0_V, i48* %conv_bias_L2_1_V, i48* %conv_bias_L2_2_V, i48* %conv_bias_L2_3_V, [56 x i48]* %result_0_V, [56 x i48]* %result_1_V, [56 x i48]* %result_2_V, [56 x i48]* %result_3_V, [56 x i48]* %result_4_V, [56 x i48]* %result_5_V, [56 x i48]* %result_6_V, [56 x i48]* %result_7_V, [56 x i48]* %result_8_V, [56 x i48]* %result_9_V, [56 x i48]* %result_10_V, [56 x i48]* %result_11_V, [56 x i48]* %result_12_V, [56 x i48]* %result_13_V)" [../src/CNN_final.cpp:29]   --->   Operation 324 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 325 [1/1] (0.00ns)   --->   "ret void" [../src/CNN_final.cpp:32]   --->   Operation 325 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0.872ns
+The critical path consists of the following:
+	wire read on port 'conv_bias_L1_V' [195]  (0 ns)
+	'call' operation (../src/CNN_final.cpp:21) to 'conv2d_3x3_1chan_rev' [383]  (0.872 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+ <State 19>: 0.887ns
+The critical path consists of the following:
+	'call' operation (../src/CNN_final.cpp:29) to 'conv2d_3x3_4chan_rev' [389]  (0.887 ns)
+
+ <State 20>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

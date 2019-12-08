@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="CNN_final.cpp" path="C:\Users\chunt\Desktop\ELEN226\final\src\CNN_final.cpp"/>
+    <originFiles name="CNN_final.h" path="C:\Users\chunt\Desktop\ELEN226\final\src\CNN_final.h"/>
+    <originFiles name="helper.cpp" path="C:\Users\chunt\Desktop\ELEN226\final\src\helper.cpp"/>
+    <originFiles name="helper.h" path="C:\Users\chunt\Desktop\ELEN226\final\src\helper.h"/>
+    <originFiles name="intermediate.cpp" path="C:\Users\chunt\Desktop\ELEN226\final\src\intermediate.cpp"/>
+    <originFiles name="intermediate.h" path="C:\Users\chunt\Desktop\ELEN226\final\src\intermediate.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb.cpp" path="C:\Users\chunt\Desktop\ELEN226\final\src\tb.cpp"/>
+    <originFiles name="bn_params.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\bn_params.dat"/>
+    <originFiles name="bn1_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\bn1_single.dat"/>
+    <originFiles name="conv1_bias_maxres.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\conv1_bias_maxres.dat"/>
+    <originFiles name="conv1_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\conv1_single.dat"/>
+    <originFiles name="conv1_weights_maxres.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\conv1_weights_maxres.dat"/>
+    <originFiles name="conv2_bias_maxres.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\conv2_bias_maxres.dat"/>
+    <originFiles name="conv2_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\conv2_single.dat"/>
+    <originFiles name="conv2_weights_maxres.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\conv2_weights_maxres.dat"/>
+    <originFiles name="input_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\input_single.dat"/>
+    <originFiles name="maxpool1_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\maxpool1_single.dat"/>
+    <originFiles name="mean_removed_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\mean_removed_single.dat"/>
+    <originFiles name="relu1_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\relu1_single.dat"/>
+    <originFiles name="pixel_means.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\pixel_means.dat"/>
+    <originFiles name="padded2_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\padded2_single.dat"/>
+    <originFiles name="resampled2_single.dat" path="C:\Users\chunt\Desktop\ELEN226\final\src\data\resampled2_single.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

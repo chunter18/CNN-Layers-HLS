@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'CNN'" level="0">
+<item name = "Date">Tue Dec  3 11:06:20 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">final</item>
+<item name = "Solution">just_dataflow</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325tffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.950, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">155633, 164849, 57354, 66570, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_conv2d_3x3_4chan_rev_fu_148">conv2d_3x3_4chan_rev, 57353, 66569, 57353, 66569, none</column>
+<column name="grp_conv2d_3x3_1chan_rev_fu_159">conv2d_3x3_1chan_rev, 43905, 43905, 43905, 43905, none</column>
+<column name="grp_max_pool_1chan_fu_168">max_pool_1chan, 1009, 1009, 1009, 1009, none</column>
+<column name="grp_resample_fu_174">resample, 34553, 34553, 34553, 34553, none</column>
+<column name="grp_batch_norm_fu_180">batch_norm, 3977, 3977, 3977, 3977, none</column>
+<column name="grp_resample_for_conv2_fu_188">resample_for_conv2, 6889, 6889, 6889, 6889, none</column>
+<column name="grp_efficient_pad_n_1cha_fu_194">efficient_pad_n_1cha, 2470, 2470, 2470, 2470, none</column>
+<column name="grp_relu_fu_200">relu, 2409, 2409, 2409, 2409, none</column>
+<column name="grp_zero_mean_1chan50_fu_206">zero_mean_1chan50, 2409, 2409, 2409, 2409, none</column>
+<column name="grp_pad_for_conv2_fu_225">pad_for_conv2, 650, 650, 650, 650, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

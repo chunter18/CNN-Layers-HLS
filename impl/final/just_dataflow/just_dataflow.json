@@ -1,0 +1,9 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "DATAFLOW"}
+        }]
+    }]}

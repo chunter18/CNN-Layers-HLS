@@ -1,0 +1,44 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../src/tb.cpp in debug mode
+   Compiling ../../../../../src/intermediate.cpp in debug mode
+   Compiling ../../../../../src/helper.cpp in debug mode
+   Compiling ../../../../../src/CNN_final.cpp in debug mode
+   Generating csim.exe
+opening file: input_single.dat
+
+opening file: pixel_means.dat
+
+opening file: conv1_weights.dat
+
+opening file: conv1_bias.dat
+
+
+opening file: bn_params.dat
+
+
+
+opening file: conv2_weights.dat
+
+opening file: conv2_bias.dat
+
+opening golden file: conv2_single.dat
+
+1.13811e-008
+Max diff was : 0.000451088
+Max diff on index [7][7]
+There were 0 diffs above 0.1
+2.58022e-008
+Max diff was : 0.000550985
+Max diff on index [7][8]
+There were 0 diffs above 0.1
+4.2069e-008
+Max diff was : 0.000556231
+Max diff on index [7][9]
+There were 0 diffs above 0.1
+5.19248e-008
+Max diff was : 0.000458002
+Max diff on index [5][9]
+There were 0 diffs above 0.1
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

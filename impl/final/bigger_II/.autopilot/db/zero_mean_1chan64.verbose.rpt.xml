@@ -1,0 +1,220 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'zero_mean_1chan64'" level="0">
+<item name = "Date">Tue Dec  3 11:19:01 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">final</item>
+<item name = "Solution">bigger_II</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325tffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 3.643, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2409, 2409, 2409, 2409, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- row">2408, 2408, 86, -, -, 28, no</column>
+<column name=" + col">84, 84, 3, -, -, 28, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 116</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 196</column>
+<column name="Register">-, -, 117, -</column>
+<specialColumn name="Available">890, 840, 407600, 203800</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_fu_423_p2">+, 0, 0, 15, 5, 1</column>
+<column name="j_fu_465_p2">+, 0, 0, 15, 5, 1</column>
+<column name="tmp_3_fu_475_p2">+, 0, 0, 18, 11, 11</column>
+<column name="p_Val2_2_fu_498_p2">-, 0, 0, 26, 19, 19</column>
+<column name="tmp_2_fu_453_p2">-, 0, 0, 18, 11, 11</column>
+<column name="tmp_2_i_i_fu_459_p2">icmp, 0, 0, 11, 5, 4</column>
+<column name="tmp_i_i_fu_417_p2">icmp, 0, 0, 11, 5, 4</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="a_V_out_blk_n">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">25, 6, 1, 6</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="b_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_bias_L1_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_bias_L2_0_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_bias_L2_1_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_bias_L2_2_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_bias_L2_3_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_0_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_1_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_2_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_3_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_4_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_5_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_6_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_7_V_out_blk_n">9, 2, 1, 2</column>
+<column name="conv_kernel_L1_8_V_out_blk_n">9, 2, 1, 2</column>
+<column name="i_i_i_reg_395">9, 2, 5, 10</column>
+<column name="j_i_i_reg_406">9, 2, 5, 10</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="i_i_i_reg_395">5, 0, 5, 0</column>
+<column name="i_reg_517">5, 0, 5, 0</column>
+<column name="j_i_i_reg_406">5, 0, 5, 0</column>
+<column name="j_reg_530">5, 0, 5, 0</column>
+<column name="tmp_2_reg_522">9, 0, 11, 2</column>
+<column name="tmp_3_cast_reg_535">64, 0, 64, 0</column>
+<column name="tmp_i_i_38_reg_550">18, 0, 18, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, zero_mean_1chan64, return value</column>
+<column name="in_image_V_address0">out, 10, ap_memory, in_image_V, array</column>
+<column name="in_image_V_ce0">out, 1, ap_memory, in_image_V, array</column>
+<column name="in_image_V_q0">in, 18, ap_memory, in_image_V, array</column>
+<column name="out_image_V_address0">out, 10, ap_memory, out_image_V, array</column>
+<column name="out_image_V_ce0">out, 1, ap_memory, out_image_V, array</column>
+<column name="out_image_V_we0">out, 1, ap_memory, out_image_V, array</column>
+<column name="out_image_V_d0">out, 18, ap_memory, out_image_V, array</column>
+<column name="means_V_address0">out, 10, ap_memory, means_V, array</column>
+<column name="means_V_ce0">out, 1, ap_memory, means_V, array</column>
+<column name="means_V_q0">in, 18, ap_memory, means_V, array</column>
+<column name="conv_kernel_L1_0_V">in, 18, ap_none, conv_kernel_L1_0_V, pointer</column>
+<column name="conv_kernel_L1_1_V">in, 18, ap_none, conv_kernel_L1_1_V, pointer</column>
+<column name="conv_kernel_L1_2_V">in, 18, ap_none, conv_kernel_L1_2_V, pointer</column>
+<column name="conv_kernel_L1_3_V">in, 18, ap_none, conv_kernel_L1_3_V, pointer</column>
+<column name="conv_kernel_L1_4_V">in, 18, ap_none, conv_kernel_L1_4_V, pointer</column>
+<column name="conv_kernel_L1_5_V">in, 18, ap_none, conv_kernel_L1_5_V, pointer</column>
+<column name="conv_kernel_L1_6_V">in, 18, ap_none, conv_kernel_L1_6_V, pointer</column>
+<column name="conv_kernel_L1_7_V">in, 18, ap_none, conv_kernel_L1_7_V, pointer</column>
+<column name="conv_kernel_L1_8_V">in, 18, ap_none, conv_kernel_L1_8_V, pointer</column>
+<column name="conv_bias_L1_V">in, 48, ap_none, conv_bias_L1_V, scalar</column>
+<column name="a_V">in, 18, ap_none, a_V, scalar</column>
+<column name="b_V">in, 18, ap_none, b_V, scalar</column>
+<column name="conv_bias_L2_0_V">in, 48, ap_none, conv_bias_L2_0_V, pointer</column>
+<column name="conv_bias_L2_1_V">in, 48, ap_none, conv_bias_L2_1_V, pointer</column>
+<column name="conv_bias_L2_2_V">in, 48, ap_none, conv_bias_L2_2_V, pointer</column>
+<column name="conv_bias_L2_3_V">in, 48, ap_none, conv_bias_L2_3_V, pointer</column>
+<column name="conv_kernel_L1_0_V_out_din">out, 18, ap_fifo, conv_kernel_L1_0_V_out, pointer</column>
+<column name="conv_kernel_L1_0_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_0_V_out, pointer</column>
+<column name="conv_kernel_L1_0_V_out_write">out, 1, ap_fifo, conv_kernel_L1_0_V_out, pointer</column>
+<column name="conv_kernel_L1_1_V_out_din">out, 18, ap_fifo, conv_kernel_L1_1_V_out, pointer</column>
+<column name="conv_kernel_L1_1_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_1_V_out, pointer</column>
+<column name="conv_kernel_L1_1_V_out_write">out, 1, ap_fifo, conv_kernel_L1_1_V_out, pointer</column>
+<column name="conv_kernel_L1_2_V_out_din">out, 18, ap_fifo, conv_kernel_L1_2_V_out, pointer</column>
+<column name="conv_kernel_L1_2_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_2_V_out, pointer</column>
+<column name="conv_kernel_L1_2_V_out_write">out, 1, ap_fifo, conv_kernel_L1_2_V_out, pointer</column>
+<column name="conv_kernel_L1_3_V_out_din">out, 18, ap_fifo, conv_kernel_L1_3_V_out, pointer</column>
+<column name="conv_kernel_L1_3_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_3_V_out, pointer</column>
+<column name="conv_kernel_L1_3_V_out_write">out, 1, ap_fifo, conv_kernel_L1_3_V_out, pointer</column>
+<column name="conv_kernel_L1_4_V_out_din">out, 18, ap_fifo, conv_kernel_L1_4_V_out, pointer</column>
+<column name="conv_kernel_L1_4_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_4_V_out, pointer</column>
+<column name="conv_kernel_L1_4_V_out_write">out, 1, ap_fifo, conv_kernel_L1_4_V_out, pointer</column>
+<column name="conv_kernel_L1_5_V_out_din">out, 18, ap_fifo, conv_kernel_L1_5_V_out, pointer</column>
+<column name="conv_kernel_L1_5_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_5_V_out, pointer</column>
+<column name="conv_kernel_L1_5_V_out_write">out, 1, ap_fifo, conv_kernel_L1_5_V_out, pointer</column>
+<column name="conv_kernel_L1_6_V_out_din">out, 18, ap_fifo, conv_kernel_L1_6_V_out, pointer</column>
+<column name="conv_kernel_L1_6_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_6_V_out, pointer</column>
+<column name="conv_kernel_L1_6_V_out_write">out, 1, ap_fifo, conv_kernel_L1_6_V_out, pointer</column>
+<column name="conv_kernel_L1_7_V_out_din">out, 18, ap_fifo, conv_kernel_L1_7_V_out, pointer</column>
+<column name="conv_kernel_L1_7_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_7_V_out, pointer</column>
+<column name="conv_kernel_L1_7_V_out_write">out, 1, ap_fifo, conv_kernel_L1_7_V_out, pointer</column>
+<column name="conv_kernel_L1_8_V_out_din">out, 18, ap_fifo, conv_kernel_L1_8_V_out, pointer</column>
+<column name="conv_kernel_L1_8_V_out_full_n">in, 1, ap_fifo, conv_kernel_L1_8_V_out, pointer</column>
+<column name="conv_kernel_L1_8_V_out_write">out, 1, ap_fifo, conv_kernel_L1_8_V_out, pointer</column>
+<column name="conv_bias_L1_V_out_din">out, 48, ap_fifo, conv_bias_L1_V_out, pointer</column>
+<column name="conv_bias_L1_V_out_full_n">in, 1, ap_fifo, conv_bias_L1_V_out, pointer</column>
+<column name="conv_bias_L1_V_out_write">out, 1, ap_fifo, conv_bias_L1_V_out, pointer</column>
+<column name="a_V_out_din">out, 18, ap_fifo, a_V_out, pointer</column>
+<column name="a_V_out_full_n">in, 1, ap_fifo, a_V_out, pointer</column>
+<column name="a_V_out_write">out, 1, ap_fifo, a_V_out, pointer</column>
+<column name="b_V_out_din">out, 18, ap_fifo, b_V_out, pointer</column>
+<column name="b_V_out_full_n">in, 1, ap_fifo, b_V_out, pointer</column>
+<column name="b_V_out_write">out, 1, ap_fifo, b_V_out, pointer</column>
+<column name="conv_bias_L2_0_V_out_din">out, 48, ap_fifo, conv_bias_L2_0_V_out, pointer</column>
+<column name="conv_bias_L2_0_V_out_full_n">in, 1, ap_fifo, conv_bias_L2_0_V_out, pointer</column>
+<column name="conv_bias_L2_0_V_out_write">out, 1, ap_fifo, conv_bias_L2_0_V_out, pointer</column>
+<column name="conv_bias_L2_1_V_out_din">out, 48, ap_fifo, conv_bias_L2_1_V_out, pointer</column>
+<column name="conv_bias_L2_1_V_out_full_n">in, 1, ap_fifo, conv_bias_L2_1_V_out, pointer</column>
+<column name="conv_bias_L2_1_V_out_write">out, 1, ap_fifo, conv_bias_L2_1_V_out, pointer</column>
+<column name="conv_bias_L2_2_V_out_din">out, 48, ap_fifo, conv_bias_L2_2_V_out, pointer</column>
+<column name="conv_bias_L2_2_V_out_full_n">in, 1, ap_fifo, conv_bias_L2_2_V_out, pointer</column>
+<column name="conv_bias_L2_2_V_out_write">out, 1, ap_fifo, conv_bias_L2_2_V_out, pointer</column>
+<column name="conv_bias_L2_3_V_out_din">out, 48, ap_fifo, conv_bias_L2_3_V_out, pointer</column>
+<column name="conv_bias_L2_3_V_out_full_n">in, 1, ap_fifo, conv_bias_L2_3_V_out, pointer</column>
+<column name="conv_bias_L2_3_V_out_write">out, 1, ap_fifo, conv_bias_L2_3_V_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

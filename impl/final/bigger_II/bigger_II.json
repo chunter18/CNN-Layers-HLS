@@ -1,0 +1,307 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "DATAFLOW"}
+        },
+        {
+          "functionName": "resample",
+          "label": "col",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "rewind",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "conv2d_3x3_4chan_rev2",
+          "label": "L2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "rewind",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "padded",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "15"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "conv_kernel_L1",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "complete",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "resampled",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "2"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "padded_L2",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "4"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "resampled_L2",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "2"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "conv_bias_L2",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "complete",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "conv_kernel_L2",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "9"
+              },
+              {
+                "name": "dim",
+                "value": "2"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "conv",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "7"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "CNN",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "result",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "7"
+              },
+              {
+                "name": "dim",
+                "value": "2"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "conv2d_3x3_1chan_rev2",
+          "label": "L1",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "rewind",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "resample_for_conv2",
+          "label": "window2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "rewind",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        }
+      ]
+    }]}

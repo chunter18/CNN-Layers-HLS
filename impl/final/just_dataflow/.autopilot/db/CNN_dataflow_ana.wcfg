@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CNN.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_CNN_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="AESL_inst_CNN_group">
+      <obj_property name="label">AESL_inst_CNN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/zero_mean_1chan50_U0_activity">
+         <obj_property name="ElementShortName">zero_mean_1chan50_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">zero_mean_1chan50_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/efficient_pad_n_1cha_U0_activity">
+         <obj_property name="ElementShortName">efficient_pad_n_1cha_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">efficient_pad_n_1cha_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/resample_U0_activity">
+         <obj_property name="ElementShortName">resample_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">resample_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/conv2d_3x3_1chan_rev_U0_activity">
+         <obj_property name="ElementShortName">conv2d_3x3_1chan_rev_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv2d_3x3_1chan_rev_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/batch_norm_U0_activity">
+         <obj_property name="ElementShortName">batch_norm_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">batch_norm_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/relu_U0_activity">
+         <obj_property name="ElementShortName">relu_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">relu_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/max_pool_1chan_U0_activity">
+         <obj_property name="ElementShortName">max_pool_1chan_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">max_pool_1chan_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/pad_for_conv2_U0_activity">
+         <obj_property name="ElementShortName">pad_for_conv2_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">pad_for_conv2_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/resample_for_conv2_U0_activity">
+         <obj_property name="ElementShortName">resample_for_conv2_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">resample_for_conv2_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/conv2d_3x3_4chan_rev_U0_activity">
+         <obj_property name="ElementShortName">conv2d_3x3_4chan_rev_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">conv2d_3x3_4chan_rev_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="zero_mean_1chan50_U0_group">
+         <obj_property name="label">zero_mean_1chan50_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="zero_mean_1chan50_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="means_V_group">
+               <obj_property name="label">means_V(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/means_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/means_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/means_V_ce0">
+                  <obj_property name="ElementShortName">means_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">means_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="zero_mean_1chan50_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="zero_mean_1chan50_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(mean_removed_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="conv_bias_L1_V_out_group">
+               <obj_property name="label">conv_bias_L1_V_out(conv_bias_L1_V_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/conv_bias_L1_V_out_blk_n">
+                  <obj_property name="ElementShortName">conv_bias_L1_V_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">conv_bias_L1_V_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/conv_bias_L1_V_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/conv_bias_L1_V_out_full_n">
+                  <obj_property name="ElementShortName">conv_bias_L1_V_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">conv_bias_L1_V_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/conv_bias_L1_V_out_write">
+                  <obj_property name="ElementShortName">conv_bias_L1_V_out_write</obj_property>
+                  <obj_property name="ObjectShortName">conv_bias_L1_V_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="a_V_out_group">
+               <obj_property name="label">a_V_out(a_V_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/a_V_out_blk_n">
+                  <obj_property name="ElementShortName">a_V_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">a_V_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/a_V_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/a_V_out_full_n">
+                  <obj_property name="ElementShortName">a_V_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">a_V_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/a_V_out_write">
+                  <obj_property name="ElementShortName">a_V_out_write</obj_property>
+                  <obj_property name="ObjectShortName">a_V_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="b_V_out_group">
+               <obj_property name="label">b_V_out(b_V_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/b_V_out_blk_n">
+                  <obj_property name="ElementShortName">b_V_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">b_V_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/b_V_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/b_V_out_full_n">
+                  <obj_property name="ElementShortName">b_V_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">b_V_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/zero_mean_1chan50_U0/b_V_out_write">
+                  <obj_property name="ElementShortName">b_V_out_write</obj_property>
+                  <obj_property name="ObjectShortName">b_V_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="efficient_pad_n_1cha_U0_group">
+         <obj_property name="label">efficient_pad_n_1cha_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="efficient_pad_n_1cha_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(mean_removed_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="efficient_pad_n_1cha_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="efficient_pad_n_1cha_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(padded_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/efficient_pad_n_1cha_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="resample_U0_group">
+         <obj_property name="label">resample_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="resample_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="square_image_V_group">
+               <obj_property name="label">square_image_V(padded_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/square_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/square_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/square_image_V_ce0">
+                  <obj_property name="ElementShortName">square_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">square_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="resample_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="resample_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="resampled_V_group">
+               <obj_property name="label">resampled_V(resampled_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/resampled_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/resampled_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/resampled_V_ce0">
+                  <obj_property name="ElementShortName">resampled_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">resampled_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_U0/resampled_V_we0">
+                  <obj_property name="ElementShortName">resampled_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">resampled_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="conv2d_3x3_1chan_rev_U0_group">
+         <obj_property name="label">conv2d_3x3_1chan_rev_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv2d_3x3_1chan_rev_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(resampled_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="kernel_V_group">
+               <obj_property name="label">kernel_V(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/kernel_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/kernel_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/kernel_V_ce0">
+                  <obj_property name="ElementShortName">kernel_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">kernel_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="bias_V_group">
+               <obj_property name="label">bias_V(conv_bias_L1_V_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/bias_V_blk_n">
+                  <obj_property name="ElementShortName">bias_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">bias_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/bias_V_dout">
+                  <obj_property name="ElementShortName">bias_V_dout[47:0]</obj_property>
+                  <obj_property name="ObjectShortName">bias_V_dout[47:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/bias_V_empty_n">
+                  <obj_property name="ElementShortName">bias_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">bias_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/bias_V_read">
+                  <obj_property name="ElementShortName">bias_V_read</obj_property>
+                  <obj_property name="ObjectShortName">bias_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv2d_3x3_1chan_rev_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv2d_3x3_1chan_rev_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(conv_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_1chan_rev_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="batch_norm_U0_group">
+         <obj_property name="label">batch_norm_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="batch_norm_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(conv_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="A_V_group">
+               <obj_property name="label">A_V(a_V_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/A_V_blk_n">
+                  <obj_property name="ElementShortName">A_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/A_V_dout">
+                  <obj_property name="ElementShortName">A_V_dout[17:0]</obj_property>
+                  <obj_property name="ObjectShortName">A_V_dout[17:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/A_V_empty_n">
+                  <obj_property name="ElementShortName">A_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">A_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/A_V_read">
+                  <obj_property name="ElementShortName">A_V_read</obj_property>
+                  <obj_property name="ObjectShortName">A_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="B_V_group">
+               <obj_property name="label">B_V(b_V_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/B_V_blk_n">
+                  <obj_property name="ElementShortName">B_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">B_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/B_V_dout">
+                  <obj_property name="ElementShortName">B_V_dout[17:0]</obj_property>
+                  <obj_property name="ObjectShortName">B_V_dout[17:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/B_V_empty_n">
+                  <obj_property name="ElementShortName">B_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">B_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/B_V_read">
+                  <obj_property name="ElementShortName">B_V_read</obj_property>
+                  <obj_property name="ObjectShortName">B_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="batch_norm_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="batch_norm_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(batchnorm_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/batch_norm_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="relu_U0_group">
+         <obj_property name="label">relu_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="relu_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_features_V_group">
+               <obj_property name="label">in_features_V(batchnorm_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/in_features_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/in_features_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/in_features_V_ce0">
+                  <obj_property name="ElementShortName">in_features_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_features_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="relu_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="relu_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="activations_V_group">
+               <obj_property name="label">activations_V(ReLU_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/activations_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/activations_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/activations_V_ce0">
+                  <obj_property name="ElementShortName">activations_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">activations_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/relu_U0/activations_V_we0">
+                  <obj_property name="ElementShortName">activations_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">activations_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="max_pool_1chan_U0_group">
+         <obj_property name="label">max_pool_1chan_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="max_pool_1chan_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(ReLU_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="max_pool_1chan_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="max_pool_1chan_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(maxpool_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/max_pool_1chan_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="pad_for_conv2_U0_group">
+         <obj_property name="label">pad_for_conv2_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="pad_for_conv2_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(maxpool_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="pad_for_conv2_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="pad_for_conv2_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(padded_L2_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/pad_for_conv2_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="resample_for_conv2_U0_group">
+         <obj_property name="label">resample_for_conv2_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="resample_for_conv2_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="square_image_V_group">
+               <obj_property name="label">square_image_V(padded_L2_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/square_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/square_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/square_image_V_ce0">
+                  <obj_property name="ElementShortName">square_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">square_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="resample_for_conv2_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="resample_for_conv2_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="resampled_V_group">
+               <obj_property name="label">resampled_V(resampled_L2_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/resampled_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/resampled_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/resampled_V_ce0">
+                  <obj_property name="ElementShortName">resampled_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">resampled_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/resample_for_conv2_U0/resampled_V_we0">
+                  <obj_property name="ElementShortName">resampled_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">resampled_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="conv2d_3x3_4chan_rev_U0_group">
+         <obj_property name="label">conv2d_3x3_4chan_rev_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="conv2d_3x3_4chan_rev_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="in_image_V_group">
+               <obj_property name="label">in_image_V(resampled_L2_V_U, PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/in_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/in_image_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/in_image_V_ce0">
+                  <obj_property name="ElementShortName">in_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">in_image_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="kernel_V_group">
+               <obj_property name="label">kernel_V(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/kernel_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/kernel_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/kernel_V_ce0">
+                  <obj_property name="ElementShortName">kernel_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">kernel_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="bias_V_group">
+               <obj_property name="label">bias_V(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/bias_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/bias_V_q0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/bias_V_ce0">
+                  <obj_property name="ElementShortName">bias_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">bias_V_ce0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv2d_3x3_4chan_rev_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="conv2d_3x3_4chan_rev_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_image_V_group">
+               <obj_property name="label">out_image_V(PIPO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/out_image_V_address0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/out_image_V_d0">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/out_image_V_ce0">
+                  <obj_property name="ElementShortName">out_image_V_ce0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_ce0</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_CNN_top/AESL_inst_CNN/conv2d_3x3_4chan_rev_U0/out_image_V_we0">
+                  <obj_property name="ElementShortName">out_image_V_we0</obj_property>
+                  <obj_property name="ObjectShortName">out_image_V_we0</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

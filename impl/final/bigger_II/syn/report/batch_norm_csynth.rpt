@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vivado HLS Report for 'batch_norm'
+================================================================
+* Date:           Tue Dec  3 11:19:04 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        final
+* Solution:       bigger_II
+* Product family: kintex7
+* Target device:  xc7k325tffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.851|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  3977|  3977|  3977|  3977|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- row     |  3976|  3976|       142|          -|          -|    28|    no    |
+        | + col    |   140|   140|         5|          -|          -|    28|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      1|       -|       -|
+|Expression       |        -|      -|       0|     120|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       0|      17|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      78|
+|Register         |        -|      -|     152|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      1|     152|     215|
++-----------------+---------+-------+--------+--------+
+|Available        |      890|    840|  407600|  203800|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+--------------------+---------+-------+---+----+
+    |         Instance        |       Module       | BRAM_18K| DSP48E| FF| LUT|
+    +-------------------------+--------------------+---------+-------+---+----+
+    |CNN_mux_732_25_2_1_U117  |CNN_mux_732_25_2_1  |        0|      0|  0|  17|
+    +-------------------------+--------------------+---------+-------+---+----+
+    |Total                    |                    |        0|      0|  0|  17|
+    +-------------------------+--------------------+---------+-------+---+----+
+
+    * DSP48: 
+    +---------------------------+----------------------+--------------+
+    |          Instance         |        Module        |  Expression  |
+    +---------------------------+----------------------+--------------+
+    |CNN_mac_muladd_25dEe_U118  |CNN_mac_muladd_25dEe  | i0 * i1 + i2 |
+    +---------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |j_fu_240_p2         |     +    |      0|  0|  15|           5|           1|
+    |k_fu_330_p2         |     +    |      0|  0|  15|           5|           1|
+    |tmp_82_fu_344_p2    |     +    |      0|  0|  15|           8|           8|
+    |tmp_83_fu_360_p2    |     +    |      0|  0|  18|          11|          11|
+    |tmp_78_fu_270_p2    |     -    |      0|  0|  18|          11|          11|
+    |tmp_81_fu_318_p2    |     -    |      0|  0|  15|           8|           8|
+    |tmp_53_i_fu_324_p2  |   icmp   |      0|  0|  11|           5|           4|
+    |tmp_i_fu_234_p2     |   icmp   |      0|  0|  11|           5|           4|
+    |ap_block_state1     |    or    |      0|  0|   2|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0| 120|          59|          49|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |A_V_blk_n    |   9|          2|    1|          2|
+    |B_V_blk_n    |   9|          2|    1|          2|
+    |ap_NS_fsm    |  33|          8|    1|          8|
+    |ap_done      |   9|          2|    1|          2|
+    |j_i_reg_196  |   9|          2|    5|         10|
+    |k_i_reg_207  |   9|          2|    5|         10|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  78|         18|   14|         34|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+----+----+-----+-----------+
+    |          Name          | FF | LUT| Bits| Const Bits|
+    +------------------------+----+----+-----+-----------+
+    |OP2_V_i_reg_406         |  37|   0|   37|          0|
+    |ap_CS_fsm               |   7|   0|    7|          0|
+    |ap_done_reg             |   1|   0|    1|          0|
+    |arrayNo_cast_i_reg_429  |   3|   0|   32|         29|
+    |j_i_reg_196             |   5|   0|    5|          0|
+    |j_reg_419               |   5|   0|    5|          0|
+    |k_i_reg_207             |   5|   0|    5|          0|
+    |k_reg_442               |   5|   0|    5|          0|
+    |p_Val2_i_74_reg_527     |  37|   0|   37|          0|
+    |tmp_56_cast_i_reg_411   |  21|   0|   37|         16|
+    |tmp_78_reg_424          |   9|   0|   11|          2|
+    |tmp_81_reg_434          |   6|   0|    8|          2|
+    |tmp_83_reg_482          |  11|   0|   11|          0|
+    +------------------------+----+----+-----+-----------+
+    |Total                   | 152|   0|  201|         49|
+    +------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs |  batch_norm  | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs |  batch_norm  | return value |
+|ap_start               |  in |    1| ap_ctrl_hs |  batch_norm  | return value |
+|ap_done                | out |    1| ap_ctrl_hs |  batch_norm  | return value |
+|ap_continue            |  in |    1| ap_ctrl_hs |  batch_norm  | return value |
+|ap_idle                | out |    1| ap_ctrl_hs |  batch_norm  | return value |
+|ap_ready               | out |    1| ap_ctrl_hs |  batch_norm  | return value |
+|in_image_0_V_address0  | out |    7|  ap_memory | in_image_0_V |     array    |
+|in_image_0_V_ce0       | out |    1|  ap_memory | in_image_0_V |     array    |
+|in_image_0_V_q0        |  in |   25|  ap_memory | in_image_0_V |     array    |
+|in_image_1_V_address0  | out |    7|  ap_memory | in_image_1_V |     array    |
+|in_image_1_V_ce0       | out |    1|  ap_memory | in_image_1_V |     array    |
+|in_image_1_V_q0        |  in |   25|  ap_memory | in_image_1_V |     array    |
+|in_image_2_V_address0  | out |    7|  ap_memory | in_image_2_V |     array    |
+|in_image_2_V_ce0       | out |    1|  ap_memory | in_image_2_V |     array    |
+|in_image_2_V_q0        |  in |   25|  ap_memory | in_image_2_V |     array    |
+|in_image_3_V_address0  | out |    7|  ap_memory | in_image_3_V |     array    |
+|in_image_3_V_ce0       | out |    1|  ap_memory | in_image_3_V |     array    |
+|in_image_3_V_q0        |  in |   25|  ap_memory | in_image_3_V |     array    |
+|in_image_4_V_address0  | out |    7|  ap_memory | in_image_4_V |     array    |
+|in_image_4_V_ce0       | out |    1|  ap_memory | in_image_4_V |     array    |
+|in_image_4_V_q0        |  in |   25|  ap_memory | in_image_4_V |     array    |
+|in_image_5_V_address0  | out |    7|  ap_memory | in_image_5_V |     array    |
+|in_image_5_V_ce0       | out |    1|  ap_memory | in_image_5_V |     array    |
+|in_image_5_V_q0        |  in |   25|  ap_memory | in_image_5_V |     array    |
+|in_image_6_V_address0  | out |    7|  ap_memory | in_image_6_V |     array    |
+|in_image_6_V_ce0       | out |    1|  ap_memory | in_image_6_V |     array    |
+|in_image_6_V_q0        |  in |   25|  ap_memory | in_image_6_V |     array    |
+|A_V_dout               |  in |   18|   ap_fifo  |      A_V     |    pointer   |
+|A_V_empty_n            |  in |    1|   ap_fifo  |      A_V     |    pointer   |
+|A_V_read               | out |    1|   ap_fifo  |      A_V     |    pointer   |
+|B_V_dout               |  in |   18|   ap_fifo  |      B_V     |    pointer   |
+|B_V_empty_n            |  in |    1|   ap_fifo  |      B_V     |    pointer   |
+|B_V_read               | out |    1|   ap_fifo  |      B_V     |    pointer   |
+|out_image_V_address0   | out |   10|  ap_memory |  out_image_V |     array    |
+|out_image_V_ce0        | out |    1|  ap_memory |  out_image_V |     array    |
+|out_image_V_we0        | out |    1|  ap_memory |  out_image_V |     array    |
+|out_image_V_d0         | out |   48|  ap_memory |  out_image_V |     array    |
++-----------------------+-----+-----+------------+--------------+--------------+
+

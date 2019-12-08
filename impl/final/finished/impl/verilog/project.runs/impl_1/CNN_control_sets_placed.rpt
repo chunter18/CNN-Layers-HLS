@@ -1,0 +1,184 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Dec  2 23:49:46 2019
+| Host         : DESKTOP-S201MJR running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CNN_control_sets_placed.rpt
+| Design       : CNN
+| Device       : xc7k325t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   117 |
+| Unused register locations in slices containing registers |   228 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            2 |
+|     10 |           11 |
+|     14 |            2 |
+|    16+ |          102 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             138 |           51 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            3048 |          673 |
+| Yes          | No                    | No                     |            5466 |         1045 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             992 |          230 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                     Enable Signal                                     |                                   Set/Reset Signal                                   | Slice Load Count | Bel Load Count |
++--------------+---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | resample_for_conv2_U0/ap_CS_fsm_reg[2]_0[0]                                           | resample_for_conv2_U0/j_mid2_reg_1613[3]_i_1_n_7                                     |                1 |              8 |
+|  ap_clk      | max_pool_1chan_U0/x_s_reg_1303                                                        | max_pool_1chan_U0/x_s_reg_1303[0]_i_1_n_7                                            |                1 |              8 |
+|  ap_clk      | efficient_pad_n_1cha_U0/ap_CS_fsm_state4                                              | efficient_pad_n_1cha_U0/i_reg_1632                                                   |                3 |             10 |
+|  ap_clk      | pad_for_conv2_U0/ap_CS_fsm_state4                                                     | pad_for_conv2_U0/i_reg_880                                                           |                1 |             10 |
+|  ap_clk      | efficient_pad_n_1cha_U0/Q[1]                                                          |                                                                                      |                3 |             10 |
+|  ap_clk      | relu_U0/tmp_3_reg_1146_reg0                                                           |                                                                                      |                3 |             10 |
+|  ap_clk      | relu_U0/j_reg_9650                                                                    | relu_U0/j_reg_965                                                                    |                1 |             10 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/x_reg_817                                                     | conv2d_3x3_1chan_rev_U0/x_reg_817[0]_i_1_n_7                                         |                2 |             10 |
+|  ap_clk      | pad_for_conv2_U0/Q[1]                                                                 |                                                                                      |                1 |             10 |
+|  ap_clk      | batch_norm_U0/indvar_flatten_reg_9500                                                 |                                                                                      |                1 |             10 |
+|  ap_clk      | batch_norm_U0/j_reg_9610                                                              | batch_norm_U0/j_reg_961                                                              |                1 |             10 |
+|  ap_clk      | resample_U0/ap_NS_fsm[2]                                                              | resample_U0/j_mid2_reg_2716[4]_i_1_n_7                                               |                2 |             10 |
+|  ap_clk      | batch_norm_U0/tmp_25_reg_1207[4]_i_2_n_7                                              | batch_norm_U0/tmp_25_reg_1207[4]_i_1_n_7                                             |                2 |             10 |
+|  ap_clk      | max_pool_1chan_U0/exitcond_flatten_reg_19200                                          |                                                                                      |                4 |             14 |
+|  ap_clk      | relu_U0/indvar_flatten_reg_9540                                                       |                                                                                      |                4 |             14 |
+|  ap_clk      | resample_for_conv2_U0/i2_reg_76206_out                                                | resample_for_conv2_U0/j4_reg_748[3]_i_1_n_7                                          |                3 |             16 |
+|  ap_clk      | resample_for_conv2_U0/ap_CS_fsm_pp0_stage1                                            | resample_for_conv2_U0/l_1_mid2_reg_1789[7]_i_1_n_7                                   |                3 |             16 |
+|  ap_clk      | resample_for_conv2_U0/resample_for_conv2_U0_resampled_0_V_ce1                         |                                                                                      |                2 |             16 |
+|  ap_clk      |                                                                                       | resample_U0/ap_sync_reg_channel_write_resampled_2_2_V                                |                5 |             18 |
+|  ap_clk      | pad_for_conv2_U0/ap_CS_fsm_pp0_stage0                                                 |                                                                                      |                7 |             18 |
+|  ap_clk      | resample_U0/WEA[0]                                                                    |                                                                                      |                2 |             20 |
+|  ap_clk      | resample_U0/i3_reg_130606_out                                                         | resample_U0/j5_reg_1292[4]_i_1_n_7                                                   |                6 |             20 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/do_init_reg_7470                                              | conv2d_3x3_1chan_rev_U0/i_reg_763                                                    |                4 |             20 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/CNN_mac_muladd_18cud_U194/CNN_mac_muladd_18cud_DSP48_1_U/p_0  | ap_rst                                                                               |                4 |             20 |
+|  ap_clk      | resample_U0/ap_CS_fsm_pp0_stage1                                                      | resample_U0/l_1_mid2_reg_3032[9]_i_1_n_7                                             |                5 |             20 |
+|  ap_clk      | resample_U0/ap_NS_fsm[2]                                                              |                                                                                      |                3 |             20 |
+|  ap_clk      | relu_U0/ap_CS_fsm_pp0_stage0                                                          |                                                                                      |                7 |             22 |
+|  ap_clk      | batch_norm_U0/ap_CS_fsm_pp0_stage0                                                    |                                                                                      |                7 |             24 |
+|  ap_clk      | resample_for_conv2_U0/j_reg_1693[3]_i_1_n_7                                           |                                                                                      |                6 |             24 |
+|  ap_clk      |                                                                                       | max_pool_1chan_U0/ap_sync_reg_channel_write_maxpool_9_V                              |                9 |             28 |
+|  ap_clk      | relu_U0/indvar_flatten_reg_9540                                                       | relu_U0/indvar_flatten_reg_954                                                       |                6 |             30 |
+|  ap_clk      | batch_norm_U0/indvar_flatten_reg_9500                                                 | batch_norm_U0/indvar_flatten_reg_950                                                 |                5 |             30 |
+|  ap_clk      |                                                                                       | pad_for_conv2_U0/ap_sync_reg_channel_write_padded_L2_9_V                             |                9 |             32 |
+|  ap_clk      | conv2d_3x3_4chan_rev_U0/i_reg_60705_out                                               | conv2d_3x3_4chan_rev_U0/i_reg_607                                                    |                6 |             32 |
+|  ap_clk      |                                                                                       | pad_for_conv2_U0/indvar_flatten2_reg_924[7]_i_1_n_7                                  |                6 |             34 |
+|  ap_clk      | max_pool_1chan_U0/i3_reg_111806_out                                                   | max_pool_1chan_U0/i3_reg_1118                                                        |                7 |             36 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/bias_V222_phi_reg_791                                         |                                                                                      |                6 |             36 |
+|  ap_clk      | resample_U0/ap_phi_reg_pp0_iter1_square_image_V_load_7_reg_17340                      | resample_U0/ap_phi_reg_pp0_iter1_square_image_V_load_6_reg_1858[17]_i_1_n_7          |               15 |             36 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/bias_V222_rewind_reg_7770                                     |                                                                                      |                6 |             36 |
+|  ap_clk      | max_pool_1chan_U0/max_pool_1chan_U0_in_image_0_V_ce0                                  |                                                                                      |               11 |             38 |
+|  ap_clk      | zero_mean_1chan_U0/i3_reg_138406_out                                                  | zero_mean_1chan_U0/i3_reg_1384                                                       |                7 |             40 |
+|  ap_clk      | efficient_pad_n_1cha_U0/indvar_flatten2_reg_16771                                     | efficient_pad_n_1cha_U0/ap_NS_fsm11_out                                              |               11 |             42 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__27                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__36                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__25                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__19                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__22                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__40                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__38                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | resample_U0/j_reg_2866[4]_i_1_n_7                                                     |                                                                                      |               20 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__30                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__13                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__39                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__16                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__23                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__26                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | conv2d_3x3_4chan_rev_U0/conv_kernel_L2_1_V_ce0                                        |                                                                                      |                9 |             48 |
+|  ap_clk      | resample_for_conv2_U0/indvar_flatten1_reg_804[7]_i_2_n_7                              | resample_for_conv2_U0/indvar_flatten1_reg_804                                        |               10 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__17                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__15                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__21                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__29                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__28                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__32                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__37                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__35                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__31                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__14                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__18                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__34                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__33                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__20                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/p_0_in__24                                                         |                                                                                      |                6 |             48 |
+|  ap_clk      | zero_mean_1chan_U0/in_image_0_V_ce0                                                   |                                                                                      |               11 |             50 |
+|  ap_clk      |                                                                                       | zero_mean_1chan_U0/ap_sync_reg_channel_write_mean_removed_9_V                        |               18 |             56 |
+|  ap_clk      |                                                                                       | batch_norm_U0/ap_sync_reg_channel_write_batchnorm_9_V                                |               11 |             56 |
+|  ap_clk      |                                                                                       | conv2d_3x3_1chan_rev_U0/ap_sync_reg_channel_write_conv_9_V                           |               22 |             56 |
+|  ap_clk      |                                                                                       | relu_U0/ap_sync_reg_channel_write_ReLU_9_V                                           |               10 |             56 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/conv2d_3x3_1chan_rev_U0_in_image_0_0_V_ce0                    |                                                                                      |               10 |             56 |
+|  ap_clk      |                                                                                       | efficient_pad_n_1cha_U0/ap_sync_reg_channel_write_padded_9_V                         |               15 |             60 |
+|  ap_clk      | resample_U0/indvar_flatten2_reg_1348[9]_i_2_n_7                                       | resample_U0/indvar_flatten2_reg_1348                                                 |               13 |             60 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/x_reg_8171                                                    | conv2d_3x3_1chan_rev_U0/y_reg_803[0]_i_1_n_7                                         |                8 |             64 |
+|  ap_clk      | max_pool_1chan_U0/x_s_reg_13031                                                       | max_pool_1chan_U0/y_s_reg_1289[0]_i_1_n_7                                            |                8 |             64 |
+|  ap_clk      | conv2d_3x3_4chan_rev_U0/conv_kernel_L2_1_V_ce0                                        | conv2d_3x3_4chan_rev_U0/p_8_reg_1328                                                 |                9 |             64 |
+|  ap_clk      | resample_U0/ap_condition_423                                                          | resample_U0/ap_phi_reg_pp0_iter1_square_image_V_load_4_reg_1610[17]_i_1_n_7          |               30 |             68 |
+|  ap_clk      | zero_mean_1chan_U0/exitcond_flatten_reg_20040                                         |                                                                                      |               12 |             70 |
+|  ap_clk      | resample_U0/ap_phi_reg_pp0_iter1_square_image_V_load_7_reg_17340                      |                                                                                      |               30 |             72 |
+|  ap_clk      | relu_U0/tmp_9_reg_1323[47]_i_1_n_7                                                    |                                                                                      |               16 |             74 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__5                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__9                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__12                                                          |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__6                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__0                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__4                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__3                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__7                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__10                                                          |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__2                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in                                                              |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__11                                                          |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__8                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | max_pool_1chan_U0/p_0_in__1                                                           |                                                                                      |                5 |             80 |
+|  ap_clk      | conv2d_3x3_4chan_rev_U0/indvar_flatten_reg_6490                                       | conv2d_3x3_4chan_rev_U0/indvar_flatten_reg_649                                       |               11 |             84 |
+|  ap_clk      | resample_for_conv2_U0/ap_condition_267                                                | resample_for_conv2_U0/ap_phi_reg_pp0_iter1_square_image_V_load_6_reg_954[24]_i_1_n_7 |               45 |             96 |
+|  ap_clk      |                                                                                       |                                                                                      |               51 |            138 |
+|  ap_clk      | resample_for_conv2_U0/ap_phi_reg_pp0_iter1_square_image_V_load_2_reg_1022[24]_i_1_n_7 |                                                                                      |               66 |            150 |
+|  ap_clk      | conv2d_3x3_4chan_rev_U0/ap_CS_fsm_pp0_stage0                                          |                                                                                      |               29 |            166 |
+|  ap_clk      | resample_U0/ap_condition_423                                                          |                                                                                      |               71 |            188 |
+|  ap_clk      | max_pool_1chan_U0/ap_phi_reg_pp0_iter3_p_Val2_7_reg_13170                             |                                                                                      |               31 |            196 |
+|  ap_clk      | resample_for_conv2_U0/ap_condition_267                                                |                                                                                      |               89 |            236 |
+|  ap_clk      | max_pool_1chan_U0/ap_phi_reg_pp0_iter2_p_Val2_8_reg_1255_reg[0]_0                     |                                                                                      |               96 |            338 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/CNN_mac_muladd_18cud_U187/CNN_mac_muladd_18cud_DSP48_1_U/E[0] |                                                                                      |               77 |            544 |
+|  ap_clk      | conv2d_3x3_4chan_rev_U0/ap_CS_fsm_pp0_stage1                                          |                                                                                      |               86 |            696 |
+|  ap_clk      | pad_for_conv2_U0/pad_for_conv2_U0_in_image_0_V_ce0                                    |                                                                                      |               78 |            734 |
+|  ap_clk      | conv2d_3x3_1chan_rev_U0/CNN_mac_muladd_18cud_U194/CNN_mac_muladd_18cud_DSP48_1_U/p_0  |                                                                                      |               97 |            868 |
+|  ap_clk      | efficient_pad_n_1cha_U0/E[0]                                                          |                                                                                      |              181 |           1050 |
+|  ap_clk      |                                                                                       | ap_rst                                                                               |              568 |           2652 |
++--------------+---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+
+
+

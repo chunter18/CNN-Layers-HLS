@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'CNN'" level="0">
+<item name = "Date">Mon Dec  2 23:35:46 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">final</item>
+<item name = "Solution">finished</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325tffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.950, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">8458, 8510, 2048, 2048, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_max_pool_1chan_fu_982">max_pool_1chan, 198, 199, 196, 196, loop rewind(delay=1 initiation interval(s))</column>
+<column name="grp_resample_fu_1028">resample, 1569, 1570, 1568, 1568, loop rewind(delay=1 initiation interval(s))</column>
+<column name="grp_conv2d_3x3_4chan_rev_fu_1071">conv2d_3x3_4chan_rev, 2054, 2055, 2048, 2048, loop rewind(delay=1 initiation interval(s))</column>
+<column name="grp_resample_for_conv2_fu_1132">resample_for_conv2, 393, 394, 392, 392, loop rewind(delay=1 initiation interval(s))</column>
+<column name="grp_conv2d_3x3_1chan_rev_fu_1155">conv2d_3x3_1chan_rev, 795, 796, 784, 784, loop rewind(delay=1 initiation interval(s))</column>
+<column name="grp_efficient_pad_n_1cha_fu_1216">efficient_pad_n_1cha, 847, 877, 847, 877, none</column>
+<column name="grp_pad_for_conv2_fu_1278">pad_for_conv2, 232, 248, 232, 248, none</column>
+<column name="grp_zero_mean_1chan_fu_1312">zero_mean_1chan, 785, 786, 784, 784, loop rewind(delay=0 initiation interval(s))</column>
+<column name="grp_relu_fu_1484">relu, 787, 787, 787, 787, none</column>
+<column name="grp_batch_norm_fu_1544">batch_norm, 789, 789, 789, 789, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
